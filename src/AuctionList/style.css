@@ -1,9 +1,95 @@
+:root {
+  --green: #1a6635;
+  --grey: #e3e3e2;
+  --white: #faf4f4;
+  --text: #494545;
+}
+
 .auction__img {
   background-image: url('./img/Radojcic_zahrada_1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 600px;
-  height: 500px;
+  width: 400px;
+  height: 30vh;
   background-size: cover;
+}
+
+.auction__timer {
+  display: flex;
+  padding: 10px 20px;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--green);
+  max-width: 250px;
+  max-height: 120px;
+  gap: 1rem;
+}
+
+.vertical__line {
+  border: 1px solid var(--white);
+  height: 0.9rem;
+}
+
+.auction__enter {
+  padding: 10px 20px;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  line-height: 1.25rem;
+  font-weight: 700;
+  border: 1px solid var(--green);
+  background-color: var(--white);
+  color: var(--green);
+}
+
+.auction__copy {
+  display: flex;
+}
+
+.container__list {
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+}
+
+.auction__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 260px;
+  padding: 1.5rem;
+  gap: 1.25rem;
+  border: 1px solid var(--green);
+  background-color: var(--white);
+  border-radius: 10px;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .auction__img {
+    width: 600px;
+    height: 500px;
+  }
+
+  .auction__copy {
+    display: flex;
+  }
+
+  .container__list {
+    flex-direction: row;
+  }
+
+  .auction__content {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 360px;
+    margin-left: -160px;
+    margin-top: 70px;
+  }
 }

@@ -42,14 +42,12 @@ html {
   flex-direction: column;
 }
 
+/*  display: none */
+
 .nav__buttons {
   display: flex;
   flex-direction: column;
 }
-
-/* .nav__content {
-  display: none;
-} */
 
 .nav__hamburger-icon {
   background-image: url(./icons/hamburger.svg);
@@ -120,7 +118,7 @@ html {
     letter-spacing: 0.5px;
     border-radius: 10px;
     /* transition: all 800ms ease; */
-    line-height: 20px;
+    line-height: 1.25rem;
     font-weight: 700;
     border: 1px solid var(--green);
     color: var(--green);

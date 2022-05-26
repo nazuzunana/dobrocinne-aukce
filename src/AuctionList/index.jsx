@@ -5,32 +5,50 @@ import { Link } from 'react-router-dom';
 // seznam aukcí
 
 const AuctionList = () => (
-  <div className="container__list">
-    <div className="list__title">Seznam aukcí</div>
-    <div className="list__auction">
+  <>
+    <section className="container__list">
       <div className="auction__img"></div>
-      <div className="auction__name">
-        <p className="auction__description">
+      <div className="auction__content">
+        <h2>Aukce na pomoc Ukrajině</h2>
+        <div className="auction__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error
           delectus nulla quaerat, voluptatum excepturi expedita dolores ab id
           dolor corporis.
-        </p>
-        <>Počet předmětů: 2</>
-        <div className="auction_:timer">Končí za</div>
+          <p>Počet předmětů: 2</p>
+        </div>
+
+        <div className="auction__timer">
+          <div className="vertical__line"></div>
+          Končí za 3 hod 24 min
+        </div>
+
+        <button className="auction__enter">
+          <Link to="/Auction">Přejít do aukce</Link>
+        </button>
       </div>
-      <button className="auction__enter">
-        <Link to="/Auction">Přejít do aukce</Link>
-      </button>
-    </div>
-    <div className="list__auction">
+    </section>
+    <section className="container__list">
       <div className="auction__img"></div>
-      <div className="auction__name"></div>
-      <div className="auction__description"></div>
-      <div className="auction__enter">
-        <Link to="/Auction">Vstoupit</Link>
+      <div className="auction__content">
+        <h2>Aukce na podporu psího útulku</h2>
+        <div className="auction__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error
+          delectus nulla quaerat, voluptatum excepturi expedita dolores ab id
+          dolor corporis.
+          <p>Počet předmětů: 2</p>
+        </div>
+
+        <div className="auction__timer">
+          <div className="vertical__line"></div>
+          Končí za 3 hod 24 min
+        </div>
+
+        <button className="auction__enter">
+          <Link to="/Auction">Přejít do aukce</Link>
+        </button>
       </div>
-    </div>
-  </div>
+    </section>
+  </>
 );
 
 export default AuctionList;

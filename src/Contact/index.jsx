@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthorCard from '../AuthorCard';
+import AuthorCard from './AuthorCard';
 import './style.css';
 
 // kontakt
