@@ -15,8 +15,10 @@ const Home = () => {
             aukční web, jenž by spojoval příjemné s užitečným: někdo má hodně a
             nestrádá, když daruje. Někdo si rád udělá radost a zároveň radost
             přinese někomu, kdo to opravdu potřebuje.
+            <br />
+            <br />
+            Pojďte si s námi něco hezkého pořídit!
           </p>
-          <p>Pojďte si s námi něco hezkého pořídit!</p>
           <button className="button__auctions">
             <Link to="/AuctionList">Seznam aukcí</Link>
           </button>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
+import timer from './img/timer.svg';
 
 // seznam aukcí
 
@@ -18,6 +19,7 @@ const AuctionList = () => (
         </div>
 
         <div className="auction__timer">
+          <img className="icon__timer" src={timer} />
           <div className="vertical__line"></div>
           Končí za 3 hod 24 min
         </div>
@@ -39,8 +41,9 @@ const AuctionList = () => (
         </div>
 
         <div className="auction__timer">
+          <img className="icon__timer" src={timer} />
           <div className="vertical__line"></div>
-          Končí za 3 hod 24 min
+          Končí za X hod XY min
         </div>
 
         <button className="auction__enter">

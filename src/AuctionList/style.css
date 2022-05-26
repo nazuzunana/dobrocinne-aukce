@@ -5,6 +5,12 @@
   --text: #494545;
 }
 
+.container__list {
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+}
+
 .auction__img {
   background-image: url('./img/Radojcic_zahrada_1.jpg');
   background-repeat: no-repeat;
@@ -24,7 +30,7 @@
   font-weight: 700;
   color: var(--white);
   background-color: var(--green);
-  max-width: 250px;
+  max-width: 270px;
   max-height: 120px;
   gap: 1rem;
 }
@@ -32,7 +38,9 @@
 .vertical__line {
   border: 1px solid var(--white);
   height: 0.9rem;
+  margin-top: 2px;
 }
+/* ešte tá čiarka nech nie je tak výrazná */
 
 .auction__enter {
   padding: 10px 20px;
@@ -49,12 +57,6 @@
   display: flex;
 }
 
-.container__list {
-  display: flex;
-  flex-direction: column;
-  margin: 60px;
-}
-
 .auction__content {
   display: flex;
   flex-direction: column;
@@ -68,6 +70,11 @@
   background-color: var(--white);
   border-radius: 10px;
   z-index: 10;
+  color: var(--text);
+}
+
+.icon__timer {
+  width: 20px;
 }
 
 @media (min-width: 768px) {

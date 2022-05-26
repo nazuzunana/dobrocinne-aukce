@@ -41,6 +41,10 @@
   border: none;
 }
 
+.box__auctions p {
+  margin-top: 14rem;
+}
+
 /* RESPONSIVITY */
 
 @media (min-width: 768px) {
