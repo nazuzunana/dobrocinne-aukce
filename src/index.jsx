@@ -9,6 +9,15 @@ import AuctionList from './AuctionList';
 import Registration from './Registration';
 import Auction from './Auction';
 
+// const hamburgerMenu = () => {
+//   const links = document.querySelector('.nav__links');
+//   if (links.style.display === 'block') {
+//     links.style.display = 'none';
+//   } else {
+//     links.style.display = 'block';
+//   }
+// };
+
 const App = () => (
   <div className="container">
     <div className="nav">
@@ -34,6 +43,7 @@ const App = () => (
           </div>
         </div>
       </div>
+      <div className="nav__hamburger-icon"></div>
     </div>
     <Outlet />
     <div className="footer">
