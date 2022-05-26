@@ -37,10 +37,12 @@ const App = () => (
           </div>
         </div>
         <div className="nav__buttons">
-          <div className="button__login">Přihlášení</div>
-          <div className="button__register">
-            <Link to="/Registration">Registrace</Link>
-          </div>
+          <button className="button__register">
+            <Link to="/Registration">Registrace k dražbě</Link>
+          </button>
+          <button className="button__login button__login--logged">
+            Přihlášení
+          </button>
         </div>
       </div>
       <div className="nav__hamburger-icon"></div>

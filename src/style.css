@@ -2,9 +2,9 @@
 
 :root {
   --green: #1a6635;
-  --grey: #eeeeee;
-  --white: #ffffff;
-  --text: #222222;
+  --grey: #e3e3e2;
+  --white: #faf4f4;
+  --text: #494545;
 }
 
 *,
@@ -27,6 +27,7 @@ html {
   align-items: center;
   margin: auto;
   background-color: var(--white);
+  box-shadow: 0rem 0rem 0.625rem #999999;
 }
 
 .nav {
@@ -87,7 +88,7 @@ html {
     justify-content: space-between;
     gap: 1rem;
     width: 100%;
-    padding: 2rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
   }
 
   .nav__content {
@@ -102,14 +103,34 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
+    padding-top: 10px;
   }
 
   .nav__buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
+  }
+
+  .button__register,
+  .button__login {
+    padding: 10px 20px;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    /* transition: all 800ms ease; */
+    line-height: 20px;
+    font-weight: 700;
+    border: 1px solid var(--green);
+    color: var(--green);
+    background-color: var(--white);
+    transition: background-color 1s;
+    transition: color 1s;
+  }
+
+  .button__register a:hover {
+    text-decoration: underline;
   }
 
   .nav__hamburger-icon {

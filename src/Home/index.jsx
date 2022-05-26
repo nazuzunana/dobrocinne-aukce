@@ -9,20 +9,28 @@ const Home = () => {
     <div className="container__homepage">
       <div className="homepage__box">
         <div className="box__auctions">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-          quia soluta voluptas aspernatur cupiditate nostrum placeat expedita
-          suscipit tempora illo?
-          <Link to="/AuctionList">Seznam aukcí</Link>
+          <p>
+            Dobročinných sbírek jsme viděly mnoho, také uměleckých aukčních domů
+            a aukčních portálů, a tak jsme tyto dvě činnosti spojily. Chyběl nám
+            aukční web, jenž by spojoval příjemné s užitečným: někdo má hodně a
+            nestrádá, když daruje. Někdo si rád udělá radost a zároveň radost
+            přinese někomu, kdo to opravdu potřebuje.
+          </p>
+          <p>Pojďte si s námi něco hezkého pořídit!</p>
+          <button className="button__auctions">
+            <Link to="/AuctionList">Seznam aukcí</Link>
+          </button>
         </div>
         <div className="box__slideshow">Slideshow</div>
       </div>
       <div className="homepage__text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque provident
-        odit fugit a impedit rem maiores alias laborum? Dignissimos molestias
-        officia ducimus quam. Illum quaerat nostrum exercitationem fuga soluta
-        vero. Quae id ipsam nisi unde, laborum vitae molestias quibusdam
-        aspernatur iure repudiandae provident exercitationem nulla architecto
-        voluptas sunt non! Reiciendis.
+        <p>
+          NGO DEI (我地) je nezisková organizace se sídlem v Praze, kterou
+          založila skupina Čechů a Hongkongců. Znaky 我地 znamenají v
+          kantonštině "my" nebo "moje země". Iniciály DEI znamenají v anglickém
+          překladu Diversity, Equality, and Inclusion (rozmanitost, rovnost a
+          začlenění).
+        </p>
       </div>
     </div>
   );
