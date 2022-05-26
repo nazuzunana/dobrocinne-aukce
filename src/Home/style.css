@@ -1,0 +1,38 @@
+.container__homepage {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.box__auctions {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.box__slideshow {
+  aspect-ratio: 1 / 1;
+}
+
+.box__auctions,
+.box__slideshow {
+  width: 100%;
+}
+
+/* RESPONSIVITY */
+
+@media (min-width: 768px) {
+  .homepage__box {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .box__auctions,
+  .box__slideshow {
+    width: 50%;
+  }
+
+  .box__auctions {
+    aspect-ratio: 1 / 1;
+  }
+}

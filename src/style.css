@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --green: #1a6635;
+  --grey: #eeeeee;
+  --white: #ffffff;
+  --text: #222222;
+}
+
+*,
+body,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background-color: var(--white);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--green);
+  color: var(--white);
+}
+
+/* z nav__content bych v mobilním rozhraní udělala hamburger menu */
+
+/* RESPONSIVITY */
+
+@media (min-width: 768px) {
+  body {
+    background-color: var(--grey);
+  }
+
+  .container {
+    max-width: 40rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .nav__content {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    gap: 3rem;
+  }
+
+  .nav__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .nav__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 50rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 60rem;
+  }
+}
