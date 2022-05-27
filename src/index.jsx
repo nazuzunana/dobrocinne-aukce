@@ -24,7 +24,7 @@ const App = () => (
       <Link to="/">
         <div className="organisation__logo">LOGO</div>
       </Link>
-      <nav className="nav__content">
+      <div className="nav__content">
         <div className="nav__links">
           <div className="nav__link">
             <Link to="/HowToBid">Jak dražit</Link>
@@ -37,14 +37,14 @@ const App = () => (
           </div>
         </div>
         <div className="nav__buttons">
-          <button className="button__register">
-            <Link to="/Registration">Registrace k dražbě</Link>
-          </button>
+          <Link to="/Registration">
+            <button className="button__register">Registrace k dražbě</button>
+          </Link>
           <button className="button__login button__login--logged">
             Přihlášení
           </button>
         </div>
-      </nav>
+      </div>
       <div className="nav__hamburger-icon"></div>
     </div>
     <Outlet />

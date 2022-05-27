@@ -3,7 +3,8 @@
 :root {
   --green: #1a6635;
   --grey: #e3e3e2;
-  --white: #faf4f4;
+  --white: #ffffff;
+  --offwhite: #faf4f4;
   --text: #494545;
 }
 
@@ -19,6 +20,13 @@ body,
 html {
   scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+button {
+  letter-spacing: 0.5px;
+  padding: 0.8rem 1rem 0.8rem 1rem;
 }
 
 .container {
@@ -26,7 +34,7 @@ html {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  background-color: var(--white);
+  background-color: var(--offwhite);
   box-shadow: 0rem 0rem 0.625rem #999999;
 }
 
@@ -35,14 +43,13 @@ html {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: var(--white);
 }
 
 .nav__content {
   display: flex;
   flex-direction: column;
 }
-
-/*  display: none */
 
 .nav__buttons {
   display: flex;
@@ -56,24 +63,18 @@ html {
   aspect-ratio: 1 / 1;
 }
 
-.nav__buttons {
-  display: flex;
-}
-
 .footer {
   width: 100%;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 3rem;
   background-color: var(--green);
   color: var(--white);
 }
-
-/* z nav__content bych v mobilním rozhraní udělala hamburger menu */
 
 /* RESPONSIVITY */
 
 @media (min-width: 768px) {
   body {
-    background-color: var(--grey);
+    background-color: var(--white);
   }
 
   .container {
@@ -86,13 +87,14 @@ html {
     justify-content: space-between;
     gap: 1rem;
     width: 100%;
-    padding: 1.5rem 2rem 1.5rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
   }
 
   .nav__content {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     width: 80%;
     gap: 3rem;
     letter-spacing: 0.5px;
@@ -103,28 +105,24 @@ html {
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
-    padding-top: 0.625rem;
   }
 
   .nav__buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .button__register,
   .button__login {
-    padding: 0.625rem 1.25rem;
-    letter-spacing: 0.5px;
     border-radius: 10px;
     transition: all 800ms ease;
-    line-height: 1.25rem;
     font-weight: 700;
     border: 1px solid var(--green);
     color: var(--green);
     background-color: var(--white);
-    transition: background-color 1s;
+    transition: background-color, color 0.5s;
   }
 
   .nav__link a:hover {
@@ -133,7 +131,10 @@ html {
 
   .button__register:hover {
     background-color: rgb(108, 133, 108);
+    color: #ffffff;
+    cursor: pointer;
   }
+
   .nav__hamburger-icon {
     display: none;
   }
