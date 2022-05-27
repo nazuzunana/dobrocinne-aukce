@@ -56,7 +56,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     aspect-ratio: 1 / 1;
-    padding: 2rem;
+    padding: 3rem;
   }
 
   .box__auctions p {
@@ -86,7 +86,7 @@
   }
 
   .box__text {
-    width: 70%;
-    padding: 2rem;
+    width: 55%;
+    padding: 6rem 0rem 6rem 0rem;
   }
 }
