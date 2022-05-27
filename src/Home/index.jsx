@@ -23,7 +23,7 @@ const Home = () => {
             <Link to="/AuctionList">Seznam aukcí</Link>
           </button>
         </div>
-        <div className="box__slideshow">Slideshow</div>
+        <div className="box__slideshow">Sem ide slideshow</div>
       </div>
       <div className="homepage__text">
         <p>

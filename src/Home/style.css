@@ -21,12 +21,19 @@
 
 .box__auctions {
   background-color: var(--green);
+  opacity: 0.9;
   color: var(--white);
   position: relative;
 }
 
+/* to hore len experiment */
+
 .box__slideshow {
   aspect-ratio: 1 / 1;
+  background-image: url('./img/Jan_Svankmajer_prirodopis_1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .box__auctions,

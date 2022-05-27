@@ -114,7 +114,7 @@ html {
 
   .button__register,
   .button__login {
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     letter-spacing: 0.5px;
     border-radius: 10px;
     transition: all 800ms ease;
@@ -131,7 +131,7 @@ html {
   }
 
   .button__register:hover {
-    background-color: grey;
+    background-color: rgb(108, 133, 108);
   }
   .nav__hamburger-icon {
     display: none;
