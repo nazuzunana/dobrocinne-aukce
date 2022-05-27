@@ -1,8 +1,20 @@
 :root {
   --green: #1a6635;
   --grey: #e3e3e2;
-  --white: #faf4f4;
+  --white: #ffffff;
+  --offwhite: #faf4f4;
   --text: #494545;
+}
+
+.button__auctions {
+  background-color: var(--green);
+  border: 1px solid var(--offwhite);
+  color: var(--offwhite);
+}
+
+.button__auctions:hover {
+  background-color: var(--offwhite);
+  color: var(--green);
 }
 
 .container__homepage {
@@ -51,10 +63,6 @@
 .box__text {
   color: var(--text);
   padding: 2rem;
-}
-
-.button__auctions:hover {
-  cursor: pointer;
 }
 
 /* RESPONSIVITY */

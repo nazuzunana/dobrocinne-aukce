@@ -27,10 +27,25 @@ html {
 button {
   letter-spacing: 0.5px;
   padding: 0.8rem 1rem 0.8rem 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: border-color 0.5s, background-color 0.5s, color 0.5s;
 }
 
 button:hover {
+  background-color: var(--green);
+  color: var(--offwhite);
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--green);
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
 }
 
 .container {
@@ -120,22 +135,9 @@ button:hover {
 
   .button__register,
   .button__login {
-    border-radius: 10px;
-    transition: all 800ms ease;
-    font-weight: 700;
     border: 1px solid var(--green);
     color: var(--green);
     background-color: var(--white);
-    transition: background-color, color 0.3s;
-  }
-
-  .nav__link a:hover {
-    text-decoration: underline;
-  }
-
-  .button__register:hover {
-    background-color: var(--green);
-    color: #ffffff;
   }
 
   .nav__hamburger-icon {
