@@ -11,19 +11,24 @@
   flex-direction: column;
   width: 100%;
   letter-spacing: 0.5px;
-  line-height: 20px;
+  line-height: 1.25rem;
 }
 
 .homepage__text {
   padding: 1.875rem 6rem 1.875rem 6rem;
   color: var(--text);
+  line-height: 1.25rem;
 }
 
 .box__auctions {
   background-color: var(--green);
-  opacity: 0.9;
   color: var(--white);
   position: relative;
+  font-size: 16px;
+}
+
+.box__auctions:hover {
+  opacity: 0.9;
 }
 
 /* to hore len experiment */
@@ -46,6 +51,7 @@
   right: 3.75rem;
   bottom: 2.5rem;
   border: none;
+  letter-spacing: 0.5px;
 }
 
 .box__auctions p {

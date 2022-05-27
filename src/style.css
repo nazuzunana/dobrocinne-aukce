@@ -62,7 +62,7 @@ html {
 
 .footer {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   background-color: var(--green);
   color: var(--white);
 }
@@ -95,6 +95,7 @@ html {
     justify-content: flex-end;
     width: 80%;
     gap: 3rem;
+    letter-spacing: 0.5px;
   }
 
   .nav__links {
