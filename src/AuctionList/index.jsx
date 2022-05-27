@@ -32,8 +32,10 @@ const Auction = ({ img, title, description }) => (
         <div className="auction__description">{description}</div>
         <div className="auction__timer">
           <img className="icon__timer" src={timer} />
-          <div className="vertical__line"></div>
-          Končí za 3 hod 24 min
+          <div className="vertical__line">
+            <p>|</p>
+          </div>
+          <p>Končí za 3 hod 24 min</p>
         </div>
 
         <button className="auction__enter">

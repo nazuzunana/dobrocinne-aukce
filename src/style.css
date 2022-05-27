@@ -121,7 +121,7 @@ button {
     border: 1px solid var(--green);
     color: var(--green);
     background-color: var(--white);
-    transition: background-color, color 0.5s;
+    transition: background-color, color 0.3s;
   }
 
   .nav__link a:hover {
