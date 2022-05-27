@@ -129,7 +129,7 @@ button {
   }
 
   .button__register:hover {
-    background-color: grey;
+    background-color: rgb(108, 133, 108);
   }
   .nav__hamburger-icon {
     display: none;

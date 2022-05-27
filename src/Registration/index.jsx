@@ -22,9 +22,8 @@ const Registration = () => {
   return (
     <div className="container__registration">
       <div className="">Už u nás máte účet? Přihlaste se tady.</div>
-      <h3 className="registration__title">Registrace</h3>
-
       <form onSubmit={handleSubmit}>
+        <h3 className="registration__title">Registrace</h3>
         <div className="form_container">
           <h4 className="">Osobní údaje</h4>
           <label>
@@ -104,10 +103,10 @@ const Registration = () => {
             Název organizace: <input type="text" />
           </label>
           <label>
-            IČO: <input type="text" />
+            IČO: <input type="number" />
           </label>
           <label>
-            DIČ: <input type="text" />
+            DIČ: <input type="number" />
           </label>
         </div>
       </form>
