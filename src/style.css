@@ -97,6 +97,7 @@ button {
     align-items: center;
     width: 80%;
     gap: 3rem;
+    letter-spacing: 0.5px;
   }
 
   .nav__links {
@@ -129,7 +130,7 @@ button {
   }
 
   .button__register:hover {
-    background-color: rgb(108, 133, 108);
+    background-color: var(--green);
     color: #ffffff;
     cursor: pointer;
   }
