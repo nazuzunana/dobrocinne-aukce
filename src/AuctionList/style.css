@@ -78,6 +78,9 @@
 }
 
 @media (min-width: 768px) {
+  .container__list {
+    flex-direction: row;
+  }
   .auction__img {
     width: 600px;
     height: 500px;
@@ -85,10 +88,6 @@
 
   .auction__copy {
     display: flex;
-  }
-
-  .container__list {
-    flex-direction: row;
   }
 
   .auction__content {

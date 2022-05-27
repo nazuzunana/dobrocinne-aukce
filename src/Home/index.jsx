@@ -39,3 +39,7 @@ const Home = () => {
 };
 
 export default Home;
+
+// Poznámky Javascript: slideshow časovač
+
+//Poznámky CSS: Buttons animace?

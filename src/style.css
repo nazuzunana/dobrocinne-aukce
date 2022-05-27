@@ -117,20 +117,22 @@ html {
     padding: 10px 20px;
     letter-spacing: 0.5px;
     border-radius: 10px;
-    /* transition: all 800ms ease; */
+    transition: all 800ms ease;
     line-height: 1.25rem;
     font-weight: 700;
     border: 1px solid var(--green);
     color: var(--green);
     background-color: var(--white);
     transition: background-color 1s;
-    transition: color 1s;
   }
 
-  .button__register a:hover {
+  .nav__link a:hover {
     text-decoration: underline;
   }
 
+  .button__register:hover {
+    background-color: grey;
+  }
   .nav__hamburger-icon {
     display: none;
   }
