@@ -22,18 +22,18 @@ const App = () => (
   <div className="container">
     <div className="nav">
       <Link to="/">
-        <div className="organisation__logo">LOGO</div>
+        <div className="organisation__logo"></div>
       </Link>
       <div className="nav__content">
         <div className="nav__links">
           <div className="nav__link">
-            <Link to="/HowToBid">Jak dražit</Link>
+            <Link to="/HowToBid">JAK DRAŽIT</Link>
           </div>
           <div className="nav__link">
-            <Link to="/AuctionList">Aukce</Link>
+            <Link to="/AuctionList">AUKCE</Link>
           </div>
           <div className="nav__link">
-            <Link to="/Contact">Kontakt</Link>
+            <Link to="/Contact">KONTAKT</Link>
           </div>
         </div>
         <div className="nav__buttons">

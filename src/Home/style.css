@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: flex-end;
   background-color: var(--green);
-  color: var(--white);
+  color: var(--offwhite);
   padding: 2rem;
 }
 
