@@ -53,6 +53,10 @@
   padding: 2rem;
 }
 
+.button__auctions:hover {
+  cursor: pointer;
+}
+
 /* RESPONSIVITY */
 
 @media (min-width: 768px) {

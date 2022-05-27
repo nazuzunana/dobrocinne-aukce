@@ -19,9 +19,9 @@ const Home = () => {
             <br />
             Pojďte si s námi něco hezkého pořídit!
           </p>
-          <button className="button__auctions">
-            <Link to="/AuctionList">Seznam aukcí</Link>
-          </button>
+          <Link to="/AuctionList">
+            <button className="button__auctions">Seznam aukcí</button>
+          </Link>
         </div>
         <div className="box__slideshow">Sem ide slideshow</div>
       </div>
