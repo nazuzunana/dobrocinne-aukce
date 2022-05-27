@@ -38,9 +38,9 @@ const Auction = ({ img, title, description }) => (
           <p>Končí za 3 hod 24 min</p>
         </div>
 
-        <button className="auction__enter">
-          <Link to="/Auction">Přejít do aukce</Link>
-        </button>
+        <Link to="/Auction">
+          <button className="auction__enter">Přejít do aukce</button>
+        </Link>
       </div>
     </section>
   </>
