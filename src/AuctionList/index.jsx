@@ -5,19 +5,31 @@ import timer from './img/timer.svg';
 
 // seznam aukcí
 
-const AuctionList = () => (
+const auctions = [
+  {
+    img: '',
+    title: 'Aukce na pomoc Ukrajině',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis.',
+  },
+
+  {
+    img: '',
+    title: 'Aukce na podporu psího útulku',
+    description:
+      'LOREM ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis.',
+  },
+];
+
+// hore je pole/zoznam aukcií, tam sa pridáva ďalšia aukcia
+
+const Auction = ({ img, title, description }) => (
   <>
     <section className="container__list">
-      <div className="auction__img"></div>
+      <div className="auction__img">{img}</div>
       <div className="auction__content">
-        <h2>Aukce na pomoc Ukrajině</h2>
-        <div className="auction__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error
-          delectus nulla quaerat, voluptatum excepturi expedita dolores ab id
-          dolor corporis.
-          <p>Počet předmětů: 2</p>
-        </div>
-
+        <h2>{title}</h2>
+        <div className="auction__description">{description}</div>
         <div className="auction__timer">
           <img className="icon__timer" src={timer} />
           <div className="vertical__line"></div>
@@ -29,29 +41,21 @@ const AuctionList = () => (
         </button>
       </div>
     </section>
-    <section className="container__list">
-      <div className="auction__img"></div>
-      <div className="auction__content">
-        <h2>Aukce na podporu psího útulku</h2>
-        <div className="auction__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error
-          delectus nulla quaerat, voluptatum excepturi expedita dolores ab id
-          dolor corporis.
-          <p>Počet předmětů: 2</p>
-        </div>
-
-        <div className="auction__timer">
-          <img className="icon__timer" src={timer} />
-          <div className="vertical__line"></div>
-          Končí za X hod XY min
-        </div>
-
-        <button className="auction__enter">
-          <Link to="/Auction">Přejít do aukce</Link>
-        </button>
-      </div>
-    </section>
   </>
 );
 
+const AuctionList = () => (
+  <div className="auctions">
+    {auctions.map((auction) => (
+      <Auction
+        img={auction.img}
+        title={auction.title}
+        description={auction.description}
+      />
+    ))}
+  </div>
+);
+
 export default AuctionList;
+
+//poprosím nezasahovať do tohto kódu, trval mi extrémne dlho
