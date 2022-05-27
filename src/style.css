@@ -121,7 +121,7 @@ button {
     border: 1px solid var(--green);
     color: var(--green);
     background-color: var(--white);
-    transition: background-color 1s;
+    transition: background-color, color 0.5s;
   }
 
   .nav__link a:hover {
@@ -130,7 +130,10 @@ button {
 
   .button__register:hover {
     background-color: rgb(108, 133, 108);
+    color: #ffffff;
+    cursor: pointer;
   }
+
   .nav__hamburger-icon {
     display: none;
   }

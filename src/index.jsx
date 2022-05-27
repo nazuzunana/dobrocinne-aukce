@@ -37,9 +37,9 @@ const App = () => (
           </div>
         </div>
         <div className="nav__buttons">
-          <button className="button__register">
-            <Link to="/Registration">Registrace k dražbě</Link>
-          </button>
+          <Link to="/Registration">
+            <button className="button__register">Registrace k dražbě</button>
+          </Link>
           <button className="button__login button__login--logged">
             Přihlášení
           </button>
