@@ -6,17 +6,6 @@
   --text: #494545;
 }
 
-.button__auctions {
-  background-color: var(--green);
-  border: 1px solid var(--offwhite);
-  color: var(--offwhite);
-}
-
-.button__auctions:hover {
-  background-color: var(--offwhite);
-  color: var(--green);
-}
-
 .container__homepage {
   margin: auto;
   display: flex;
@@ -32,17 +21,31 @@
 .box__auctions {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
   background-color: var(--green);
   color: var(--offwhite);
-  padding: 2rem;
+  padding: 5rem 2rem 5rem 2rem;
 }
 
 .box__auctions p {
   padding-bottom: 2rem;
 }
 
+.button__auctions {
+  background-color: var(--green);
+  border: 1px solid var(--offwhite);
+  color: var(--offwhite);
+}
+
+.button__auctions:hover {
+  background-color: var(--offwhite);
+  color: var(--green);
+}
+
 .box__slideshow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   aspect-ratio: 1 / 1;
   background-image: url('./img/Jan_Svankmajer_prirodopis_1.jpg');
   background-repeat: no-repeat;
@@ -61,8 +64,11 @@
 }
 
 .box__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: var(--text);
-  padding: 2rem;
+  padding: 5rem 2rem 5rem 2rem;
 }
 
 /* RESPONSIVITY */

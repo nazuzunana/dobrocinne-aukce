@@ -23,7 +23,7 @@ const Home = () => {
             <button className="button__auctions">Seznam aukcí</button>
           </Link>
         </div>
-        <div className="box__slideshow">Sem ide slideshow</div>
+        <div className="box__slideshow"></div>
       </div>
       <div className="homepage__text">
         <div className="box__text">

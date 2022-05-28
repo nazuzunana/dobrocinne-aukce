@@ -43,9 +43,8 @@ a {
   color: var(--green);
 }
 
-a:hover,
-a:active {
-  text-decoration: underline;
+.nav__link:hover {
+  border-bottom: 1px solid #999999;
 }
 
 .nav {
@@ -53,6 +52,7 @@ a:active {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 2rem;
 }
 
 .container {
