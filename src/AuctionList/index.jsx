@@ -15,7 +15,7 @@ const auctions = [
   },
 
   {
-    img: imageRadojcic,
+    img: '',
     title: 'Aukce na podporu psího útulku',
     description:
       'LOREM ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis. Počet předmětů: 2',
@@ -33,7 +33,7 @@ const Auction = ({ img, title, description }) => (
         <div className="auction__description">{description}</div>
         <div className="auction__timer">
           <img className="icon__timer" src={timer} />
-          <div className="vertical__line">
+          <div>
             <p>|</p>
           </div>
           <p>Končí za 3 hod 24 min</p>

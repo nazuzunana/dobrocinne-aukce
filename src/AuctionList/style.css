@@ -43,14 +43,6 @@
   width: fit-content;
 }
 
-/* .vertical__line {
-  border: 0.1rem solid var(--white);
-  height: 0.9rem;
-  margin-top: 2px;
-} */
-
-/*ešte tá čiarka nech nie je tak výrazná */
-
 .auction__enter {
   padding: 0.8rem 1rem 0.8rem 1rem;
   font-weight: 700;
@@ -109,9 +101,12 @@
   }
 
   .auction__img {
-    width: 60%;
-    height: auto;
+    width: 600px;
+    height: 500px;
   }
+
+  /*  width: 60%;
+    height: auto; */
 
   .auction__copy {
     display: flex;
@@ -120,9 +115,10 @@
   .auction__content {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-left: -70px;
-    margin-bottom: -50px;
+    width: 450px;
+    height: 360px;
+    margin-left: -10rem;
+    margin-top: 4.375rem;
   }
 
   @media (min-width: 1200px) {
