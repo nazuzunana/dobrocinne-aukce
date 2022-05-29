@@ -6,6 +6,38 @@
   --text: #494545;
 }
 
+/* carousel pokus! */
+
+.box__slideshow {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  height: 250px;
+  cursor: pointer;
+  position: relative;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__media {
+  flex-grow: 1;
+}
+
+.carousel__next {
+  color: var(--text);
+  user-select: none;
+}
+
+.carousel__previous {
+  color: var(--text);
+  user-select: none;
+}
+
+/* end carousel */
+
 .container__homepage {
   margin: auto;
   display: flex;
@@ -42,20 +74,19 @@
   color: var(--green);
 }
 
-.box__slideshow {
-  display: flex;
-  flex-direction: column;
+/* .box__slideshow {
   justify-content: flex-end;
   aspect-ratio: 1 / 1;
   background-image: url('./img/Jan_Svankmajer_prirodopis_1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
+} */
 
 .box__auctions,
 .box__slideshow {
   width: 100%;
+  height: auto;
 }
 
 .homepage__text {

@@ -14,7 +14,7 @@ const Registration = () => {
   const validateEmail = (e) => {
     const email = e.target.value;
 
-    // validátor hesla - fukčný :)
+    // validátor e-mailu - funkčný :)
 
     if (validator.isEmail(email)) {
       setEmailError('');
@@ -22,6 +22,8 @@ const Registration = () => {
       setEmailError('zadejte platný e-mail');
     }
   };
+
+  //validator hesla - nefunkčný?
 
   const validatePassword = (e) => {
     const password = e.target.value;
@@ -38,9 +40,6 @@ const Registration = () => {
 
     console.log(`Uživatel „${userName}“ se chce zaregistrovat.`);
   };
-  const jeUserNamePrazdne = userName.length === 0;
-  const jeLastNamePrazdne = userLastName.length === 0;
-  const jeUserPhone = userPhone.length === 0;
 
   return (
     <div className="container__registration">
@@ -93,7 +92,6 @@ const Registration = () => {
               }}
             />
           </label>
-          {jeUserNamePrazdne && <div>Křestní jméno je povinný údaj.</div>}
           <label>
             Příjmení:
             <input
@@ -106,8 +104,6 @@ const Registration = () => {
               }}
             />
           </label>
-
-          {jeLastNamePrazdne && <div>Příjmení je povinný údaj.</div>}
           <label>
             Příjmení:
             <input
@@ -120,8 +116,6 @@ const Registration = () => {
               }}
             />
           </label>
-
-          {jeLastNamePrazdne && <div>Příjmení je povinný údaj.</div>}
           <label>
             Telefon:
             <input
@@ -134,8 +128,6 @@ const Registration = () => {
               }}
             />
           </label>
-
-          {jeUserPhone && <p>Telefon je povinný údaj.</p>}
         </div>
 
         <div className="form_container">
