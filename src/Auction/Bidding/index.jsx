@@ -18,7 +18,7 @@ export const Bidding = () => {
               name="minimumbid"
               placeholder="Minimální příhoz 1000 CZK"
             ></input>
-            <button>Chci přihodit</button>
+            <button className="btn_bid">Chci přihodit</button>
           </div>
           <div className="bidding__input">
             <input
@@ -27,7 +27,7 @@ export const Bidding = () => {
               name="maximumbid"
               placeholder="Váš maximální příhoz"
             ></input>
-            <button>Chci přihodit</button>
+            <button className="btn_bid">Chci přihodit</button>
           </div>
         </div>
       </div>

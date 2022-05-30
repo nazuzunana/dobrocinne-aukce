@@ -113,15 +113,6 @@
   color: var(--green);
 }
 
-/* .box__slideshow {
-  justify-content: flex-end;
-  aspect-ratio: 1 / 1;
-  background-image: url('./img/Jan_Svankmajer_prirodopis_1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-} */
-
 .box__auctions,
 .box__slideshow {
   width: 100%;
