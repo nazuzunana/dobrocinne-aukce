@@ -44,7 +44,7 @@ const Auction = ({ img, title, description }) => (
 );
 
 const AuctionList = () => (
-  <div className="auctions">
+  <div>
     {auctions.map((auction) => (
       <Auction
         img={auction.img}

@@ -10,4 +10,5 @@
 
 .auction__text {
   padding: 1rem;
+  color: var(--text);
 }

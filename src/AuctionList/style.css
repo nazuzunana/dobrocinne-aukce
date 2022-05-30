@@ -5,29 +5,17 @@
   --text: #494545;
 }
 
-.auctions {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 1rem 5rem 1rem;
-  gap: 5rem;
-}
-
 .container__list {
   display: flex;
   flex-direction: column;
-  /* padding-bottom: 4rem; */
-  width: 100%;
-  /* margin: 60px; */
+  border-bottom: 1px solid var(--green);
 }
 
 .auction__img {
-  background-image: url('./img/Radojcic_zahrada_1.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  /* width: 400px; */
   width: 100%;
-  height: 30vh;
+  height: 50vh;
   background-size: cover;
+  margin-top: 40px;
 }
 
 .auction__enter {
@@ -36,7 +24,6 @@
   border: 1px solid var(--green);
   background-color: var(--white);
   color: var(--green);
-  z-index: 10;
   margin-bottom: -45px;
 }
 
@@ -49,15 +36,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 2rem;
   gap: 1.5rem;
   border: 1px solid var(--green);
   background-color: var(--white);
   border-radius: 5px;
-  z-index: 10;
   margin-top: -10px;
   color: var(--text);
+  margin-bottom: 40px;
 }
 
 .auction__description {
@@ -72,36 +58,26 @@
 /* responzivitu je třeba upravit, odsazení, šířky a výšky zlobí */
 
 @media (min-width: 768px) {
-  .auctions {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 0rem 8rem 0rem;
-    gap: 8rem;
-    width: 80%;
-  }
   .container__list {
     flex-direction: row;
   }
 
   .auction__img {
-    width: 600px;
-    height: 500px;
+    width: 550px;
+    height: 450px;
+    margin: 40px;
   }
-
-  /*  width: 60%;
-    height: auto; */
 
   .auction__copy {
     display: flex;
   }
 
   .auction__content {
-    display: flex;
-    flex-direction: column;
-    width: 450px;
     height: 360px;
+    width: 450px;
     margin-left: -10rem;
-    margin-top: 4.375rem;
+    margin-top: 5.4rem;
+    padding: 30px 40px 30px 40px;
   }
 
   @media (min-width: 1200px) {
