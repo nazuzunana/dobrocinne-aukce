@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
+import imageJan from './img/Jan_Svankmajer_prirodopis_1.jpg';
+import imagePristav from './img/Pristav_1.jpg';
 
 // domovská stránka
+
+// slideshow
+
+const images = [imageJan, imagePristav, imageJan, imagePristav, imageJan];
+
+const Carousel = () => {
+  const [image, setImage] = useState(0);
+
+  return (
+    <div className="box__slideshow">
+      <div className="carousel__media">
+        <a
+          className="carousel__previous"
+          aria-label="předchozí"
+          onClick={() => (image === 0 ? setImage(4) : setImage(image - 1))}
+        >
+          <i class="arrow right"></i>
+        </a>
+        <img className="carousel__image" src={images[image]} alt="" />
+        <a
+          className="carousel__next"
+          aria-label="další"
+          onClick={() => (image === 4 ? setImage(0) : setImage(image + 1))}
+        >
+          <i class="arrow left"></i>
+        </a>
+      </div>
+    </div>
+  );
+};
 
 const Home = () => {
   return (
@@ -27,7 +59,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="box__slideshow"></div>
+        <Carousel className="box__slideshow" />
       </div>
       <div className="homepage__text">
         <div className="box__text-img">
@@ -49,5 +81,3 @@ const Home = () => {
 export default Home;
 
 // Poznámky Javascript: slideshow časovač
-
-//Poznámky CSS: Buttons animace?

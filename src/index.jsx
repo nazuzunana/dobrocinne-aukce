@@ -18,6 +18,8 @@ import Auction from './Auction';
 //   }
 // };
 
+// doplnit stylovanie, ktory link je zrovna aktivny: https://reactrouter.com/docs/en/v6/getting-started/tutorial#active-links
+
 const App = () => (
   <div className="container">
     <div className="nav">
@@ -64,6 +66,14 @@ createRoot(document.querySelector('#app')).render(
         <Route path="AuctionList" element={<AuctionList />} />
         <Route path="Registration" element={<Registration />} />
         <Route path="Auction" element={<Auction />} />
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: '1rem' }}>
+              <p>Ups...tady nic není.</p>
+            </main>
+          }
+        />
       </Route>
     </Routes>
   </BrowserRouter>,

@@ -2,8 +2,6 @@
 
 :root {
   --green: #1a6635;
-  --grey: #e3e3e2;
-  --white: #faf4f4;
   --text: #494545;
 }
 
@@ -18,12 +16,13 @@ html {
 .container__registration {
   max-width: 35rem;
   margin: 0 auto;
+  color: var(--text);
 }
 
 form {
   padding: 2rem;
   border: 1px solid var(--green);
-  border-radius: 10px;
+  border-radius: 5px;
   letter-spacing: 0.5px;
   line-height: 1.25rem;
   font-size: 14px;

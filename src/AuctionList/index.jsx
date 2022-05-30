@@ -2,19 +2,21 @@ import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import timer from './img/timer.svg';
+import imageRadojcic from './img/Radojcic_zahrada_1.jpg';
+import imageSen from './img/prazsky_sen.jpg';
 
 // seznam aukcí
 
 const auctions = [
   {
-    img: '',
+    img: imageRadojcic,
     title: 'Aukce na pomoc Ukrajině',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis. Počet předmětů: 2',
   },
 
   {
-    img: '',
+    img: imageSen,
     title: 'Aukce na podporu psího útulku',
     description:
       'LOREM ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis. Počet předmětů: 2',
@@ -26,13 +28,15 @@ const auctions = [
 const Auction = ({ img, title, description }) => (
   <>
     <section className="container__list">
-      <div className="auction__img">{img}</div>
+      <div>
+        <img className="auction__img" src={img} />
+      </div>
       <div className="auction__content">
         <h2>{title}</h2>
         <div className="auction__description">{description}</div>
         <div className="auction__timer">
           <img className="icon__timer" src={timer} />
-          <div className="vertical__line">
+          <div>
             <p>|</p>
           </div>
           <p>Končí za 3 hod 24 min</p>
