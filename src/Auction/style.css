@@ -4,9 +4,10 @@
   flex-direction: column;
   max-width: 400px;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
 }
 
-.auction__description {
+.auction__text {
   padding: 1rem;
 }
