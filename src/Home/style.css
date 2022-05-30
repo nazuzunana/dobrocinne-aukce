@@ -28,7 +28,6 @@
 
 .carousel__next,
 .carousel__previous {
-  color: var(--text);
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -45,6 +44,26 @@
   position: absolute;
   right: 0;
   border-radius: 3px 0 0 3px;
+}
+
+.arrow {
+  border: solid var(--text);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+}
+
+.left {
+  transform: rotate(-45deg);
+}
+
+.right {
+  transform: rotate(135deg);
+}
+
+.carousel__next:hover,
+.carousel__previous:hover {
+  background-color: rgb(211, 211, 211, 0.3);
 }
 
 /* end carousel */

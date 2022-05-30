@@ -16,21 +16,21 @@ const Carousel = () => {
   return (
     <div className="box__slideshow">
       <div className="carousel__media">
-        <div
+        <a
           className="carousel__previous"
           aria-label="předchozí"
           onClick={() => (image === 0 ? setImage(4) : setImage(image - 1))}
         >
-          ←
-        </div>
+          <i class="arrow right"></i>
+        </a>
         <img className="carousel__image" src={images[image]} alt="" />
-        <div
+        <a
           className="carousel__next"
           aria-label="další"
           onClick={() => (image === 4 ? setImage(0) : setImage(image + 1))}
         >
-          →
-        </div>
+          <i class="arrow left"></i>
+        </a>
       </div>
     </div>
   );

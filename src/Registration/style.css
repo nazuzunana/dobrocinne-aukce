@@ -22,7 +22,7 @@ html {
 form {
   padding: 2rem;
   border: 1px solid var(--green);
-  border-radius: 10px;
+  border-radius: 5px;
   letter-spacing: 0.5px;
   line-height: 1.25rem;
   font-size: 14px;
