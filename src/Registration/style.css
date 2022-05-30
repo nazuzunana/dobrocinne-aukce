@@ -14,7 +14,7 @@ html {
 }
 
 .container__registration {
-  max-width: 35rem;
+  max-width: 40rem;
   margin: 0 auto;
   color: var(--text);
 }
@@ -26,6 +26,7 @@ form {
   letter-spacing: 0.5px;
   line-height: 1.25rem;
   font-size: 14px;
+  margin: 3rem;
 }
 
 /* h1 {
@@ -60,12 +61,6 @@ button:hover {
 
 button:active {
   transform: scale(0.9);
-}
-
-input:not([type='radio']):not([type='checkbox']),
-select,
-textarea {
-  border: 1px solid gray;
 }
 
 .field input:not([type='radio']):not([type='checkbox']),

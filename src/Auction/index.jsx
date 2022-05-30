@@ -1,17 +1,21 @@
 import React from 'react';
 import './style.css';
+import Bidding from './Bidding';
+import { Timer } from '../Timer';
 
 // aukce
 
 const Auction = () => (
   <div className="container__auction">
-    <div className="auction__name">Aukce</div>
-    <div className="auction__timer"></div>
-    <div className="auction__description"></div>
-    <div className="auction__lots">
-      <div className="auction__lot"></div>
-      <div className="auction__lot"></div>
+    <div className="auction__intro">
+      <h2 className="auction__name">Aukce</h2>
+      <p className="auction__description">
+        Popis účelu:Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Doloremque fugit, animi voluptatibus beatae dolorum quia vel quidem aut.
+      </p>
+      <Timer />
     </div>
+    <Bidding />
   </div>
 );
 

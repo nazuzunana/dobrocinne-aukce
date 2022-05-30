@@ -1,0 +1,16 @@
+.icon__timer {
+  width: 1.3rem;
+}
+
+.auction__timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--green);
+  gap: 1rem;
+  width: fit-content;
+}

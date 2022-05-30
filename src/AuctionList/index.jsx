@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
+import { Timer } from '../Timer';
 import { Link } from 'react-router-dom';
-import timer from './img/timer.svg';
 import imageRadojcic from './img/Radojcic_zahrada_1.jpg';
 import imageSen from './img/prazsky_sen.jpg';
 
@@ -34,14 +34,7 @@ const Auction = ({ img, title, description }) => (
       <div className="auction__content">
         <h2>{title}</h2>
         <div className="auction__description">{description}</div>
-        <div className="auction__timer">
-          <img className="icon__timer" src={timer} />
-          <div>
-            <p>|</p>
-          </div>
-          <p>Končí za 3 hod 24 min</p>
-        </div>
-
+        <Timer />
         <Link to="/Auction">
           <button className="auction__enter">Přejít do aukce</button>
         </Link>
