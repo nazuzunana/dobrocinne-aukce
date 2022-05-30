@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import './style.css';
 import timer from './timer.svg';
+import React from 'react';
 
 export const Timer = () => (
   <div className="auction__timer">

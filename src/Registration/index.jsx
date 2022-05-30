@@ -105,18 +105,6 @@ const Registration = () => {
             />
           </label>
           <label>
-            Příjmení:
-            <input
-              type="text"
-              value={userLastName}
-              onChange={(event) => {
-                const vstup1 = event.target.value;
-                console.log(vstup1);
-                setUserLastName(vstup1);
-              }}
-            />
-          </label>
-          <label>
             Telefon:
             <input
               type="number"

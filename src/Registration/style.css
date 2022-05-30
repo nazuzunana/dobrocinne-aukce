@@ -14,7 +14,7 @@ html {
 }
 
 .container__registration {
-  max-width: 40rem;
+  max-width: 60rem;
   margin: 0 auto;
   color: var(--text);
 }
@@ -27,6 +27,25 @@ form {
   line-height: 1.25rem;
   font-size: 14px;
   margin: 3rem;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'] {
+  width: 70%;
+  padding: 5px;
+  margin: 5px 0 22px 5px;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus,
+input[type='number']:focus {
+  background-color: #ddd;
+  outline: none;
 }
 
 /* h1 {
