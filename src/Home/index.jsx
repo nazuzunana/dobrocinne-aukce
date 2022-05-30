@@ -63,8 +63,8 @@ const Home = () => {
             NGO DEI (我地) je nezisková organizace se sídlem v Praze, kterou
             založila skupina Čechů a Hongkongců. Znaky 我地 znamenají v
             kantonštině „my“ nebo „moje země“. Iniciály DEI znamenají v
-            anglickém překladu Diversity, Equality, and Inclusion (rozmanitost,
-            rovnost a začlenění).
+            anglickém překladu rozmanitost, rovnost a začlenění (diversity,
+            equality, inclusion).
           </p>
         </div>
       </div>

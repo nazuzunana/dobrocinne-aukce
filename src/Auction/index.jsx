@@ -1,4 +1,5 @@
 import React from 'react';
+import AuctionLot from './AuctionLot';
 import './style.css';
 
 // aukce
@@ -8,10 +9,6 @@ const Auction = () => (
     <div className="auction__name">Aukce</div>
     <div className="auction__timer"></div>
     <div className="auction__description"></div>
-    <div className="auction__lots">
-      <div className="auction__lot"></div>
-      <div className="auction__lot"></div>
-    </div>
   </div>
 );
 

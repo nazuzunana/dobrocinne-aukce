@@ -30,19 +30,6 @@
   background-size: cover;
 }
 
-.auction__timer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 0.8rem;
-  border-radius: 5px;
-  font-weight: 700;
-  color: var(--white);
-  background-color: var(--green);
-  gap: 1rem;
-  width: fit-content;
-}
-
 .auction__enter {
   padding: 0.8rem 1rem 0.8rem 1rem;
   font-weight: 700;
@@ -67,14 +54,10 @@
   gap: 1.5rem;
   border: 1px solid var(--green);
   background-color: var(--white);
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 10;
   margin-top: -10px;
   color: var(--text);
-}
-
-.icon__timer {
-  width: 1.3rem;
 }
 
 .auction__description {

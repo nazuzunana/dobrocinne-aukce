@@ -4,6 +4,10 @@ import './style.css';
 // přihazování na položku v aukci
 
 const Bidding = () => {
-  return <></>;
+  return (
+    <>
+      <div className="lot__bidding"></div>
+    </>
+  );
 };
 export default Bidding;
