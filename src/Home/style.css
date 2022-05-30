@@ -90,22 +90,16 @@
   width: 100%;
 }
 
-.homepage__text {
-  color: var(--text);
-  line-height: 1.25rem;
-}
-
 .box__auctions {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2rem;
+  aspect-ratio: 1 / 1;
   background-color: var(--green);
+  padding: 3rem 2rem 3rem 2rem;
   color: var(--offwhite);
-  padding: 5rem 2rem 5rem 2rem;
-}
-
-.box__auctions p {
-  padding-bottom: 2rem;
 }
 
 .button__auctions {
@@ -137,14 +131,33 @@
 .homepage__text {
   display: flex;
   justify-content: center;
+  position: relative;
+  padding: 2rem;
 }
 
-.box__text {
+.box__text-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-image: url('../img/logo.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.overlay {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgba(250, 244, 244, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
   color: var(--text);
-  padding: 5rem 2rem 5rem 2rem;
+  font-weight: 700;
+  top: 0;
+  left: 0;
+  text-align: center;
 }
 
 /* RESPONSIVITY */
@@ -168,8 +181,12 @@
     padding: 3rem;
   }
 
-  .box__text {
-    width: 55%;
-    padding: 6rem 0rem 6rem 0rem;
+  .box__text-img {
+    width: 50%;
+    margin: 5rem;
+  }
+
+  .overlay p {
+    padding: 6rem;
   }
 }

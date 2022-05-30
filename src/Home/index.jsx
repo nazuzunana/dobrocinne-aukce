@@ -41,31 +41,37 @@ const Home = () => {
     <div className="container__homepage">
       <div className="homepage__box">
         <div className="box__auctions">
-          <p>
-            Dobročinných sbírek jsme viděly mnoho, také uměleckých aukčních domů
-            a aukčních portálů, a tak jsme tyto dvě činnosti spojily. Chyběl nám
-            aukční web, jenž by spojoval příjemné s užitečným: někdo má hodně a
-            nestrádá, když daruje. Někdo si rád udělá radost a zároveň radost
-            přinese někomu, kdo to opravdu potřebuje.
-            <br />
-            <br />
-            Pojďte si s námi něco hezkého pořídit!
-          </p>
-          <Link to="/AuctionList">
-            <button className="button__auctions">Seznam aukcí</button>
-          </Link>
+          <div className="box__auctions-text">
+            <p>
+              Dobročinných sbírek jsme viděly mnoho, také uměleckých aukčních
+              domů a aukčních portálů, a tak jsme tyto dvě činnosti spojily.
+              Chyběl nám aukční web, jenž by spojoval příjemné s užitečným:
+              někdo má hodně a nestrádá, když daruje. Někdo si rád udělá radost
+              a zároveň radost přinese někomu, kdo to opravdu potřebuje.
+              <br />
+              <br />
+              Pojďte si s námi něco hezkého pořídit!
+            </p>
+          </div>
+          <div className="box__auctions__button">
+            <Link to="/AuctionList">
+              <button className="button__auctions">Seznam aukcí</button>
+            </Link>
+          </div>
         </div>
         <Carousel className="box__slideshow" />
       </div>
       <div className="homepage__text">
-        <div className="box__text">
-          <p>
-            NGO DEI (我地) je nezisková organizace se sídlem v Praze, kterou
-            založila skupina Čechů a Hongkongců. Znaky 我地 znamenají v
-            kantonštině „my“ nebo „moje země“. Iniciály DEI znamenají v
-            anglickém překladu rozmanitost, rovnost a začlenění (diversity,
-            equality, inclusion).
-          </p>
+        <div className="box__text-img">
+          <div className="overlay">
+            <p>
+              NGO DEI (我地) je nezisková organizace se sídlem v Praze, kterou
+              založila skupina Čechů a Hongkongců. Znaky 我地 znamenají v
+              kantonštině „my“ nebo „moje země“. Iniciály DEI znamenají v
+              anglickém překladu Diversity, Equality, and Inclusion
+              (rozmanitost, rovnost a začlenění).
+            </p>
+          </div>
         </div>
       </div>
     </div>
