@@ -26,14 +26,25 @@
   flex-grow: 1;
 }
 
-.carousel__next {
+.carousel__next,
+.carousel__previous {
   color: var(--text);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
-.carousel__previous {
-  color: var(--text);
-  user-select: none;
+.carousel__next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 /* end carousel */
