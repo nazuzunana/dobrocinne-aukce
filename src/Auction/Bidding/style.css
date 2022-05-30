@@ -1,0 +1,18 @@
+.lot__bidding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--green);
+  background-color: var(--white);
+  border-radius: 5px;
+  color: var(--text);
+  width: 300px;
+  margin: 2rem;
+}
+
+.bidding__input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

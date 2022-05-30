@@ -1,4 +1,4 @@
-/* import React from 'react';
+import React from 'react';
 import './style.css';
 
 // položka v aukci
@@ -11,4 +11,4 @@ export const AuctionLot = () => (
   </div>
 );
 
-export default AuctionLot; */
+export default AuctionLot;
