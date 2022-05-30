@@ -75,18 +75,12 @@
   width: 100%;
 }
 
-.homepage__text {
-  color: var(--text);
-  line-height: 1.25rem;
-}
-
 .box__auctions {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   gap: 2rem;
-  width: 100%;
   aspect-ratio: 1 / 1;
   background-color: var(--green);
   padding: 3rem 2rem 3rem 2rem;
@@ -175,5 +169,9 @@
   .box__text-img {
     width: 50%;
     margin: 5rem;
+  }
+
+  .overlay p {
+    padding: 6rem;
   }
 }
