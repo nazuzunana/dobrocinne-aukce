@@ -1,0 +1,42 @@
+.container__contact {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  padding: 0rem 1rem 5rem 1rem;
+}
+
+.organisation__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.organisation__name p {
+  font-weight: 700;
+}
+
+.author__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+/* RESPONSIVITY */
+
+@media (min-width: 768px) {
+  .container__contact {
+    padding: 2rem 2rem 5rem 2rem;
+  }
+
+  .author__cards {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .author__card {
+    width: 40%;
+  }
+}

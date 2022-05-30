@@ -21,7 +21,7 @@ const Carousel = () => {
           aria-label="předchozí"
           onClick={() => (image === 0 ? setImage(4) : setImage(image - 1))}
         >
-          <i class="arrow right"></i>
+          <i className="arrow right"></i>
         </a>
         <img className="carousel__image" src={images[image]} alt="" />
         <a
@@ -29,7 +29,7 @@ const Carousel = () => {
           aria-label="další"
           onClick={() => (image === 4 ? setImage(0) : setImage(image + 1))}
         >
-          <i class="arrow left"></i>
+          <i className="arrow left"></i>
         </a>
       </div>
     </div>

@@ -1,0 +1,25 @@
+.author__photo {
+  background-image: url('img/zuzana.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.author__name {
+  font-weight: 700;
+}
+
+.author__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .author__photo {
+    width: 50%;
+  }
+}

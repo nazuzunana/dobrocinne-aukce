@@ -117,11 +117,10 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 2rem;
 }
 
 .box__text-img {
-  width: 100%;
+  width: 40%;
   aspect-ratio: 1 / 1;
   background-image: url('../img/logo.png');
   background-position: center;
@@ -137,12 +136,12 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 2rem;
   color: var(--text);
   font-weight: 700;
   top: 0;
   left: 0;
   text-align: center;
+  padding: 2rem 4rem 2rem 4rem;
 }
 
 /* RESPONSIVITY */
@@ -159,6 +158,10 @@
     aspect-ratio: 1 / 1;
   }
 
+  .homepage__text {
+    height: auto;
+  }
+
   .box__auctions {
     display: flex;
     flex-direction: column;
@@ -167,7 +170,7 @@
   }
 
   .box__text-img {
-    width: 50%;
+    width: 30%;
     margin: 5rem;
   }
 
