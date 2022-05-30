@@ -51,15 +51,15 @@ const AuthorCard = ({
       <div className="author__socials">
         <div className="socials__instagram">
           Instagram:{' '}
-          <Link to={instagramUrl} target="_blank">
+          <a href={instagramUrl} target="_blank">
             {instagramUsername}
-          </Link>
+          </a>
         </div>
         <div className="socials__github">
           GitHub:{' '}
-          <Link to={githubUrl} target="_blank">
+          <a href={githubUrl} target="_blank">
             {githubUsername}
-          </Link>
+          </a>
         </div>
       </div>
       <div className="author__description">
