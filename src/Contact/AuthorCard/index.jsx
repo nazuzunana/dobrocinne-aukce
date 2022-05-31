@@ -5,7 +5,7 @@ import './style.css';
 
 export const authors = [
   {
-    photo: '/img/viktoria.png',
+    photo: './img/viktoria.png',
     name: 'Viktória Andraščíková',
     email: 'viktoria.andrascikova@gmail.com',
     phone: 'telefon',
@@ -16,7 +16,7 @@ export const authors = [
     description: 'popis vik',
   },
   {
-    photo: '/img/zuzana.jpg',
+    photo: './img/zuzana.jpg',
     name: 'Zuzana Červínová',
     email: 'zuzankacervinova@gmail.com',
     phone: '+420 774 353 833',

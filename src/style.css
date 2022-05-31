@@ -111,7 +111,7 @@ a {
   }
 
   .container {
-    max-width: 50rem;
+    /* max-width: 50rem; */
   }
 
   .nav {
@@ -160,12 +160,12 @@ a {
 
 @media (min-width: 992px) {
   .container {
-    max-width: 60rem;
+    /* max-width: 60rem; */
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 70rem;
+    /* max-width: 70rem; */
   }
 }
