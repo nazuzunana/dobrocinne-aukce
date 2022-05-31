@@ -1,7 +1,3 @@
-.author__socials a:hover {
-  border-bottom: 1px solid var(--green);
-}
-
 .author__photo {
   /* background-image: url('img/zuzana.jpg');
   background-repeat: no-repeat;
@@ -22,18 +18,37 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .author__photo {
-    width: 50%;
-  }
+.author__socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
+.author__instagram,
+.author__github {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.author__instagram {
+  background-image: url(../icons/instagram.svg);
+}
+
+.author__github {
+  background-image: url(../icons/github.svg);
+}
+
+@media (min-width: 768px) {
   .author__card {
-    width: 40%;
+    width: 30%;
   }
 }
 
 @media (min-width: 992px) {
   .author__card {
-    width: 30%;
+    width: 25%;
   }
 }

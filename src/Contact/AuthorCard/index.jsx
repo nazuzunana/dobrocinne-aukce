@@ -13,7 +13,6 @@ export const authors = [
     instagramUsername: 'viktoradelaville',
     githubUrl: 'https://github.com/ViktoriaAndr',
     githubUsername: 'ViktoriaAndr',
-    description: 'popis vik',
   },
   {
     photo: './img/zuzana.jpg',
@@ -24,7 +23,6 @@ export const authors = [
     instagramUsername: 'nazuzunana',
     githubUrl: 'https://github.com/nazuzunana',
     githubUsername: 'nazuzunana',
-    description: 'popis zuzana',
   },
 ];
 
@@ -48,21 +46,12 @@ const AuthorCard = ({
         <div className="author__phone">{phone}</div>
       </div>
       <div className="author__socials">
-        <div className="socials__instagram">
-          Instagram:{' '}
-          <a href={instagramUrl} target="_blank">
-            {instagramUsername}
-          </a>
-        </div>
-        <div className="socials__github">
-          GitHub:{' '}
-          <a href={githubUrl} target="_blank">
-            {githubUsername}
-          </a>
-        </div>
-      </div>
-      <div className="author__description">
-        <p>{description}</p>
+        <a href={githubUrl} target="_blank">
+          <div className="author__github"></div>
+        </a>
+        <a href={instagramUrl} target="_blank">
+          <div className="author__instagram"></div>
+        </a>
       </div>
     </div>
   );

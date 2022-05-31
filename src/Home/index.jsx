@@ -8,7 +8,7 @@ import imagePristav from './img/Pristav_1.jpg';
 
 // slideshow
 
-const images = [imageJan, imagePristav, imageJan, imagePristav, imageJan];
+const images = [imagePristav, imageJan, imagePristav, imageJan];
 
 const Carousel = () => {
   const [image, setImage] = useState(0);
