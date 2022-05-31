@@ -26,7 +26,7 @@ html {
 
 button {
   letter-spacing: 0.5px;
-  padding: 0.8rem 1rem 0.8rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 5px;
   font-weight: 700;
   transition: border-color 0.5s, background-color 0.5s, color 0.5s;
@@ -128,7 +128,6 @@ a {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    width: 80%;
     gap: 3rem;
     letter-spacing: 0.5px;
   }

@@ -1,8 +1,12 @@
+.author__socials a:hover {
+  border-bottom: 1px solid var(--green);
+}
+
 .author__photo {
-  background-image: url('img/zuzana.jpg');
+  /* background-image: url('img/zuzana.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: contain; */
   width: 100%;
   aspect-ratio: 1 / 1;
 }
@@ -21,5 +25,15 @@
 @media (min-width: 768px) {
   .author__photo {
     width: 50%;
+  }
+
+  .author__card {
+    width: 40%;
+  }
+}
+
+@media (min-width: 992px) {
+  .author__card {
+    width: 30%;
   }
 }

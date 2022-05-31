@@ -19,8 +19,6 @@
 }
 
 .auction__enter {
-  padding: 0.8rem 1rem 0.8rem 1rem;
-  font-weight: 700;
   border: 1px solid var(--green);
   background-color: var(--white);
   color: var(--green);

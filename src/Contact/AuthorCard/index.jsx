@@ -1,30 +1,29 @@
 import React from 'react';
 import './style.css';
-import { Link } from 'react-router-dom';
 
 // kartička s údaji o autorovi
 
 export const authors = [
   {
-    photo: './img/viktoria.png',
+    photo: '/img/viktoria.png',
     name: 'Viktória Andraščíková',
     email: 'viktoria.andrascikova@gmail.com',
     phone: 'telefon',
     instagramUrl: 'https://www.instagram.com/viktoradelaville/',
-    instagramUsername: '@viktoradelaville',
+    instagramUsername: 'viktoradelaville',
     githubUrl: 'https://github.com/ViktoriaAndr',
-    githubUsername: '@ViktoriaAndr',
+    githubUsername: 'ViktoriaAndr',
     description: 'popis vik',
   },
   {
-    photo: './img/zuzana.jpg',
+    photo: '/img/zuzana.jpg',
     name: 'Zuzana Červínová',
     email: 'zuzankacervinova@gmail.com',
     phone: '+420 774 353 833',
     instagramUrl: 'https://www.instagram.com/nazuzunana/',
-    instagramUsername: '@nazuzunana',
+    instagramUsername: 'nazuzunana',
     githubUrl: 'https://github.com/nazuzunana',
-    githubUsername: '@nazuzunana',
+    githubUsername: 'nazuzunana',
     description: 'popis zuzana',
   },
 ];
@@ -42,7 +41,7 @@ const AuthorCard = ({
 }) => {
   return (
     <div className="author__card">
-      <div className="author__photo"></div>
+      <img className="author__photo" src={photo}></img>
       <div className="author__name">{name}</div>
       <div className="author__contact">
         <div className="author__email">{email}</div>
