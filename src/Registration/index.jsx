@@ -13,6 +13,11 @@ const Registration = () => {
   const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [gdprAccepted, setGdprAccepted] = useState(false);
   const [userPassportDate, setUserPassportDate] = useState('');
+  const [userPassport, setUserPassport] = useState('');
+  const [userLand, setUserLand] = useState('');
+  const [userCity, setUserCity] = useState('');
+  const [userPostcode, setUserPostcode] = useState('');
+  const [userStreet, setUserStreet] = useState('');
 
   const isUserNameEmpty = userName.length === 0;
   const isUserLastNameEmpty = userLastName.length === 0;
@@ -203,11 +208,11 @@ const Registration = () => {
             Ulice a číslo popisné:
             <input
               type="text"
-              value={userName}
+              value={userStreet}
               onChange={(event) => {
                 const vstup = event.target.value;
                 console.log(vstup);
-                setUserName(vstup);
+                setUserStreet(vstup);
               }}
             />
           </label>
@@ -215,11 +220,11 @@ const Registration = () => {
             Město:
             <input
               type="text"
-              value={userLastName}
+              value={userCity}
               onChange={(event) => {
                 const vstup1 = event.target.value;
                 console.log(vstup1);
-                setUserLastName(vstup1);
+                setUserCity(vstup1);
               }}
             />
           </label>
@@ -227,11 +232,11 @@ const Registration = () => {
             PSČ:
             <input
               type="number"
-              value={userPhone}
+              value={userPostcode}
               onChange={(event) => {
                 const vstup4 = event.target.value;
                 console.log(vstup4);
-                setUserPhone(vstup4);
+                setUserPostcode(vstup4);
               }}
             />
           </label>
@@ -239,11 +244,11 @@ const Registration = () => {
             Země:
             <input
               type="text"
-              value={userPhone}
+              value={userLand}
               onChange={(event) => {
                 const vstup4 = event.target.value;
                 console.log(vstup4);
-                setUserPhone(vstup4);
+                setUserLand(vstup4);
               }}
             />
           </label>
@@ -259,11 +264,11 @@ const Registration = () => {
             Číslo dokladu*:
             <input
               type="text"
-              value={userName}
+              value={userPassport}
               onChange={(event) => {
                 const vstup = event.target.value;
                 console.log(vstup);
-                setUserName(vstup);
+                setUserPassport(vstup);
               }}
               required
             />
