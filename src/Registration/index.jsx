@@ -10,6 +10,13 @@ const Registration = () => {
   const [userPhone, setUserPhone] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const [newsletterAccepted, setNewsletterAccepted] = useState(false);
+  const [gdprAccepted, setGdprAccepted] = useState(false);
+  const [userPassportDate, setUserPassportDate] = useState('');
+
+  const isUserNameEmpty = userName.length === 0;
+  const isUserLastNameEmpty = userLastName.length === 0;
+  const isUserPhoneEmpty = userPhone.length === 0;
 
   const validateEmail = (e) => {
     const email = e.target.value;
@@ -49,7 +56,7 @@ const Registration = () => {
         <div className="form_container">
           <h4 className="">Přihlašovací údaje</h4>
           <label>
-            <span>E-mail: </span>
+            <span>E-mail*: </span>
             <input type="email" onChange={(e) => validateEmail(e)}></input>{' '}
             <p
               style={{
@@ -60,7 +67,7 @@ const Registration = () => {
             </p>
           </label>
           <label>
-            Heslo:
+            Heslo*:
             <input
               type="password"
               onChange={(e) => validatePassword(e)}
@@ -74,14 +81,14 @@ const Registration = () => {
             </p>
           </label>
           <label>
-            Heslo znovu:
+            Heslo znovu*:
             <input type="password" />
           </label>
         </div>
         <div className="form_container">
           <h4 className="">Osobní údaje</h4>
           <label>
-            Křestní jméno:
+            Křestní jméno*:
             <input
               type="text"
               value={userName}
@@ -90,10 +97,11 @@ const Registration = () => {
                 console.log(vstup);
                 setUserName(vstup);
               }}
+              required
             />
           </label>
           <label>
-            Příjmení:
+            Příjmení*:
             <input
               type="text"
               value={userLastName}
@@ -102,10 +110,11 @@ const Registration = () => {
                 console.log(vstup1);
                 setUserLastName(vstup1);
               }}
+              required
             />
           </label>
           <label>
-            Telefon:
+            Telefon*:
             <input
               type="number"
               value={userPhone}
@@ -114,6 +123,7 @@ const Registration = () => {
                 console.log(vstup4);
                 setUserPhone(vstup4);
               }}
+              required
             />
           </label>
         </div>
@@ -130,6 +140,171 @@ const Registration = () => {
             DIČ: <input type="number" />
           </label>
         </div>
+
+        <div className="form_container">
+          <h4 className="">Fakturační adresa</h4>
+          <label>
+            Ulice a číslo popisné*:
+            <input
+              type="text"
+              value={userName}
+              onChange={(event) => {
+                const vstup = event.target.value;
+                console.log(vstup);
+                setUserName(vstup);
+              }}
+              required
+            />
+          </label>
+          <label>
+            Město*:
+            <input
+              type="text"
+              value={userLastName}
+              onChange={(event) => {
+                const vstup1 = event.target.value;
+                console.log(vstup1);
+                setUserLastName(vstup1);
+              }}
+              required
+            />
+          </label>
+          <label>
+            PSČ*:
+            <input
+              type="number"
+              value={userPhone}
+              onChange={(event) => {
+                const vstup4 = event.target.value;
+                console.log(vstup4);
+                setUserPhone(vstup4);
+              }}
+              required
+            />
+          </label>
+          <label>
+            Země*:
+            <input
+              type="text"
+              value={userPhone}
+              onChange={(event) => {
+                const vstup4 = event.target.value;
+                console.log(vstup4);
+                setUserPhone(vstup4);
+              }}
+              required
+            />
+          </label>
+        </div>
+        <div className="form_container">
+          <h4 className="">Doručovací adresa</h4>
+          <p>vyplňte pouze v případě, že se liší od fakturační adresy</p>
+          <label>
+            Ulice a číslo popisné:
+            <input
+              type="text"
+              value={userName}
+              onChange={(event) => {
+                const vstup = event.target.value;
+                console.log(vstup);
+                setUserName(vstup);
+              }}
+            />
+          </label>
+          <label>
+            Město:
+            <input
+              type="text"
+              value={userLastName}
+              onChange={(event) => {
+                const vstup1 = event.target.value;
+                console.log(vstup1);
+                setUserLastName(vstup1);
+              }}
+            />
+          </label>
+          <label>
+            PSČ:
+            <input
+              type="number"
+              value={userPhone}
+              onChange={(event) => {
+                const vstup4 = event.target.value;
+                console.log(vstup4);
+                setUserPhone(vstup4);
+              }}
+            />
+          </label>
+          <label>
+            Země:
+            <input
+              type="text"
+              value={userPhone}
+              onChange={(event) => {
+                const vstup4 = event.target.value;
+                console.log(vstup4);
+                setUserPhone(vstup4);
+              }}
+            />
+          </label>
+        </div>
+        <div className="form_container">
+          <h4 className="">Ověření totožnosti</h4>
+          <p>
+            Dle dražebního zákona je každý účastník aukce povinen prokázat svoji
+            totožnost, a to prostřednictvím občanského průkazu či cestovního
+            pasu.
+          </p>
+          <label>
+            Číslo dokladu*:
+            <input
+              type="text"
+              value={userName}
+              onChange={(event) => {
+                const vstup = event.target.value;
+                console.log(vstup);
+                setUserName(vstup);
+              }}
+              required
+            />
+          </label>
+          <label>
+            Platnost do*:
+            <input
+              type="text"
+              value={userPassportDate}
+              onChange={(event) => {
+                const vstup1 = event.target.value;
+                console.log(vstup1);
+                setUserPassportDate(vstup1);
+              }}
+              required
+            />
+          </label>
+        </div>
+        <p>* povinné údaje</p>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={newsletterAccepted}
+            onChange={(event) => {
+              setNewsletterAccepted(event.target.checked);
+            }}
+          />
+          Chci dostávat novinky a aktuální informace.{' '}
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={gdprAccepted}
+            onChange={(event) => {
+              setGdprAccepted(event.target.checked);
+            }}
+          />
+          Souhlasím se zpracováním osobních údajů dle zákona č. 101/2000 Sb. o
+          ochraně osobních údajů. <input type="submit" value="Registrovat" />
+        </label>
       </form>
     </div>
   );
@@ -137,5 +312,5 @@ const Registration = () => {
 export default Registration;
 
 /*  <button type="submit" disabled={jeUserNamePrazdne}>
-Registrovat
+Registrovat    required
 </button> */
