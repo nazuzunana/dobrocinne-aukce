@@ -22,10 +22,10 @@ export const lots = [
 export const AuctionLot = ({ name, author, technique, measurements }) => (
   <div className="container__lot">
     <div className="lot__gallery"></div>
-    <div className="lot__name">Název díla: {name}</div>
-    <div className="lot__author">Jméno autora: {author}</div>
-    <div className="lot__technique">Technika: {technique}</div>
-    <div className="lot__measurements">Rozměry: {measurements}</div>
+    <div className="lot__name">{name}</div>
+    <div className="lot__author">{author}</div>
+    <div className="lot__technique">{technique}</div>
+    <div className="lot__measurements">{measurements}</div>
     <Bidding />
   </div>
 );

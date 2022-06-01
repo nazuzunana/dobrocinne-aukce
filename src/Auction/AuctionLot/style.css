@@ -5,3 +5,12 @@
   width: 100%;
   margin-top: 2rem;
 }
+
+.lot__name {
+  font-weight: 700;
+}
+
+.lot__author {
+  font-weight: 700;
+  font-size: large;
+}
