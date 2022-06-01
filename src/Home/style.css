@@ -55,10 +55,12 @@
 
 .left {
   transform: rotate(-45deg);
+  margin-right: 30px;
 }
 
 .right {
   transform: rotate(135deg);
+  margin-left: 30px;
 }
 
 .carousel__next:hover,
@@ -183,5 +185,11 @@
 
   .overlay p {
     padding: 6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .box__text-img {
+    width: 25%;
   }
 }
