@@ -28,9 +28,9 @@ const auctions = [
 const Auction = ({ img, title, description }) => (
   <>
     <section className="container__list">
-      <div>
+      <figure>
         <img className="auction__img" src={img} />
-      </div>
+      </figure>
       <div className="auction__content">
         <h2>{title}</h2>
         <div className="auction__description">{description}</div>

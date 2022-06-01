@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import hammer from './img/hammer.svg';
 
 // přihazování na položku v aukci
 
@@ -9,23 +10,20 @@ export const Bidding = () => {
       <div className="lot__bidding">
         <h4>Název předmětu</h4>
         <p>Vyvolávací cena: 5000 CZK</p>
-        <p>Poslední příhoz:</p>
+        <p>
+          Poslední příhoz:
+          <img className="icon__hammer" src={hammer} />
+        </p>
         <div class="bidding__inputs">
           <div className="bidding__input">
-            <input
-              type="text"
-              id="minbid"
-              name="minimumbid"
-              placeholder="Minimální příhoz 1000 CZK"
-            ></input>
-            <button className="btn_bid">Chci přihodit</button>
+            <button className="btn_bid">1000 CZK</button>
           </div>
           <div className="bidding__input">
             <input
               type="text"
               id="maxbid"
               name="maximumbid"
-              placeholder="Váš maximální příhoz"
+              placeholder="Vlastní částka v CZK"
             ></input>
             <button className="btn_bid">Chci přihodit</button>
           </div>

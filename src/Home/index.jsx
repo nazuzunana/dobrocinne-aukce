@@ -36,6 +36,8 @@ const Carousel = () => {
   );
 };
 
+// k slideshow ešte časovač a figcaption
+
 const Home = () => {
   return (
     <div className="container__homepage">
@@ -79,5 +81,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// Poznámky Javascript: slideshow časovač
