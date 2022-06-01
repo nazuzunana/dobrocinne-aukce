@@ -10,8 +10,8 @@ export const Bidding = () => {
       <div className="lot__bidding">
         <p>Vyvolávací cena: 5000 CZK</p>
         <p>
-          Poslední příhoz:
-          <img className="icon__hammer" src={hammer} />
+          Poslední
+          <img className="icon__hammer" src={hammer} />:
         </p>
         <div class="bidding__inputs">
           <div className="bidding__input">

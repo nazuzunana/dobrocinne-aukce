@@ -5,9 +5,9 @@
   align-items: center;
   padding: 2rem;
   border: 1px solid var(--green);
-  background-color: var(--white);
+  background-color: var(--green);
   border-radius: 5px;
-  color: var(--text);
+  color: var(--white);
   margin: 2rem;
   gap: 0.5rem;
 }
@@ -26,11 +26,16 @@
 }
 
 .btn_bid {
-  border: 1px solid var(--green);
-  color: var(--green);
-  background-color: var(--white);
+  background-color: var(--green);
+  border: 1px solid var(--offwhite);
+  color: var(--offwhite);
 }
 
 .btn_bid:hover {
-  background-color: #417a55;
+  background-color: var(--white);
+  color: var(--green);
+}
+
+.icon__hammer {
+  width: 2rem;
 }
