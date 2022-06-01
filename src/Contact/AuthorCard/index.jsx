@@ -5,7 +5,7 @@ import './style.css';
 
 export const authors = [
   {
-    photo: './img/viktoria.png',
+    photo: 'photo__viktoria',
     name: 'Viktória Andraščíková',
     email: 'viktoria.andrascikova@gmail.com',
     phone: 'telefon',
@@ -15,7 +15,7 @@ export const authors = [
     githubUsername: 'ViktoriaAndr',
   },
   {
-    photo: './img/zuzana.jpg',
+    photo: 'photo__zuzana',
     name: 'Zuzana Červínová',
     email: 'zuzankacervinova@gmail.com',
     phone: '+420 774 353 833',
@@ -39,7 +39,7 @@ const AuthorCard = ({
 }) => {
   return (
     <div className="author__card">
-      <img className="author__photo" src={photo}></img>
+      <div className={photo}></div>
       <div className="author__name">{name}</div>
       <div className="author__contact">
         <div className="author__email">{email}</div>

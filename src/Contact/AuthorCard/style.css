@@ -1,10 +1,18 @@
-.author__photo {
-  /* background-image: url('img/zuzana.jpg');
+.photo__viktoria,
+.photo__zuzana {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; */
+  background-size: contain;
   width: 100%;
   aspect-ratio: 1 / 1;
+}
+
+.photo__viktoria {
+  background-image: url('img/viktoria-bw.png');
+}
+
+.photo__zuzana {
+  background-image: url('img/zuzana-bw.jpg');
 }
 
 .author__name {
