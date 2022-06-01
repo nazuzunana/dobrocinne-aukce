@@ -8,35 +8,19 @@ export const authors = [
     photo: 'photo__viktoria',
     name: 'Viktória Andraščíková',
     email: 'viktoria.andrascikova@gmail.com',
-    phone: 'telefon',
-    instagramUrl: 'https://www.instagram.com/viktoradelaville/',
-    instagramUsername: 'viktoradelaville',
-    githubUrl: 'https://github.com/ViktoriaAndr',
-    githubUsername: 'ViktoriaAndr',
+    phone: '+420 728 637 263',
+    instagram: 'https://www.instagram.com/viktoradelaville/',
   },
   {
     photo: 'photo__zuzana',
     name: 'Zuzana Červínová',
     email: 'zuzankacervinova@gmail.com',
     phone: '+420 774 353 833',
-    instagramUrl: 'https://www.instagram.com/nazuzunana/',
-    instagramUsername: 'nazuzunana',
-    githubUrl: 'https://github.com/nazuzunana',
-    githubUsername: 'nazuzunana',
+    instagram: 'https://www.instagram.com/nazuzunana/',
   },
 ];
 
-const AuthorCard = ({
-  photo,
-  name,
-  email,
-  phone,
-  instagramUrl,
-  instagramUsername,
-  githubUrl,
-  githubUsername,
-  description,
-}) => {
+const AuthorCard = ({ photo, name, email, phone, instagram }) => {
   return (
     <div className="author__card">
       <div className={photo}></div>
@@ -46,10 +30,7 @@ const AuthorCard = ({
         <div className="author__phone">{phone}</div>
       </div>
       <div className="author__socials">
-        <a href={githubUrl} target="_blank">
-          <div className="author__github"></div>
-        </a>
-        <a href={instagramUrl} target="_blank">
+        <a href={instagram} target="_blank">
           <div className="author__instagram"></div>
         </a>
       </div>

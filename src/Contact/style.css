@@ -25,16 +25,16 @@
 .organisation__facebook {
   background-repeat: no-repeat;
   background-size: contain;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .organisation__instagram {
-  background-image: url(./icons/instagram.svg);
+  background-image: url(./icons/instagram.png);
 }
 
 .organisation__facebook {
-  background-image: url(./icons/facebook.svg);
+  background-image: url(./icons/facebook.png);
 }
 
 .organisation__name p {
@@ -44,6 +44,7 @@
 .author__cards {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3rem;
   width: 100%;
 }

@@ -18,7 +18,9 @@ const Contact = () => {
           <p>Česká republika</p>
         </div>
         <div className="organisation__email-phone">
-          <div className="organisation__email">e-mail</div>
+          <div className="organisation__email">
+            <p>info@ngodei.org</p>
+          </div>
           <div className="organisation__phone">
             <p>+420 606 125 203</p>
           </div>
@@ -42,10 +44,7 @@ const Contact = () => {
             name={author.name}
             email={author.email}
             phone={author.phone}
-            instagramUrl={author.instagramUrl}
-            instagramUsername={author.instagramUsername}
-            githubUrl={author.githubUrl}
-            githubUsername={author.githubUsername}
+            instagram={author.instagram}
           />
         ))}
       </div>

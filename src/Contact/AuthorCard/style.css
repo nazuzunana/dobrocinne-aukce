@@ -37,16 +37,16 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .author__instagram {
-  background-image: url(../icons/instagram.svg);
+  background-image: url(../icons/instagram.png);
 }
 
 .author__github {
-  background-image: url(../icons/github.svg);
+  background-image: url(../icons/github.png);
 }
 
 @media (min-width: 768px) {
