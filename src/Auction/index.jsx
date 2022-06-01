@@ -1,7 +1,8 @@
 import React from 'react';
 import './style.css';
-import Bidding from './Bidding';
 import { Timer } from '../Timer';
+import AuctionLot from './AuctionLot';
+import { lots } from './AuctionLot';
 
 // aukce
 
@@ -19,7 +20,17 @@ const Auction = () => (
       </p>
       <Timer />
     </div>
-    <Bidding />
+    <div className="auction__lots">
+      {lots.map((lot) => (
+        <AuctionLot
+          key={lot.name}
+          name={lot.name}
+          author={lot.author}
+          technique={lot.technique}
+          measurements={lot.measurements}
+        />
+      ))}
+    </div>
   </div>
 );
 

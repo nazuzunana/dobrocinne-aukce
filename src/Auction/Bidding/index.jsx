@@ -7,7 +7,6 @@ export const Bidding = () => {
   return (
     <>
       <div className="lot__bidding">
-        <h4>Název předmětu</h4>
         <p>Vyvolávací cena: 5000 CZK</p>
         <p>Poslední příhoz:</p>
         <div class="bidding__inputs">

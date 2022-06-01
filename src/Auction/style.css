@@ -21,8 +21,19 @@
   color: var(--text);
 }
 
+.auction__lots {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 @media (min-width: 768px) {
   .container__auction {
     padding: 2rem 2rem 5rem 2rem;
+  }
+
+  .auction__lots {
+    display: flex;
+    flex-direction: row;
   }
 }
