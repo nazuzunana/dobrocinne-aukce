@@ -7,7 +7,6 @@
 }
 
 .organisation__contact {
-  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
