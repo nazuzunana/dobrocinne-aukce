@@ -55,6 +55,11 @@
   width: 100%;
 }
 
+.step_instructions a:hover {
+  border-bottom: 1px solid var(--green);
+  padding-bottom: 2px;
+}
+
 .how-to-bid__description {
   display: flex;
   flex-direction: column;

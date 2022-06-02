@@ -11,8 +11,11 @@ const HowToBid = () => {
           <div className="how-to-bid__icon form"></div>
           <div className="step_instructions">
             <p>
-              Pro možnost přihazovat na předměty v aukcích si založte
-              uživatelský učet.
+              Pro možnost přihazovat na předměty v aukcích si{' '}
+              <a href="/Registration" target="_blank">
+                založte uživatelský učet
+              </a>{' '}
+              .
             </p>
           </div>
         </div>
@@ -29,8 +32,8 @@ const HowToBid = () => {
           <div className="how-to-bid__icon login"></div>
           <div className="step_instructions">
             <p>
-              Po založení uživatelského účtu a potvrzení registrace se
-              přihlaste.
+              Po založení uživatelského účtu a potvrzení registrace se{' '}
+              <a href="#">přihlaste</a>.
             </p>
           </div>
         </div>
@@ -69,7 +72,7 @@ const HowToBid = () => {
               Vydražené předměty si je po uhrazení faktury možné vyzvednout
               osobně na adrese: Letohradská 711/10, 170 00 Praha 7-Holešovice
               během otevírací doby: Út - Ne: 11:00 - 21:00 či jindy po dohodě na
-              tel: +420 606 125 203 či na e-mail: info@ngodei.org .
+              tel: +420 606 125 203 či na e-mail: info@ngodei.org.
               <br />
               <br />
               Po domluvě lze vydražené předměty zaslat. Výběr dopravce a cena
