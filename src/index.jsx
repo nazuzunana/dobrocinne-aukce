@@ -51,7 +51,17 @@ const App = () => (
     </div>
     <Outlet />
     <div className="footer">
-      <p>Czechitas, Digitální akademie: Web</p>
+      <div className="footer__links">
+        <a href="#">
+          <div className="footer__auction-rules">Aukční řád</div>
+        </a>
+        <a href="#">
+          <div className="footer__privacy-policy">Ochrana osobních údajů</div>
+        </a>
+      </div>
+      <div className="footer__copyright">
+        Czechitas, Digitální akademie: Web
+      </div>
     </div>
   </div>
 );

@@ -32,7 +32,7 @@
 }
 
 .how-to-bid__icon {
-  width: 15%;
+  width: 20%;
   aspect-ratio: 1 / 1;
   background-size: contain;
   background-position: center;
@@ -81,7 +81,7 @@
 
 @media (min-width: 768px) {
   .container__how-to-bid {
-    margin-left: 0;
+    /* margin-left: 0; */
     width: 70%;
     padding: 2rem 2rem 5rem 2rem;
   }
