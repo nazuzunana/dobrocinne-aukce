@@ -24,16 +24,23 @@
 .organisation__facebook {
   background-repeat: no-repeat;
   background-size: contain;
-  width: 2rem;
-  height: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .organisation__instagram {
   background-image: url(./icons/instagram.png);
 }
+.organisation__instagram:hover {
+  background-image: url(./icons/instagram-hover.png);
+}
 
 .organisation__facebook {
   background-image: url(./icons/facebook.png);
+}
+
+.organisation__facebook:hover {
+  background-image: url(./icons/facebook-hover.png);
 }
 
 .organisation__name p {

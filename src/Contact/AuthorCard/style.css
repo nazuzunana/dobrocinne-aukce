@@ -32,21 +32,20 @@
   gap: 1rem;
 }
 
-.author__instagram,
-.author__github {
+.author__instagram {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  width: 2rem;
-  height: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .author__instagram {
   background-image: url(../icons/instagram.png);
 }
 
-.author__github {
-  background-image: url(../icons/github.png);
+.author__instagram:hover {
+  background-image: url(../icons/instagram-hover.png);
 }
 
 @media (min-width: 768px) {
