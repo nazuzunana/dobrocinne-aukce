@@ -20,6 +20,7 @@ const Auction = () => (
       </p>
       <Timer />
     </div>
+    <hr className="horizontal-line" />
     <div className="auction__lots">
       {lots.map((lot) => (
         <AuctionLot

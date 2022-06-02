@@ -35,6 +35,19 @@ const Contact = () => {
           </a>
         </div>
       </div>
+      <hr className="horizontal-line" />
+      <div className="project">
+        <div className="project__name">Dobročinné aukce</div>
+        <div className="project__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+          laudantium dolores ab sint quod quasi alias obcaecati fugit maiores
+          voluptatum voluptatibus minus nemo ea error fuga placeat. Magni,
+          tempore? Ab, repellat qui? Quaerat eum eos fugit earum. Ut, cum ab.
+          Praesentium dolore minus voluptatem at amet earum expedita natus
+          doloribus?
+        </div>
+      </div>
+      <div className="project__authors"> </div>
 
       <div className="author__cards">
         {authors.map((author) => (

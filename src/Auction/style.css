@@ -7,7 +7,6 @@
 }
 
 .auction__intro {
-  border-bottom: 1px solid var(--green);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -19,6 +18,11 @@
 
 .auction__text {
   color: var(--text);
+}
+
+.horizontal-line {
+  border-top: 1px solid var(--green);
+  width: 100%;
 }
 
 .auction__lots {
@@ -35,5 +39,17 @@
   .auction__lots {
     display: flex;
     flex-direction: row;
+  }
+
+  .auction__intro {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .auction__intro {
+    margin: auto;
+    width: 70%;
   }
 }

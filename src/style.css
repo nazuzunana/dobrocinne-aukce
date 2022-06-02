@@ -20,6 +20,10 @@ body,
   letter-spacing: 0.5px;
 }
 
+body {
+  color: var(--text);
+}
+
 html {
   scroll-behavior: smooth;
 }

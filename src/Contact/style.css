@@ -1,5 +1,4 @@
 .container__contact {
-  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -8,11 +7,11 @@
 }
 
 .organisation__contact {
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border-bottom: 1px solid var(--green);
-  padding-bottom: 2rem;
+  width: 100%;
 }
 
 .organisation__socials {
@@ -41,6 +40,23 @@
   font-weight: 700;
 }
 
+.horizontal-line {
+  border-top: 1px solid var(--green);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project__name {
+  font-size: large;
+  font-weight: 700;
+}
+
 .author__cards {
   display: flex;
   flex-direction: column;
@@ -56,8 +72,19 @@
     padding: 2rem 2rem 5rem 2rem;
   }
 
+  .project {
+    margin: auto;
+    width: 80%;
+  }
+
   .author__cards {
     display: flex;
     flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .project {
+    width: 70%;
   }
 }
