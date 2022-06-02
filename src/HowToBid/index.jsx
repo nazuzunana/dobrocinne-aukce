@@ -45,10 +45,37 @@ const HowToBid = () => {
           </div>
           <div className="description__text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit, placeat fuga quos omnis accusamus explicabo
-              voluptate! Quaerat ullam consequatur eveniet nihil magnam! Fugit
-              quos officia molestias dolorum vero eveniet necessitatibus?
+              Nejnižší příhoz k ceně <span className="bold">0-20 Kč</span> je{' '}
+              <span className="bold">1 Kč</span>. <br />
+              Nejnižší příhoz k ceně <span className="bold">
+                20-100 Kč
+              </span> je <span className="bold">20 Kč</span>. <br />
+              Nejnižší příhoz k ceně <span className="bold">
+                100-500 Kč
+              </span> je <span className="bold">50 Kč</span>. <br />
+              Nejnižší příhoz k ceně <span className="bold">500-5 000 Kč</span>
+              je <span className="bold">100 Kč</span>. <br />
+              Nejnižší příhoz k ceně{' '}
+              <span className="bold">5 000-10 000 Kč</span> je{' '}
+              <span className="bold">500 Kč</span>. <br />
+              Nejnižší příhoz k ceně{' '}
+              <span className="bold">10 000-50 000 Kč</span> je{' '}
+              <span className="bold">1 000 Kč</span>. <br />
+              Nejnižší příhoz k ceně{' '}
+              <span className="bold">50 000-100 000 Kč</span> je{' '}
+              <span className="bold">5 000 Kč</span>. <br />
+              Nejnižší příhoz k ceně{' '}
+              <span className="bold">100 000-500 000 Kč</span> je{' '}
+              <span className="bold">10 000 Kč</span>. <br />
+              Nejnižší příhoz k ceně{' '}
+              <span className="bold">500 000-1 000 000 Kč</span> je{' '}
+              <span className="bold">50 000 Kč</span>. <br />
+              Nejnižší příhoz k ceně{' '}
+              <span className="bold">1 000 000-50 000 000 Kč</span> je{' '}
+              <span className="bold">100 000 Kč</span>. <br />
+              Nejnižší příhoz k ceně nad{' '}
+              <span className="bold">50 000 000 Kč</span> je{' '}
+              <span className="bold">200 000 Kč</span>. <br />
             </p>
           </div>
         </div>
