@@ -32,7 +32,8 @@
   gap: 1rem;
 }
 
-.author__instagram {
+.author__instagram,
+.author__linkedin {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

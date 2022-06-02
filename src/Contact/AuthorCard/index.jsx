@@ -20,7 +20,7 @@ export const authors = [
   },
 ];
 
-const AuthorCard = ({ photo, name, email, phone, instagram }) => {
+const AuthorCard = ({ photo, name, email, phone, linkedin, instagram }) => {
   return (
     <div className="author__card">
       <div className={photo}></div>

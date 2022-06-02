@@ -57,6 +57,7 @@ const Contact = () => {
             name={author.name}
             email={author.email}
             phone={author.phone}
+            linkedin={author.linkedin}
             instagram={author.instagram}
           />
         ))}
