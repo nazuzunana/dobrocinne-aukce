@@ -52,7 +52,7 @@
 }
 
 .step_instructions {
-  width: 85%;
+  width: 100%;
 }
 
 .vertical-line {
@@ -63,13 +63,18 @@
 
 @media (min-width: 768px) {
   .container__how-to-bid {
-    width: 60%;
+    margin-left: 0;
+    width: 70%;
     padding: 2rem 2rem 5rem 2rem;
   }
 }
 
 @media (min-width: 992px) {
   .container__how-to-bid {
-    width: 50%;
+    width: 60%;
+  }
+
+  .how-to-bid__icon {
+    width: 12%;
   }
 }
