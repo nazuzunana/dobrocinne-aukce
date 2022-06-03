@@ -86,9 +86,13 @@
 
 @media (min-width: 768px) {
   .container__how-to-bid {
-    /* margin-left: 0; */
+    margin: 0 auto;
     width: 70%;
     padding: 2rem 2rem 5rem 2rem;
+  }
+
+  .how-to-bid__step:hover {
+    transform: scale(1.15);
   }
 }
 

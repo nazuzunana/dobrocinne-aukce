@@ -60,7 +60,7 @@ const App = () => (
         </a>
       </div>
       <div className="footer__copyright">
-        Czechitas, Digitální akademie: Web
+        © 2022, Vytvořeno pro Czechitas, Digitální akademie: Web
       </div>
     </div>
   </div>

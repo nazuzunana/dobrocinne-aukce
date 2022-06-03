@@ -308,7 +308,7 @@ const Registration = () => {
             }}
           />
           Souhlasím se zpracováním osobních údajů dle zákona č. 101/2000 Sb. o
-          ochraně osobních údajů. <input type="submit" value="Registrovat" />
+          ochraně osobních údajů. <input type="submit" value="Vytvořit účet" />
         </label>
       </form>
     </div>
