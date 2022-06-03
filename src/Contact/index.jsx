@@ -47,8 +47,7 @@ const Contact = () => {
           doloribus?
         </div>
       </div>
-      <div className="project__authors"> </div>
-
+      <div className="project__authors"></div>
       <div className="author__cards">
         {authors.map((author) => (
           <AuthorCard

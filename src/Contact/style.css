@@ -78,7 +78,8 @@
     padding: 2rem 2rem 5rem 2rem;
   }
 
-  .project {
+  .project,
+  .organisation__contact {
     margin: auto;
     width: 80%;
   }
@@ -90,7 +91,8 @@
 }
 
 @media (min-width: 992px) {
-  .project {
+  .project,
+  .organisation__contact {
     width: 70%;
   }
 }

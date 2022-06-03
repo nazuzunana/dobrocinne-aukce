@@ -8,7 +8,7 @@
   background-color: var(--green);
   border-radius: 5px;
   color: var(--white);
-  margin: 2rem;
+  width: 70%;
   gap: 0.5rem;
 }
 
@@ -38,4 +38,10 @@
 
 .icon__hammer {
   width: 2rem;
+}
+
+@media (min-width: 768px) {
+  .lot__bidding {
+    width: 90%;
+  }
 }

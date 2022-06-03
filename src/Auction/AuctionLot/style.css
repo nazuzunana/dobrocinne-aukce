@@ -1,9 +1,49 @@
 .container__lot {
   border: 1px solid var(--green);
   border-radius: 5px;
-  padding: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   width: 100%;
-  margin-top: 2rem;
+}
+
+.auction__lot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lot__gallery,
+.lot__description {
+  width: 100%;
+}
+
+.img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 50vh;
+}
+
+.img__prirodopis {
+  background-image: url('../lots/prirodopis.jpg');
+}
+
+.img__pristav {
+  background-image: url('../lots/pristav.jpg');
+}
+
+.img__valecne-utrpeni {
+  background-image: url('../lots/valecne-utrpeni.jpg');
+}
+
+.img__prazsky-sen {
+  background-image: url('../lots/prazsky-sen.jpg');
+}
+
+.horizontal-line {
+  border-top: 1px solid var(--green);
 }
 
 .lot__name {

@@ -2,23 +2,19 @@ import React from 'react';
 import './style.css';
 import { Timer } from '../Timer';
 import { Link } from 'react-router-dom';
-import imageRadojcic from './img/Radojcic_zahrada_1.jpg';
-import imageSen from './img/prazsky_sen.jpg';
 
 // seznam aukcí
 
-const auctions = [
+export const auctionListAuctions = [
   {
-    // img: imageRadojcic,
-    img: 'img__radojcic',
+    img: 'auction__img img__pristav',
     title: 'Aukce na pomoc Ukrajině',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis. Počet předmětů: 2',
   },
 
   {
-    // img: imageSen,
-    img: 'img__sen',
+    img: 'auction__img img__zahrada',
     title: 'Aukce na podporu psího útulku',
     description:
       'LOREM ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis. Počet předmětů: 2',
@@ -27,7 +23,7 @@ const auctions = [
 
 // hore je pole/zoznam aukcií, tam sa pridáva ďalšia aukcia
 
-const Auction = ({ img, title, description }) => (
+const AuctionListAuction = ({ img, title, description }) => (
   <>
     <section className="auction-list__auction">
       <div className={img}></div>
@@ -45,11 +41,12 @@ const Auction = ({ img, title, description }) => (
 
 const AuctionList = () => (
   <div className="container__auction-list">
-    {auctions.map((auction) => (
-      <Auction
-        img={auction.img}
-        title={auction.title}
-        description={auction.description}
+    {auctionListAuctions.map((auctionListAuction) => (
+      <AuctionListAuction
+        key={auctionListAuction.title}
+        img={auctionListAuction.img}
+        title={auctionListAuction.title}
+        description={auctionListAuction.description}
       />
     ))}
   </div>
