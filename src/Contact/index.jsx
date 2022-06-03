@@ -41,27 +41,27 @@ const Contact = () => {
       <div className="project">
         <div className="project__name">Dobročinné aukce</div>
         <div className="project__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-          laudantium dolores ab sint quod quasi alias obcaecati fugit maiores
-          voluptatum voluptatibus minus nemo ea error fuga placeat. Magni,
-          tempore? Ab, repellat qui? Quaerat eum eos fugit earum. Ut, cum ab.
-          Praesentium dolore minus voluptatem at amet earum expedita natus
-          doloribus?
+          Projekt vznikl v rámci digitální akademie webového vývoje neziskové
+          organizace Czechitas v létě 2022. Rády bychom po skončení akademie web
+          nadále rozvíjely a darovaly dobročinné neziskové organizaci, která by
+          jej užívala pro vlastní účely. <br />
+          <br />V případě otázek týkajících se webu nás neváhejte kontaktovat.
         </div>
       </div>
-      <div className="project__authors"></div>
-      <div className="author__cards">
-        {authors.map((author) => (
-          <AuthorCard
-            key={author.name}
-            photo={author.photo}
-            name={author.name}
-            email={author.email}
-            phone={author.phone}
-            linkedin={author.linkedin}
-            instagram={author.instagram}
-          />
-        ))}
+      <div className="project__authors">
+        <div className="author__cards">
+          {authors.map((author) => (
+            <AuthorCard
+              key={author.name}
+              photo={author.photo}
+              name={author.name}
+              email={author.email}
+              phone={author.phone}
+              linkedin={author.linkedin}
+              instagram={author.instagram}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
