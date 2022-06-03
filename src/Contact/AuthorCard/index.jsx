@@ -5,7 +5,7 @@ import './style.css';
 
 export const authors = [
   {
-    photo: 'photo__viktoria',
+    photo: 'author__photo photo__viktoria',
     name: 'Viktória Andraščíková',
     email: 'viktoria.andrascikova@gmail.com',
     phone: '+420 728 637 263',
@@ -13,7 +13,7 @@ export const authors = [
     instagram: 'https://www.instagram.com/viktoradelaville/',
   },
   {
-    photo: 'photo__zuzana',
+    photo: 'author__photo photo__zuzana',
     name: 'Zuzana Červínová',
     email: 'zuzankacervinova@gmail.com',
     phone: '+420 774 353 833',

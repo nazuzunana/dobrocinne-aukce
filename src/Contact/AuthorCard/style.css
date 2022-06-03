@@ -1,5 +1,4 @@
-.photo__viktoria,
-.photo__zuzana {
+.author__photo {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -58,12 +57,6 @@
 
 @media (min-width: 768px) {
   .author__card {
-    width: 30%;
-  }
-}
-
-@media (min-width: 992px) {
-  .author__card {
-    width: 25%;
+    width: 50%;
   }
 }

@@ -93,7 +93,8 @@
   }
 
   .project,
-  .organisation__contact {
+  .organisation__contact,
+  .project__authors {
     margin: auto;
     width: 80%;
   }
@@ -101,12 +102,14 @@
   .author__cards {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 @media (min-width: 992px) {
   .project,
-  .organisation__contact {
+  .organisation__contact,
+  .project__authors {
     width: 60%;
   }
 }
