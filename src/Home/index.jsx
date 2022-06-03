@@ -16,6 +16,12 @@ const Carousel = () => {
   return (
     <div className="box__slideshow">
       <div className="carousel__media">
+        <div class="name_box">
+          <div class="slideshow_name">
+            Here comes the name of the masterpiece
+          </div>
+        </div>
+
         <a
           className="carousel__previous"
           aria-label="předchozí"

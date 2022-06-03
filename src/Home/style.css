@@ -68,6 +68,22 @@
   background-color: rgb(211, 211, 211, 0.3);
 }
 
+.slideshow_name {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.name_box {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  background-color: var(--grey);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  opacity: 0.8;
+}
+
 /* pridat fade k obrazkom po kliknuti dalsieho */
 /* .fade {
   animation-name: fade;
