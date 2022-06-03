@@ -46,7 +46,7 @@
   background-image: url('../lots/zahrada.jpg');
 }
 
-.img__deti {
+.img__hra {
   background-image: url('../lots/hra.jpg');
 }
 
@@ -62,11 +62,11 @@
   border-top: 1px solid var(--green);
 }
 
-.lot__name {
-  font-weight: 700;
-}
-
 .lot__author {
   font-weight: 700;
   font-size: large;
+}
+
+.lot__name {
+  font-weight: 700;
 }

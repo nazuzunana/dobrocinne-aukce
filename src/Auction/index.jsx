@@ -39,7 +39,9 @@ const Auction = ({ title, description }) => (
           key={lot.name}
           img={lot.img}
           name={lot.name}
+          date={lot.date}
           author={lot.author}
+          signature={lot.signature}
           technique={lot.technique}
           measurements={lot.measurements}
         />
