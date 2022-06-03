@@ -72,6 +72,7 @@
     margin: auto;
     padding: 2rem 2rem 5rem 2rem;
     gap: 4rem;
+    width: 80%;
   }
 
   .auction-list__auction {
@@ -79,7 +80,7 @@
   }
 
   .auction__img {
-    width: 70%;
+    width: 100%;
   }
 
   .auction__copy {
@@ -88,20 +89,28 @@
 
   .auction__content {
     height: 100%;
-    width: 50%;
+    width: 60%;
     margin-left: 18rem;
     margin-top: -12rem;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .container__auction-list {
-    width: 80%;
+    width: 60%;
   }
 
   .auction__content {
     height: 100%;
-    width: 40%;
+    width: 80%;
+    margin-left: 22rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .auction__content {
+    height: 100%;
+    width: 60%;
     margin-left: 22rem;
   }
 }
