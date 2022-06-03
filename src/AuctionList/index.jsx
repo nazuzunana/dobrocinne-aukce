@@ -30,10 +30,7 @@ const auctions = [
 const Auction = ({ img, title, description }) => (
   <>
     <section className="auction-list__auction">
-      <figure>
-        {/* <img className="auction__img" src={img} /> */}
-        <div className={img}></div>
-      </figure>
+      <div className={img}></div>
       <div className="auction__content">
         <h2>{title}</h2>
         <div className="auction__description">{description}</div>

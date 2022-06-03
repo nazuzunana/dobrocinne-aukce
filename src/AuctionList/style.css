@@ -70,16 +70,18 @@
 
 @media (min-width: 768px) {
   .container__auction-list {
-    flex-direction: row;
-    gap: 4rem;
-    width: 90%;
+    margin: auto;
     padding: 2rem 2rem 5rem 2rem;
+    gap: 4rem;
+  }
+
+  .auction-list__auction {
+    align-items: center;
   }
 
   .img__radojcic,
   .img__sen {
-    width: 100%;
-    height: 50vh;
+    width: 70%;
   }
 
   .auction__copy {
@@ -87,16 +89,21 @@
   }
 
   .auction__content {
-    margin-left: 0;
     height: 100%;
-    width: 100%;
-    margin-left: 1.7rem;
-    margin-top: -10rem;
+    width: 50%;
+    margin-left: 18rem;
+    margin-top: -12rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container__auction-list {
+    width: 80%;
   }
 
-  @media (min-width: 992px) {
-    .container__auction-list {
-      width: 80%;
-    }
+  .auction__content {
+    height: 100%;
+    width: 40%;
+    margin-left: 22rem;
   }
 }
