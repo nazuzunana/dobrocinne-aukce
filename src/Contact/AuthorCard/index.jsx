@@ -9,6 +9,7 @@ export const authors = [
     name: 'Viktória Andraščíková',
     email: 'viktoria.andrascikova@gmail.com',
     phone: '+420 728 637 263',
+    linkedin: 'https://www.linkedin.com/in/viktoriaandrascikova/',
     instagram: 'https://www.instagram.com/viktoradelaville/',
   },
   {
@@ -16,6 +17,7 @@ export const authors = [
     name: 'Zuzana Červínová',
     email: 'zuzankacervinova@gmail.com',
     phone: '+420 774 353 833',
+    linkedin: 'https://www.linkedin.com/in/zuzanacervinova/',
     instagram: 'https://www.instagram.com/nazuzunana/',
   },
 ];
@@ -30,8 +32,11 @@ const AuthorCard = ({ photo, name, email, phone, linkedin, instagram }) => {
         <div className="author__phone">{phone}</div>
       </div>
       <div className="author__socials">
+        <a href={linkedin} target="_blank">
+          <div className="author__social author__linkedin"></div>
+        </a>
         <a href={instagram} target="_blank">
-          <div className="author__instagram"></div>
+          <div className="author__social author__instagram"></div>
         </a>
       </div>
     </div>

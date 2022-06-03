@@ -32,8 +32,7 @@
   gap: 1rem;
 }
 
-.author__instagram,
-.author__linkedin {
+.author__social {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -47,6 +46,14 @@
 
 .author__instagram:hover {
   background-image: url(../icons/instagram-hover.png);
+}
+
+.author__linkedin {
+  background-image: url(../icons/linkedin.png);
+}
+
+.author__linkedin:hover {
+  background-image: url(../icons/linkedin-hover.png);
 }
 
 @media (min-width: 768px) {

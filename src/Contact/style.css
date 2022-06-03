@@ -19,8 +19,7 @@
   gap: 1rem;
 }
 
-.organisation__instagram,
-.organisation__facebook {
+.socials__link {
   background-repeat: no-repeat;
   background-size: contain;
   width: 1.7rem;
@@ -40,6 +39,14 @@
 
 .organisation__facebook:hover {
   background-image: url(./icons/facebook-hover.png);
+}
+
+.organisation__website {
+  background-image: url(./icons/web.png);
+}
+
+.organisation__website:hover {
+  background-image: url(./icons/web-hover.png);
 }
 
 .organisation__name p {

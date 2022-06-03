@@ -27,11 +27,13 @@ const Contact = () => {
         </div>
         <div className="organisation__socials">
           <a href="https://www.facebook.com/ngodei.org/" target="_blank">
-            <div className="organisation__facebook"></div>
+            <div className="socials__link organisation__facebook"></div>
           </a>
-
           <a href="https://www.instagram.com/ngodeiorg" target="_blank">
-            <div className="organisation__instagram"></div>
+            <div className="socials__link organisation__instagram"></div>
+          </a>
+          <a href="https://www.ngodei.org/" target="_blank">
+            <div className="socials__link organisation__website"></div>
           </a>
         </div>
       </div>
