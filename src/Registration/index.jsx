@@ -55,13 +55,13 @@ const Registration = () => {
 
   return (
     <div className="container__registration">
+      <h3 className="registration__title">Registrace</h3>
       <div className="">Už u nás máte účet? Přihlaste se tady.</div>
       <form onSubmit={handleSubmit}>
-        <h3 className="registration__title">Registrace</h3>
-        <div className="form_container">
-          <h4 className="">Přihlašovací údaje</h4>
+        <div className="form__container">
+          <div className="form__title">Přihlašovací údaje</div>
           <label>
-            <span>E-mail*: </span>
+            <span className="form__label">E-mail*: </span>
             <input type="email" onChange={(e) => validateEmail(e)}></input>{' '}
             <p
               style={{
@@ -72,7 +72,7 @@ const Registration = () => {
             </p>
           </label>
           <label>
-            Heslo*:
+            <span className="form__label">Heslo*: </span>
             <input
               type="password"
               onChange={(e) => validatePassword(e)}
@@ -86,14 +86,14 @@ const Registration = () => {
             </p>
           </label>
           <label>
-            Heslo znovu*:
+            <span className="form__label">Heslo znovu*: </span>
             <input type="password" />
           </label>
         </div>
-        <div className="form_container">
-          <h4 className="">Osobní údaje</h4>
+        <div className="form__container">
+          <div className="form__title">Osobní údaje</div>
           <label>
-            Křestní jméno*:
+            <span className="form__label">Křestní jméno*: </span>
             <input
               type="text"
               value={userName}
@@ -106,7 +106,7 @@ const Registration = () => {
             />
           </label>
           <label>
-            Příjmení*:
+            <span className="form__label">Příjmení*: </span>
             <input
               type="text"
               value={userLastName}
@@ -119,7 +119,7 @@ const Registration = () => {
             />
           </label>
           <label>
-            Telefon*:
+            <span className="form__label">Telefon*: </span>
             <input
               type="number"
               value={userPhone}
@@ -133,23 +133,24 @@ const Registration = () => {
           </label>
         </div>
 
-        <div className="form_container">
-          <h4>Organizace</h4>
+        <div className="form__container">
+          <div className="form__title">Organizace</div>
           <label>
-            Název organizace: <input type="text" />
+            <span className="form__label">Název organizace: </span>{' '}
+            <input type="text" />
           </label>
           <label>
-            IČO: <input type="number" />
+            <span className="form__label">IČO: </span> <input type="number" />
           </label>
           <label>
-            DIČ: <input type="number" />
+            <span className="form__label">DIČ: </span> <input type="number" />
           </label>
         </div>
 
-        <div className="form_container">
-          <h4 className="">Fakturační adresa</h4>
+        <div className="form__container">
+          <div className="form__title">Fakturační adresa</div>
           <label>
-            Ulice a číslo popisné*:
+            <span className="form__label">Ulice a číslo popisné*: </span>
             <input
               type="text"
               value={userName}
@@ -162,7 +163,7 @@ const Registration = () => {
             />
           </label>
           <label>
-            Město*:
+            <span className="form__label">Město*: </span>
             <input
               type="text"
               value={userLastName}
@@ -175,7 +176,7 @@ const Registration = () => {
             />
           </label>
           <label>
-            PSČ*:
+            <span className="form__label">PSČ*:</span>
             <input
               type="number"
               value={userPhone}
@@ -188,7 +189,7 @@ const Registration = () => {
             />
           </label>
           <label>
-            Země*:
+            <span className="form__label">Země*: </span>
             <input
               type="text"
               value={userPhone}
@@ -201,11 +202,11 @@ const Registration = () => {
             />
           </label>
         </div>
-        <div className="form_container">
-          <h4 className="">Doručovací adresa</h4>
-          <p>vyplňte pouze v případě, že se liší od fakturační adresy</p>
+        <div className="form__container">
+          <div className="form__title">Doručovací adresa</div>
+          <p>(vyplňte pouze v případě, že se liší od fakturační adresy)</p>
           <label>
-            Ulice a číslo popisné:
+            <span className="form__label">Ulice a číslo popisné: </span>
             <input
               type="text"
               value={userStreet}
@@ -217,7 +218,7 @@ const Registration = () => {
             />
           </label>
           <label>
-            Město:
+            <span className="form__label">Město: </span>
             <input
               type="text"
               value={userCity}
@@ -229,7 +230,7 @@ const Registration = () => {
             />
           </label>
           <label>
-            PSČ:
+            <span className="form__label">PSČ: </span>
             <input
               type="number"
               value={userPostcode}
@@ -253,15 +254,15 @@ const Registration = () => {
             />
           </label>
         </div>
-        <div className="form_container">
-          <h4 className="">Ověření totožnosti</h4>
+        <div className="form__container">
+          <div className="form__title">Ověření totožnosti</div>
           <p>
             Dle dražebního zákona je každý účastník aukce povinen prokázat svoji
             totožnost, a to prostřednictvím občanského průkazu či cestovního
             pasu.
           </p>
           <label>
-            Číslo dokladu*:
+            <span className="form__label">Číslo dokladu*: </span>
             <input
               type="text"
               value={userPassport}
@@ -274,7 +275,7 @@ const Registration = () => {
             />
           </label>
           <label>
-            Platnost do*:
+            <span className="form__label">Platnost do*: </span>
             <input
               type="text"
               value={userPassportDate}
@@ -288,28 +289,36 @@ const Registration = () => {
           </label>
         </div>
         <p>* povinné údaje</p>
-
-        <label>
-          <input
-            type="checkbox"
-            checked={newsletterAccepted}
-            onChange={(event) => {
-              setNewsletterAccepted(event.target.checked);
-            }}
-          />
-          Chci dostávat novinky a aktuální informace.{' '}
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={gdprAccepted}
-            onChange={(event) => {
-              setGdprAccepted(event.target.checked);
-            }}
-          />
-          Souhlasím se zpracováním osobních údajů dle zákona č. 101/2000 Sb. o
-          ochraně osobních údajů. <input type="submit" value="Vytvořit účet" />
-        </label>
+        <div className="form__checkboxes">
+          <label className="form__checkbox">
+            <input
+              type="checkbox"
+              checked={newsletterAccepted}
+              onChange={(event) => {
+                setNewsletterAccepted(event.target.checked);
+              }}
+            />
+            <span className="form__checkbox-text">
+              Chci dostávat novinky a aktuální informace.{' '}
+            </span>
+          </label>
+          <label className="form__checkbox">
+            <input
+              type="checkbox"
+              checked={gdprAccepted}
+              onChange={(event) => {
+                setGdprAccepted(event.target.checked);
+              }}
+            />
+            <span className="form__checkbox-text">
+              Souhlasím se zpracováním osobních údajů dle zákona č. 101/2000 Sb.
+              o ochraně osobních údajů.{' '}
+            </span>
+          </label>
+        </div>
+        <button type="submit" className="registration__btn">
+          Vytvořit účet
+        </button>
       </form>
     </div>
   );
