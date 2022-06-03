@@ -65,8 +65,7 @@ const App = () => (
         </div>
       </div>
       <div className="footer__copyright">
-        &copy; 2022 | Viktória Andraščíková, Zuzana Červínová | Czechitas,
-        Digitální akademie: Web
+        © 2022, Vytvořeno pro Czechitas, Digitální akademie: Web
       </div>
     </div>
   </div>

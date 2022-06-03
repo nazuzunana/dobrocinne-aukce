@@ -63,8 +63,8 @@
   }
 
   .auction__img {
-    width: 550px;
-    height: 450px;
+    width: 600px;
+    height: 500px;
     margin: 40px;
   }
 
@@ -75,8 +75,8 @@
   .auction__content {
     height: 360px;
     width: 450px;
-    margin-left: -10rem;
-    margin-top: 5.4rem;
+    margin-left: -12rem;
+    margin-top: 7rem;
     padding: 30px 40px 30px 40px;
   }
 
