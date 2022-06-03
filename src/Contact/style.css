@@ -19,12 +19,12 @@
   gap: 1rem;
 }
 
-.socials__link {
+/* .socials__icons {
   background-repeat: no-repeat;
   background-size: contain;
   width: 1.5rem;
   height: 1.5rem;
-}
+} */
 
 .organisation__instagram {
   background-image: url(./icons/instagram.png);

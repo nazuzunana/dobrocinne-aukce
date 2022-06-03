@@ -47,6 +47,14 @@ a {
   color: var(--green);
 }
 
+.socials__icons {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .nav__link:hover {
   border-bottom: 1px solid var(--green);
 }

@@ -33,10 +33,10 @@ const AuthorCard = ({ photo, name, email, phone, linkedin, instagram }) => {
       </div>
       <div className="author__socials">
         <a href={linkedin} target="_blank">
-          <div className="author__social author__linkedin"></div>
+          <div className="socials__icons author__linkedin"></div>
         </a>
         <a href={instagram} target="_blank">
-          <div className="author__social author__instagram"></div>
+          <div className="socials__icons author__instagram"></div>
         </a>
       </div>
     </div>
