@@ -90,6 +90,10 @@ a {
   height: 5rem;
 }
 
+.organisation__logo:hover {
+  opacity: 0.5;
+}
+
 .nav__content {
   display: flex;
   flex-direction: column;
