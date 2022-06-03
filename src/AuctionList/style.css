@@ -7,24 +7,38 @@
   --text: #494545;
 }
 
-.container__list {
+.container__auction-list {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid var(--green);
+  gap: 1rem;
+  padding: 1rem 1rem 5rem 1rem;
 }
 
-.auction__img {
+.auction-list__auction {
+  display: flex;
+  flex-direction: column;
+}
+
+.img__radojcic,
+.img__sen {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 50vh;
-  background-size: cover;
-  margin-top: 40px;
+}
+.img__radojcic {
+  background-image: url('img/Radojcic_zahrada_1.jpg');
+}
+
+.img__sen {
+  background-image: url('img/prazsky_sen.jpg');
 }
 
 .auction__enter {
   border: 1px solid var(--green);
   background-color: var(--white);
   color: var(--green);
-  margin-bottom: -45px;
 }
 
 .auction__copy {
@@ -41,9 +55,8 @@
   border: 1px solid var(--green);
   background-color: var(--white);
   border-radius: 5px;
-  margin-top: -10px;
   color: var(--text);
-  margin-bottom: 40px;
+  margin-top: -4rem;
 }
 
 .auction__description {
@@ -55,17 +68,18 @@
 
 /* RESPONSIVITY */
 
-/* responzivitu je třeba upravit, odsazení, šířky a výšky zlobí */
-
 @media (min-width: 768px) {
-  .container__list {
+  .container__auction-list {
     flex-direction: row;
+    gap: 4rem;
+    width: 90%;
+    padding: 2rem 2rem 5rem 2rem;
   }
 
-  .auction__img {
-    width: 600px;
-    height: 500px;
-    margin: 40px;
+  .img__radojcic,
+  .img__sen {
+    width: 100%;
+    height: 50vh;
   }
 
   .auction__copy {
@@ -73,16 +87,16 @@
   }
 
   .auction__content {
-    height: 360px;
-    width: 450px;
-    margin-left: -12rem;
-    margin-top: 7rem;
-    padding: 30px 40px 30px 40px;
+    margin-left: 0;
+    height: 100%;
+    width: 100%;
+    margin-left: 1.7rem;
+    margin-top: -10rem;
   }
 
-  @media (min-width: 1200px) {
-    .auctions {
-      width: 70%;
+  @media (min-width: 992px) {
+    .container__auction-list {
+      width: 80%;
     }
   }
 }
