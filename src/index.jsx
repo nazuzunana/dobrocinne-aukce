@@ -52,15 +52,21 @@ const App = () => (
     <Outlet />
     <div className="footer">
       <div className="footer__links">
-        <a href="#">
-          <div className="footer__auction-rules">Aukční řád</div>
-        </a>
-        <a href="#">
-          <div className="footer__privacy-policy">Ochrana osobních údajů</div>
-        </a>
+        <div className="footer__auction-rules">
+          <a href="#">Aukční řád</a>
+        </div>
+
+        <div className="footer__privacy-policy">
+          <a href="#">Ochrana osobních údajů</a>
+        </div>
+
+        <div className="footer__contact">
+          <Link to="/Contact">Kontakt</Link>
+        </div>
       </div>
       <div className="footer__copyright">
-        Czechitas, Digitální akademie: Web
+        &copy; 2022 | Viktória Andraščíková, Zuzana Červínová | Czechitas,
+        Digitální akademie: Web
       </div>
     </div>
   </div>
