@@ -14,7 +14,7 @@ export const lots = [
   },
   {
     img: 'img img__prirodopis',
-    name: 'Přírodopis (23/35)',
+    name: 'Přírodopis',
     author: 'Jan Švankmajer (*1934)',
     technique: 'litografie',
     measurements: '79x57,5 cm',
@@ -33,6 +33,38 @@ export const lots = [
     author: 'Miroslav Houšť (*1954)',
     technique: 'barevná litografie na papíře',
     measurements: '51x48,5 cm',
+  },
+
+  {
+    img: 'img img__zahrada',
+    name: 'Zahrada',
+    author: 'George Radojčič (*1987)',
+    technique: 'akryl na plátně',
+    measurements: '59x60 cm',
+  },
+
+  {
+    img: 'img img__deti',
+    name: 'Hra',
+    author: 'Kurt Gebauer (*1941)',
+    technique: 'litografie',
+    measurements: '72,5x51 cm',
+  },
+
+  {
+    img: 'img img__zeny',
+    name: 'Ženy',
+    author: 'Irena Trefilová (*1967)',
+    technique: 'olej na plátně',
+    measurements: '68x100 cm',
+  },
+
+  {
+    img: 'img img__osvetlovani',
+    name: 'Osvětlování XIII.',
+    author: 'Ondřej Michálek ( 	*1947)',
+    technique: 'linoryt',
+    measurements: ' 	61,5x79 cm',
   },
 ];
 

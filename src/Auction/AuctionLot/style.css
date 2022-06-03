@@ -42,6 +42,22 @@
   background-image: url('../lots/prazsky-sen.jpg');
 }
 
+.img__zahrada {
+  background-image: url('../lots/zahrada.jpg');
+}
+
+.img__deti {
+  background-image: url('../lots/hra.jpg');
+}
+
+.img__zeny {
+  background-image: url('../lots/zeny.jpg');
+}
+
+.img__osvetlovani {
+  background-image: url('../lots/osvetlovani.jpg');
+}
+
 .horizontal-line {
   border-top: 1px solid var(--green);
 }
