@@ -128,7 +128,7 @@ const Registration = () => {
   return registered ? (
     <div className="container__registration">
       <h2>Děkujeme za registraci!</h2>
-      <p>Teď můžete vesele přihazovat na našich aukcích.</p>
+      <p>Nyní můžete vesele přihazovat na našich aukcích.</p>
     </div>
   ) : (
     <div className="container__registration">
