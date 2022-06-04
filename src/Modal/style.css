@@ -12,20 +12,20 @@
 }
 
 .modalContainer {
-  width: 400px;
-  height: 400px;
+  min-width: 25rem;
+  height: auto;
   border-radius: 5px;
   background-color: var(--offwhite);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 2rem;
+  gap: 1rem;
 }
 
 .modalContainer .title {
   display: inline-block;
   text-align: center;
-  margin-top: 10px;
 }
 
 .titleCloseBtn {
@@ -47,6 +47,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 1.5rem;
 }
 
 .modalContainer .footer {
@@ -54,16 +55,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.modalContainer button {
-  background-color: var(--green);
-  border: 1px solid var(--offwhite);
-  color: var(--offwhite);
-  width: 150px;
-  height: 45px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
