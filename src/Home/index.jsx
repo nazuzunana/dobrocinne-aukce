@@ -9,7 +9,7 @@ import { ref, getDownloadURL } from 'firebase/storage';
 // slideshow
 
 const Carousel = () => {
-  const [slide, setSlide] = useState(0);
+  const [slideIndex, setSlideIndex] = useState(0);
   const [slides, setSlides] = useState([]);
   const mounted = useRef();
 
@@ -28,7 +28,7 @@ const Carousel = () => {
         setSlides(slides);
 
         mounted.current = setInterval(() => {
-          setSlide((prev) => {
+          setSlideIndex((prev) => {
             if (prev === slides.length - 1) {
               return 0;
             }
@@ -43,33 +43,44 @@ const Carousel = () => {
         clearInterval(mounted.current);
       }
     };
-  }, [mounted, setSlide]);
+  }, [mounted, setSlideIndex]);
 
   return slides.length > 0 ? (
     <div className="box__slideshow">
       <div className="carousel__media">
         <div className="name_box">
-          <div className="slideshow_name">{slides[slide].title}</div>
+          <div className="slideshow_name">{slides[slideIndex].title}</div>
         </div>
 
         <span
           className="carousel__previous"
           aria-label="předchozí"
-          onClick={() => (slide === 0 ? setSlide(3) : setSlide(slide - 1))}
+          onClick={() =>
+            slideIndex === 0 ? setSlideIndex(3) : setSlideIndex(slideIndex - 1)
+          }
         >
           <i className="arrow right"></i>
         </span>
-        <Link to={`/Auction/${slides[slide].auction.id}`}>
-          <img
-            className="carousel__image"
-            src={slides[slide].url}
-            alt={slides[slide].title}
-          />
+        <Link
+          className="carousel__image-container"
+          to={`/Auction/${slides[slideIndex].auction.id}`}
+        >
+          {slides.map((slide, index) => (
+            <img
+              className="carousel__image"
+              key={slide.id}
+              src={slide.url}
+              alt={slide.title}
+              style={{ opacity: slideIndex === index ? 1 : 0 }}
+            />
+          ))}
         </Link>
         <span
           className="carousel__next"
           aria-label="další"
-          onClick={() => (slide === 3 ? setSlide(0) : setSlide(slide + 1))}
+          onClick={() =>
+            slideIndex === 3 ? setSlideIndex(0) : setSlideIndex(slideIndex + 1)
+          }
         >
           <i className="arrow left"></i>
         </span>
