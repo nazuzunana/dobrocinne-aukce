@@ -90,10 +90,6 @@
     width: 70%;
     padding: 2rem 2rem 5rem 2rem;
   }
-
-  .how-to-bid__step:hover {
-    transform: scale(1.05);
-  }
 }
 
 @media (min-width: 992px) {
