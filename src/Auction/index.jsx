@@ -3,6 +3,7 @@ import './style.css';
 import { Timer } from '../Timer';
 import AuctionLot from './AuctionLot';
 import { lots } from './AuctionLot';
+import { useParams } from 'react-router-dom';
 
 // aukce
 
@@ -20,34 +21,38 @@ export const auctions = [
   },
 ];
 
-const Auction = ({ title, description }) => (
-  <div className="container__auction">
-    <div className="auction__intro">
-      <h2 className="auction__name">Název aukce</h2>
-      <p className="auction__text">
-        Popis účelu: Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Eveniet dolore dignissimos, officia exercitationem quibusdam vel odio
-        numquam nam cumque. Minima illum iusto ducimus optio molestias,
-        recusandae earum dolores pariatur doloremque.
-      </p>
-      <Timer />
+const Auction = ({ title, description }) => {
+  const { id } = useParams();
+  console.log(id);
+  return (
+    <div className="container__auction">
+      <div className="auction__intro">
+        <h2 className="auction__name">Název aukce</h2>
+        <p className="auction__text">
+          Popis účelu: Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Eveniet dolore dignissimos, officia exercitationem quibusdam vel odio
+          numquam nam cumque. Minima illum iusto ducimus optio molestias,
+          recusandae earum dolores pariatur doloremque.
+        </p>
+        <Timer />
+      </div>
+      <hr className="horizontal-line" />
+      <div className="auction__lots">
+        {lots.map((lot) => (
+          <AuctionLot
+            key={lot.name}
+            img={lot.img}
+            name={lot.name}
+            date={lot.date}
+            author={lot.author}
+            signature={lot.signature}
+            technique={lot.technique}
+            measurements={lot.measurements}
+          />
+        ))}
+      </div>
     </div>
-    <hr className="horizontal-line" />
-    <div className="auction__lots">
-      {lots.map((lot) => (
-        <AuctionLot
-          key={lot.name}
-          img={lot.img}
-          name={lot.name}
-          date={lot.date}
-          author={lot.author}
-          signature={lot.signature}
-          technique={lot.technique}
-          measurements={lot.measurements}
-        />
-      ))}
-    </div>
-  </div>
-);
+  );
+};
 
 export default Auction;

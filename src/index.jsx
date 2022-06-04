@@ -80,7 +80,7 @@ createRoot(document.querySelector('#app')).render(
         <Route path="Contact" element={<Contact />} />
         <Route path="AuctionList" element={<AuctionList />} />
         <Route path="Registration" element={<Registration />} />
-        <Route path="Auction" element={<Auction />} />
+        <Route path="Auction/:id" element={<Auction />} />
         <Route
           path="*"
           element={

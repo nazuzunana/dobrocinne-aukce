@@ -13,7 +13,7 @@ export const Bidding = () => {
           Poslední
           <img className="icon__hammer" src={hammer} />:
         </p>
-        <div class="bidding__inputs">
+        <div className="bidding__inputs">
           <div className="bidding__input">
             <button className="btn_bid">1000 CZK</button>
           </div>

@@ -8,23 +8,7 @@ import { ref, getDownloadURL } from 'firebase/storage';
 
 // seznam aukcí
 
-// export const auctionListAuctions = [
-//   {
-//     img: 'auction__img img__pristav',
-//     title: 'Aukce na pomoc Ukrajině',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis. Počet předmětů: 2',
-//   },
-
-//   {
-//     img: 'auction__img img__zahrada',
-//     title: 'Aukce na podporu psího útulku',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis. Počet předmětů: 2',
-//   },
-// ];
-
-const AuctionListAuction = ({ img, title, description }) => {
+const AuctionListAuction = ({ id, img, title, description }) => {
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
@@ -44,7 +28,7 @@ const AuctionListAuction = ({ img, title, description }) => {
           <h2>{title}</h2>
           <div className="auction__description">{description}</div>
           <Timer />
-          <Link to="/Auction">
+          <Link to={`/Auction/${id}`}>
             <button className="auction__enter">Přejít do aukce</button>
           </Link>
         </div>
@@ -73,6 +57,7 @@ const AuctionList = () => {
       {auctionListAuctions.map((auctionListAuction) => (
         <AuctionListAuction
           key={auctionListAuction.id}
+          id={auctionListAuction.id}
           img={auctionListAuction.img}
           title={auctionListAuction.title}
           description={auctionListAuction.description}
@@ -83,5 +68,3 @@ const AuctionList = () => {
 };
 
 export default AuctionList;
-
-//poprosím nezasahovať do tohto kódu, trval mi extrémne dlho
