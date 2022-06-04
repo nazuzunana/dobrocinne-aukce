@@ -28,18 +28,6 @@
   text-align: center;
 }
 
-.titleCloseBtn {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.titleCloseBtn p {
-  background-color: none;
-  border: none;
-  cursor: pointer;
-  color: var(--green);
-}
-
 .modalContainer .body {
   flex: 50%;
   display: flex;
@@ -55,4 +43,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.close {
+  align-self: flex-end;
+  height: calc(1.7rem + 1px);
+  color: var(--green);
+}
+
+a:hover,
+.close:hover {
+  border-bottom: 1px solid var(--green);
+  padding-bottom: 2px;
+  cursor: pointer;
 }
