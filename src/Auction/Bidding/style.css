@@ -10,6 +10,13 @@
   color: var(--white);
   width: 70%;
   gap: 0.5rem;
+  text-align: center;
+}
+
+.bidding__starting-price,
+.bidding__current-price {
+  font-weight: 700;
+  font-size: larger;
 }
 
 .bidding__input {

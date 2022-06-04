@@ -47,6 +47,7 @@ const Auction = () => {
             signature={lot.signature}
             technique={lot.technique}
             measurements={lot.measurements}
+            startingPrice={lot.startingPrice}
           />
         ))}
       </div>

@@ -14,6 +14,7 @@ export const AuctionLot = ({
   signature,
   technique,
   measurements,
+  startingPrice,
 }) => {
   const [imageUrl, setImageUrl] = useState('');
 
@@ -41,7 +42,7 @@ export const AuctionLot = ({
           <div className="lot__technique">{technique}</div>
           <div className="lot__measurements">{measurements}</div>
         </div>
-        <Bidding />
+        <Bidding startingPrice={startingPrice} />
       </div>
     </div>
   );
