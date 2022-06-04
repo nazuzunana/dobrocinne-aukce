@@ -18,6 +18,10 @@ const Registration = () => {
   const [userCity, setUserCity] = useState('');
   const [userPostcode, setUserPostcode] = useState('');
   const [userStreet, setUserStreet] = useState('');
+  const [invoiceStreet, setInvoiceStreet] = useState('');
+  const [invoiceCity, setInvoiceCity] = useState('');
+  const [invoicePsc, setInvoicePsc] = useState('');
+  const [invoiceCountry, setInvoiceCountry] = useState('');
 
   const isUserNameEmpty = userName.length === 0;
   const isUserLastNameEmpty = userLastName.length === 0;
@@ -111,9 +115,9 @@ const Registration = () => {
               type="text"
               value={userLastName}
               onChange={(event) => {
-                const vstup1 = event.target.value;
-                console.log(vstup1);
-                setUserLastName(vstup1);
+                const vstup = event.target.value;
+                console.log(vstup);
+                setUserLastName(vstup);
               }}
               required
             />
@@ -153,11 +157,11 @@ const Registration = () => {
             <span className="form__label">Ulice a číslo popisné*: </span>
             <input
               type="text"
-              value={userName}
+              value={invoiceStreet}
               onChange={(event) => {
                 const vstup = event.target.value;
                 console.log(vstup);
-                setUserName(vstup);
+                setInvoiceStreet(vstup);
               }}
               required
             />
@@ -166,11 +170,11 @@ const Registration = () => {
             <span className="form__label">Město*: </span>
             <input
               type="text"
-              value={userLastName}
+              value={invoiceCity}
               onChange={(event) => {
                 const vstup1 = event.target.value;
                 console.log(vstup1);
-                setUserLastName(vstup1);
+                setInvoiceCity(vstup1);
               }}
               required
             />
@@ -179,11 +183,11 @@ const Registration = () => {
             <span className="form__label">PSČ*:</span>
             <input
               type="number"
-              value={userPhone}
+              value={invoicePsc}
               onChange={(event) => {
-                const vstup4 = event.target.value;
-                console.log(vstup4);
-                setUserPhone(vstup4);
+                const vstup = event.target.value;
+                console.log(vstup);
+                setInvoicePsc(vstup);
               }}
               required
             />
@@ -192,11 +196,11 @@ const Registration = () => {
             <span className="form__label">Země*: </span>
             <input
               type="text"
-              value={userPhone}
+              value={invoiceCountry}
               onChange={(event) => {
                 const vstup4 = event.target.value;
                 console.log(vstup4);
-                setUserPhone(vstup4);
+                setInvoiceCountry(vstup4);
               }}
               required
             />
@@ -324,7 +328,3 @@ const Registration = () => {
   );
 };
 export default Registration;
-
-/*  <button type="submit" disabled={jeUserNamePrazdne}>
-Registrovat    required
-</button> */
