@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import imageJan from './img/Jan_Svankmajer_prirodopis_1.jpg';
@@ -8,10 +8,45 @@ import imagePristav from './img/Pristav_1.jpg';
 
 // slideshow
 
-const images = [imagePristav, imageJan, imagePristav, imageJan];
+const imagesTest = [imagePristav, imageJan, imagePristav, imageJan];
 
 const Carousel = () => {
   const [image, setImage] = useState(0);
+  const [images, setImages] = useState(() => imagesTest);
+  const mounted = useRef();
+
+  useEffect(() => {
+    mounted.current = setInterval(() => {
+      setImage((prev) => {
+        console.log('Update image');
+        if (prev === images.length - 1) {
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 3000);
+
+    return () => {
+      if (mounted.current) {
+        clearInterval(mounted.current);
+      }
+    };
+  }, []);
+
+  // useEffect(() => {
+  //   changeColor();
+  // });
+
+  // function flashText() {
+  //   return image === 0 ? image[setImage(3)] : setImage(image - 1);
+  // }
+
+  // function changeColor() {
+  //   // check if already an interval has been set up
+  //   if (!image) {
+  //     setImage(setTimeout(flashText, 10));
+  //   }
+  // }
 
   return (
     <div className="box__slideshow">
@@ -25,15 +60,20 @@ const Carousel = () => {
         <a
           className="carousel__previous"
           aria-label="předchozí"
-          onClick={() => (image === 0 ? setImage(4) : setImage(image - 1))}
+          onClick={() => (image === 0 ? setImage(3) : setImage(image - 1))}
         >
           <i className="arrow right"></i>
         </a>
-        <img className="carousel__image" src={images[image]} alt="" />
+        <img
+          className="carousel__image"
+          src={images[image]}
+          alt=""
+          style={{ backgroundColor: image % 2 !== 0 ? 'red' : 'green' }}
+        />
         <a
           className="carousel__next"
           aria-label="další"
-          onClick={() => (image === 4 ? setImage(0) : setImage(image + 1))}
+          onClick={() => (image === 3 ? setImage(0) : setImage(image + 1))}
         >
           <i className="arrow left"></i>
         </a>
