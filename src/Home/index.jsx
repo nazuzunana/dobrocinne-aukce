@@ -1,66 +1,81 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
-import imageJan from './img/Jan_Svankmajer_prirodopis_1.jpg';
-import imagePristav from './img/Pristav_1.jpg';
-import imageUtrpeni from '../Auction/lots/valecne-utrpeni.jpg';
-import imageSen from '../Auction/lots/prazsky-sen.jpg';
-// domovská stránka
+import { collection, getDocs } from 'firebase/firestore';
+import { db, storage } from '../firebase';
+import { ref, getDownloadURL } from 'firebase/storage';
 
+// domovská stránka
 // slideshow
 
-const imagesTest = [imagePristav, imageJan, imageUtrpeni, imageSen];
-
 const Carousel = () => {
-  const [image, setImage] = useState(0);
-  const [images, setImages] = useState(() => imagesTest);
+  const [slide, setSlide] = useState(0);
+  const [slides, setSlides] = useState([]);
   const mounted = useRef();
 
   useEffect(() => {
-    mounted.current = setInterval(() => {
-      setImage((prev) => {
-        console.log('Update image');
-        if (prev === images.length - 1) {
-          return 0;
-        }
-        return prev + 1;
+    getDocs(collection(db, 'slideshow')).then((querySnapshot) => {
+      const slides = [];
+
+      querySnapshot.forEach((doc) => {
+        slides.push({ id: doc.id, ...doc.data() });
       });
-    }, 3000);
+
+      Promise.all(
+        slides.map((slide) => getDownloadURL(ref(storage, slide.img))),
+      ).then((urls) => {
+        slides.forEach((slide, index) => (slide.url = urls[index]));
+        setSlides(slides);
+
+        mounted.current = setInterval(() => {
+          setSlide((prev) => {
+            if (prev === slides.length - 1) {
+              return 0;
+            }
+            return prev + 1;
+          });
+        }, 7000);
+      });
+    });
 
     return () => {
       if (mounted.current) {
         clearInterval(mounted.current);
       }
     };
-  }, []);
+  }, [mounted, setSlide]);
 
-  return (
+  return slides.length > 0 ? (
     <div className="box__slideshow">
       <div className="carousel__media">
-        <div class="name_box">
-          <div class="slideshow_name">
-            Here comes the name of the masterpiece
-          </div>
+        <div className="name_box">
+          <div className="slideshow_name">{slides[slide].title}</div>
         </div>
 
-        <a
+        <span
           className="carousel__previous"
           aria-label="předchozí"
-          onClick={() => (image === 0 ? setImage(3) : setImage(image - 1))}
+          onClick={() => (slide === 0 ? setSlide(3) : setSlide(slide - 1))}
         >
           <i className="arrow right"></i>
-        </a>
-        <img className="carousel__image" src={images[image]} alt="" />
-        <a
+        </span>
+        <Link to={`/Auction/${slides[slide].auction.id}`}>
+          <img
+            className="carousel__image"
+            src={slides[slide].url}
+            alt={slides[slide].title}
+          />
+        </Link>
+        <span
           className="carousel__next"
           aria-label="další"
-          onClick={() => (image === 3 ? setImage(0) : setImage(image + 1))}
+          onClick={() => (slide === 3 ? setSlide(0) : setSlide(slide + 1))}
         >
           <i className="arrow left"></i>
-        </a>
+        </span>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 // k slideshow ešte časovač a figcaption
