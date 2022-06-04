@@ -133,7 +133,6 @@ const Registration = () => {
   ) : (
     <div className="container__registration">
       <h3 className="registration__title">Registrace</h3>
-      <div className="">Už u nás máte účet? Přihlaste se tady.</div>
       <form onSubmit={handleSubmit}>
         <div className="form__container">
           <div className="form__title">Přihlašovací údaje</div>
