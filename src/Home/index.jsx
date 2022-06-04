@@ -50,12 +50,7 @@ const Carousel = () => {
         >
           <i className="arrow right"></i>
         </a>
-        <img
-          className="carousel__image"
-          src={images[image]}
-          alt=""
-          style={{ backgroundColor: image % 2 !== 0 ? 'red' : 'green' }}
-        />
+        <img className="carousel__image" src={images[image]} alt="" />
         <a
           className="carousel__next"
           aria-label="další"
@@ -70,46 +65,44 @@ const Carousel = () => {
 
 // k slideshow ešte časovač a figcaption
 
-const Home = () => {
-  return (
-    <div className="container__homepage">
-      <div className="homepage__box">
-        <div className="box__auctions">
-          <div className="box__auctions-text">
-            <p>
-              Dobročinných sbírek jsme viděly mnoho, také uměleckých aukčních
-              domů a aukčních portálů, a tak jsme tyto dvě činnosti spojily.
-              Chyběl nám aukční web, jenž by spojoval příjemné s užitečným:
-              někdo má hodně a nestrádá, když daruje. Někdo si rád udělá radost
-              a zároveň radost přinese někomu, kdo to opravdu potřebuje.
-              <br />
-              <br />
-              Pojďte si s námi něco hezkého pořídit!
-            </p>
-          </div>
-          <div className="box__auctions__button">
-            <Link to="/AuctionList">
-              <button className="button__auctions">Seznam aukcí</button>
-            </Link>
-          </div>
+const Home = () => (
+  <div className="container__homepage">
+    <div className="homepage__box">
+      <div className="box__auctions">
+        <div className="box__auctions-text">
+          <p>
+            Dobročinných sbírek jsme viděly mnoho, také uměleckých aukčních domů
+            a aukčních portálů, a tak jsme tyto dvě činnosti spojily. Chyběl nám
+            aukční web, jenž by spojoval příjemné s užitečným: někdo má hodně a
+            nestrádá, když daruje. Někdo si rád udělá radost a zároveň radost
+            přinese někomu, kdo to opravdu potřebuje.
+            <br />
+            <br />
+            Pojďte si s námi něco hezkého pořídit!
+          </p>
         </div>
-        <Carousel className="box__slideshow" />
+        <div className="box__auctions__button">
+          <Link to="/AuctionList">
+            <button className="button__auctions">Seznam aukcí</button>
+          </Link>
+        </div>
       </div>
-      <div className="homepage__text">
-        <div className="box__text-img">
-          <div className="overlay">
-            <p>
-              NGO DEI (我地) je nezisková organizace se sídlem v Praze, kterou
-              založila skupina Čechů a Hongkongců. Znaky 我地 znamenají v
-              kantonštině „my“ nebo „moje země“. Iniciály DEI znamenají v
-              anglickém překladu Diversity, Equality, and Inclusion
-              (rozmanitost, rovnost a začlenění).
-            </p>
-          </div>
+      <Carousel className="box__slideshow" />
+    </div>
+    <div className="homepage__text">
+      <div className="box__text-img">
+        <div className="overlay">
+          <p>
+            NGO DEI (我地) je nezisková organizace se sídlem v Praze, kterou
+            založila skupina Čechů a Hongkongců. Znaky 我地 znamenají v
+            kantonštině „my“ nebo „moje země“. Iniciály DEI znamenají v
+            anglickém překladu Diversity, Equality, and Inclusion (rozmanitost,
+            rovnost a začlenění).
+          </p>
         </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default Home;
