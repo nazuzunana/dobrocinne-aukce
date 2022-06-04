@@ -10,6 +10,9 @@ const Registration = () => {
   const [userName, setUserName] = useState('');
   const [userLastName, setUserLastName] = useState('');
   const [userPhone, setUserPhone] = useState('');
+  const [organisation, setOrganisation] = useState('');
+  const [ico, setIco] = useState('');
+  const [dic, setDic] = useState('');
   const [invoiceStreet, setInvoiceStreet] = useState('');
   const [invoiceCity, setInvoiceCity] = useState('');
   const [invoicePsc, setInvoicePsc] = useState('');
@@ -141,13 +144,39 @@ const Registration = () => {
           <div className="form__title">Organizace</div>
           <label>
             <span className="form__label">Název organizace: </span>{' '}
-            <input type="text" />
+            <input
+              type="text"
+              value={organisation}
+              onChange={(event) => {
+                const vstup = event.target.value;
+                console.log(vstup);
+                setOrganisation(vstup);
+              }}
+            />
           </label>
           <label>
-            <span className="form__label">IČO: </span> <input type="number" />
+            <span className="form__label">IČO: </span>{' '}
+            <input
+              type="number"
+              value={ico}
+              onChange={(event) => {
+                const vstup = event.target.value;
+                console.log(vstup);
+                setIco(vstup);
+              }}
+            />
           </label>
           <label>
-            <span className="form__label">DIČ: </span> <input type="number" />
+            <span className="form__label">DIČ: </span>{' '}
+            <input
+              type="number"
+              value={dic}
+              onChange={(event) => {
+                const vstup = event.target.value;
+                console.log(vstup);
+                setDic(vstup);
+              }}
+            />
           </label>
         </div>
 
