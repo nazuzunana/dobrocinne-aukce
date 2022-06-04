@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './style.css';
 import validator from 'validator';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
+import { doc, setDoc } from 'firebase/firestore';
 
 // registrační formulář
 
@@ -32,10 +33,6 @@ const Registration = () => {
 
   const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [gdprAccepted, setGdprAccepted] = useState(false);
-
-  const isUserNameEmpty = userName.length === 0;
-  const isUserLastNameEmpty = userLastName.length === 0;
-  const isUserPhoneEmpty = userPhone.length === 0;
 
   const validateEmail = (e) => {
     const email = e.target.value;
@@ -99,6 +96,27 @@ const Registration = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
+          setDoc(doc(db, 'users', user.uid), {
+            email,
+            userName,
+            userLastName,
+            userPhone,
+            organisation,
+            ico,
+            dic,
+            invoiceStreet,
+            invoiceCity,
+            invoicePsc,
+            invoiceCountry,
+            userLand,
+            userCity,
+            userPostcode,
+            userStreet,
+            userPassportDate,
+            userPassport,
+            newsletterAccepted,
+            gdprAccepted,
+          });
         },
       );
     }
@@ -169,7 +187,6 @@ const Registration = () => {
               value={userName}
               onChange={(event) => {
                 const vstup = event.target.value;
-                console.log(vstup);
                 setUserName(vstup);
               }}
               required
@@ -182,7 +199,6 @@ const Registration = () => {
               value={userLastName}
               onChange={(event) => {
                 const vstup = event.target.value;
-                console.log(vstup);
                 setUserLastName(vstup);
               }}
               required
@@ -195,7 +211,6 @@ const Registration = () => {
               value={userPhone}
               onChange={(event) => {
                 const vstup4 = event.target.value;
-                console.log(vstup4);
                 setUserPhone(vstup4);
               }}
               required
@@ -212,7 +227,6 @@ const Registration = () => {
               value={organisation}
               onChange={(event) => {
                 const vstup = event.target.value;
-                console.log(vstup);
                 setOrganisation(vstup);
               }}
             />
@@ -224,7 +238,6 @@ const Registration = () => {
               value={ico}
               onChange={(event) => {
                 const vstup = event.target.value;
-                console.log(vstup);
                 setIco(vstup);
               }}
             />
@@ -236,7 +249,6 @@ const Registration = () => {
               value={dic}
               onChange={(event) => {
                 const vstup = event.target.value;
-                console.log(vstup);
                 setDic(vstup);
               }}
             />
@@ -252,7 +264,6 @@ const Registration = () => {
               value={invoiceStreet}
               onChange={(event) => {
                 const vstup = event.target.value;
-                console.log(vstup);
                 setInvoiceStreet(vstup);
               }}
               required
@@ -265,7 +276,6 @@ const Registration = () => {
               value={invoiceCity}
               onChange={(event) => {
                 const vstup1 = event.target.value;
-                console.log(vstup1);
                 setInvoiceCity(vstup1);
               }}
               required
@@ -278,7 +288,6 @@ const Registration = () => {
               value={invoicePsc}
               onChange={(event) => {
                 const vstup = event.target.value;
-                console.log(vstup);
                 setInvoicePsc(vstup);
               }}
               required
@@ -291,7 +300,6 @@ const Registration = () => {
               value={invoiceCountry}
               onChange={(event) => {
                 const vstup4 = event.target.value;
-                console.log(vstup4);
                 setInvoiceCountry(vstup4);
               }}
               required
@@ -308,7 +316,6 @@ const Registration = () => {
               value={userStreet}
               onChange={(event) => {
                 const vstup = event.target.value;
-                console.log(vstup);
                 setUserStreet(vstup);
               }}
             />
@@ -320,7 +327,6 @@ const Registration = () => {
               value={userCity}
               onChange={(event) => {
                 const vstup1 = event.target.value;
-                console.log(vstup1);
                 setUserCity(vstup1);
               }}
             />
@@ -332,7 +338,6 @@ const Registration = () => {
               value={userPostcode}
               onChange={(event) => {
                 const vstup4 = event.target.value;
-                console.log(vstup4);
                 setUserPostcode(vstup4);
               }}
             />
@@ -344,7 +349,6 @@ const Registration = () => {
               value={userLand}
               onChange={(event) => {
                 const vstup4 = event.target.value;
-                console.log(vstup4);
                 setUserLand(vstup4);
               }}
             />
@@ -364,7 +368,6 @@ const Registration = () => {
               value={userPassport}
               onChange={(event) => {
                 const vstup = event.target.value;
-                console.log(vstup);
                 setUserPassport(vstup);
               }}
               required
@@ -377,7 +380,6 @@ const Registration = () => {
               value={userPassportDate}
               onChange={(event) => {
                 const vstup1 = event.target.value;
-                console.log(vstup1);
                 setUserPassportDate(vstup1);
               }}
               required
