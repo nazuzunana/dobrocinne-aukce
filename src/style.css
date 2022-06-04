@@ -68,8 +68,11 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 2rem;
-  /* border-bottom: 1px solid var(--grey); */
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--offwhite);
 }
 
 .container {
@@ -87,8 +90,8 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .organisation__logo:hover {
@@ -155,6 +158,11 @@ a {
     gap: 1rem;
     width: 100%;
     padding: 1rem 2rem 1rem 2rem;
+  }
+
+  .organisation__logo {
+    width: 5rem;
+    height: 5rem;
   }
 
   .nav__content {
