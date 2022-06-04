@@ -7,6 +7,10 @@ import validator from 'validator';
 const Registration = () => {
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const [passwordAgainError, setPasswordAgainError] = useState('');
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [userName, setUserName] = useState('');
   const [userLastName, setUserLastName] = useState('');
   const [userPhone, setUserPhone] = useState('');
@@ -23,6 +27,7 @@ const Registration = () => {
   const [userStreet, setUserStreet] = useState('');
   const [userPassportDate, setUserPassportDate] = useState('');
   const [userPassport, setUserPassport] = useState('');
+
   const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [gdprAccepted, setGdprAccepted] = useState(false);
 
@@ -37,6 +42,7 @@ const Registration = () => {
 
     if (validator.isEmail(email)) {
       setEmailError('');
+      setEmail(email);
     } else {
       setEmailError('zadejte platný e-mail');
     }
@@ -47,17 +53,49 @@ const Registration = () => {
   const validatePassword = (e) => {
     const password = e.target.value;
 
-    if (validator.isStrongPassword(password)) {
+    if (
+      validator.isStrongPassword(password, {
+        minLength: 8,
+        minLowercase: 1,
+        minUppercase: 0,
+        minNumbers: 1,
+        minSymbols: 1,
+        returnScore: false,
+        pointsPerUnique: 1,
+        pointsPerRepeat: 0.5,
+        pointsForContainingLower: 10,
+        pointsForContainingUpper: 10,
+        pointsForContainingNumber: 10,
+        pointsForContainingSymbol: 10,
+      })
+    ) {
       setPasswordError('silné heslo');
+      setPassword(password);
     } else {
-      passwordError('není dostatečně silné heslo');
+      setPasswordError(
+        'Heslo musí obsahovat aspoň 8 znaků a jeden speciální znak.',
+      );
+    }
+  };
+
+  const validatePasswordAgain = (e) => {
+    const passwordAgain = e.target.value;
+
+    if (password !== passwordAgain) {
+      setPasswordAgainError('Hesla nejsou totožná.');
     }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(`Uživatel „${userName}“ se chce zaregistrovat.`);
+    if (
+      emailError === '' &&
+      passwordError === '' &&
+      passwordAgainError === ''
+    ) {
+      console.log('okáčko');
+    }
   };
 
   return (
@@ -69,7 +107,12 @@ const Registration = () => {
           <div className="form__title">Přihlašovací údaje</div>
           <label>
             <span className="form__label">E-mail*: </span>
-            <input type="email" onChange={(e) => validateEmail(e)}></input>{' '}
+            <input
+              type="email"
+              onBlur={(e) => validateEmail(e)}
+              onFocus={() => setEmailError('')}
+              required
+            ></input>{' '}
             <p
               style={{
                 color: 'red',
@@ -83,6 +126,8 @@ const Registration = () => {
             <input
               type="password"
               onChange={(e) => validatePassword(e)}
+              onFocus={() => setPasswordError('')}
+              required
             ></input>{' '}
             <p
               style={{
@@ -94,7 +139,19 @@ const Registration = () => {
           </label>
           <label>
             <span className="form__label">Heslo znovu*: </span>
-            <input type="password" />
+            <input
+              type="password"
+              onChange={(e) => validatePasswordAgain(e)}
+              onFocus={() => setPasswordAgainError('')}
+              required
+            />
+            <p
+              style={{
+                color: 'red',
+              }}
+            >
+              {passwordAgainError}
+            </p>
           </label>
         </div>
         <div className="form__container">
