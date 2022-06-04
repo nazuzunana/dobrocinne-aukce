@@ -64,3 +64,6 @@ ehthumbs_vista.db
 
 # Windows folder config file
 [Dd]esktop.ini
+
+# Firebase
+src/firebase/config.js
