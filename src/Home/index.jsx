@@ -21,6 +21,8 @@ const Carousel = () => {
         slides.push({ id: doc.id, ...doc.data() });
       });
 
+      slides.reverse();
+
       Promise.all(
         slides.map((slide) => getDownloadURL(ref(storage, slide.img))),
       ).then((urls) => {
@@ -56,7 +58,9 @@ const Carousel = () => {
           className="carousel__previous"
           aria-label="předchozí"
           onClick={() =>
-            slideIndex === 0 ? setSlideIndex(3) : setSlideIndex(slideIndex - 1)
+            slideIndex === 0
+              ? setSlideIndex(slides.length - 1)
+              : setSlideIndex(slideIndex - 1)
           }
         >
           <i className="arrow right"></i>
@@ -79,7 +83,9 @@ const Carousel = () => {
           className="carousel__next"
           aria-label="další"
           onClick={() =>
-            slideIndex === 3 ? setSlideIndex(0) : setSlideIndex(slideIndex + 1)
+            slideIndex === slides.length - 1
+              ? setSlideIndex(0)
+              : setSlideIndex(slideIndex + 1)
           }
         >
           <i className="arrow left"></i>
