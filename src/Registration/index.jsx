@@ -48,8 +48,6 @@ const Registration = () => {
     }
   };
 
-  //validator hesla - nefunkčný?
-
   const validatePassword = (e) => {
     const password = e.target.value;
 
@@ -69,7 +67,7 @@ const Registration = () => {
         pointsForContainingSymbol: 10,
       })
     ) {
-      setPasswordError('silné heslo');
+      setPasswordError('');
       setPassword(password);
     } else {
       setPasswordError(
@@ -185,7 +183,7 @@ const Registration = () => {
           <label>
             <span className="form__label">Telefon*: </span>
             <input
-              type="number"
+              type="tel"
               value={userPhone}
               onChange={(event) => {
                 const vstup4 = event.target.value;
@@ -214,7 +212,7 @@ const Registration = () => {
           <label>
             <span className="form__label">IČO: </span>{' '}
             <input
-              type="number"
+              type="text"
               value={ico}
               onChange={(event) => {
                 const vstup = event.target.value;
@@ -226,7 +224,7 @@ const Registration = () => {
           <label>
             <span className="form__label">DIČ: </span>{' '}
             <input
-              type="number"
+              type="text"
               value={dic}
               onChange={(event) => {
                 const vstup = event.target.value;
@@ -268,7 +266,7 @@ const Registration = () => {
           <label>
             <span className="form__label">PSČ*:</span>
             <input
-              type="number"
+              type="text"
               value={invoicePsc}
               onChange={(event) => {
                 const vstup = event.target.value;
@@ -322,7 +320,7 @@ const Registration = () => {
           <label>
             <span className="form__label">PSČ: </span>
             <input
-              type="number"
+              type="text"
               value={userPostcode}
               onChange={(event) => {
                 const vstup4 = event.target.value;
@@ -367,7 +365,7 @@ const Registration = () => {
           <label>
             <span className="form__label">Platnost do*: </span>
             <input
-              type="text"
+              type="date"
               value={userPassportDate}
               onChange={(event) => {
                 const vstup1 = event.target.value;

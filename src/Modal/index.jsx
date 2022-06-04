@@ -24,7 +24,7 @@ function Modal({ setOpenModal }) {
           <label>
             <span>Vaše přihlašovací heslo: </span> <input type="password" />
           </label>
-          <button>Přihlásit</button>
+          <button className="button__login">Přihlásit</button>
           <p>
             Nemáte účet? <a href="/Registration">Zaregistrujte se.</a>{' '}
           </p>
