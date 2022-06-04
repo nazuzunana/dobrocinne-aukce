@@ -26,13 +26,6 @@
   width: 100%;
   height: 50vh;
 }
-.img__pristav {
-  background-image: url('../Auction/lots/pristav.jpg');
-}
-
-.img__zahrada {
-  background-image: url('../Auction/lots/zahrada.jpg');
-}
 
 .auction__enter {
   border: 1px solid var(--green);

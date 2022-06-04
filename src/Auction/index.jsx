@@ -1,53 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import { Timer } from '../Timer';
 import AuctionLot from './AuctionLot';
 import { lots } from './AuctionLot';
+import { useParams } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../firebase';
 
 // aukce
 
-export const auctions = [
-  {
-    title: 'Aukce na pomoc Ukrajině',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis. Počet předmětů: 2',
-  },
+const Auction = () => {
+  const [auction, setAuction] = useState(null);
+  const { id } = useParams();
 
-  {
-    title: 'Aukce na podporu psího útulku',
-    description:
-      'LOREM ipsum dolor sit amet consectetur adipisicing elit. Ipsa error delectus nulla quaerat, voluptatum excepturi expedita dolores ab id dolor corporis. Počet předmětů: 2',
-  },
-];
+  useEffect(() => {
+    const docRef = doc(db, 'auctions', id);
+    getDoc(docRef).then((docSnap) => {
+      setAuction(docSnap.data());
+    });
+  }, [setAuction]);
 
-const Auction = ({ title, description }) => (
-  <div className="container__auction">
-    <div className="auction__intro">
-      <h2 className="auction__name">Název aukce</h2>
-      <p className="auction__text">
-        Popis účelu: Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Eveniet dolore dignissimos, officia exercitationem quibusdam vel odio
-        numquam nam cumque. Minima illum iusto ducimus optio molestias,
-        recusandae earum dolores pariatur doloremque.
-      </p>
-      <Timer />
+  return auction ? (
+    <div className="container__auction">
+      <div className="auction__intro">
+        <h2 className="auction__name">{auction.title}</h2>
+        <p className="auction__text">{auction.description}</p>
+        <Timer />
+      </div>
+      <hr className="horizontal-line" />
+      <div className="auction__lots">
+        {lots.map((lot) => (
+          <AuctionLot
+            key={lot.name}
+            img={lot.img}
+            name={lot.name}
+            date={lot.date}
+            author={lot.author}
+            signature={lot.signature}
+            technique={lot.technique}
+            measurements={lot.measurements}
+          />
+        ))}
+      </div>
     </div>
-    <hr className="horizontal-line" />
-    <div className="auction__lots">
-      {lots.map((lot) => (
-        <AuctionLot
-          key={lot.name}
-          img={lot.img}
-          name={lot.name}
-          date={lot.date}
-          author={lot.author}
-          signature={lot.signature}
-          technique={lot.technique}
-          measurements={lot.measurements}
-        />
-      ))}
-    </div>
-  </div>
-);
+  ) : null;
+};
 
 export default Auction;
