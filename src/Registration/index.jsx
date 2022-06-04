@@ -5,23 +5,23 @@ import validator from 'validator';
 // registrační formulář
 
 const Registration = () => {
+  const [emailError, setEmailError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
   const [userName, setUserName] = useState('');
   const [userLastName, setUserLastName] = useState('');
   const [userPhone, setUserPhone] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-  const [newsletterAccepted, setNewsletterAccepted] = useState(false);
-  const [gdprAccepted, setGdprAccepted] = useState(false);
-  const [userPassportDate, setUserPassportDate] = useState('');
-  const [userPassport, setUserPassport] = useState('');
-  const [userLand, setUserLand] = useState('');
-  const [userCity, setUserCity] = useState('');
-  const [userPostcode, setUserPostcode] = useState('');
-  const [userStreet, setUserStreet] = useState('');
   const [invoiceStreet, setInvoiceStreet] = useState('');
   const [invoiceCity, setInvoiceCity] = useState('');
   const [invoicePsc, setInvoicePsc] = useState('');
   const [invoiceCountry, setInvoiceCountry] = useState('');
+  const [userLand, setUserLand] = useState('');
+  const [userCity, setUserCity] = useState('');
+  const [userPostcode, setUserPostcode] = useState('');
+  const [userStreet, setUserStreet] = useState('');
+  const [userPassportDate, setUserPassportDate] = useState('');
+  const [userPassport, setUserPassport] = useState('');
+  const [newsletterAccepted, setNewsletterAccepted] = useState(false);
+  const [gdprAccepted, setGdprAccepted] = useState(false);
 
   const isUserNameEmpty = userName.length === 0;
   const isUserLastNameEmpty = userLastName.length === 0;
