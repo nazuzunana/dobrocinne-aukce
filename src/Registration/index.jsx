@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './style.css';
 import validator from 'validator';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 
 // registrační formulář
 
@@ -94,7 +96,13 @@ const Registration = () => {
       passwordError === '' &&
       passwordAgainError === ''
     ) {
-      console.log('okáčko');
+      createUserWithEmailAndPassword(auth, email, password).then(
+        (userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+        },
+      );
     }
   };
 
@@ -399,6 +407,7 @@ const Registration = () => {
               onChange={(event) => {
                 setGdprAccepted(event.target.checked);
               }}
+              required
             />
             <span className="form__checkbox-text">
               Souhlasím se zpracováním osobních údajů dle zákona č. 101/2000 Sb.
