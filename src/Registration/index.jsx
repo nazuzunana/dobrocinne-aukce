@@ -34,6 +34,8 @@ const Registration = () => {
   const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [gdprAccepted, setGdprAccepted] = useState(false);
 
+  const [registered, setRegistered] = useState(false);
+
   const validateEmail = (e) => {
     const email = e.target.value;
 
@@ -95,7 +97,6 @@ const Registration = () => {
         (userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
           setDoc(doc(db, 'users', user.uid), {
             email,
             userName,
@@ -116,13 +117,20 @@ const Registration = () => {
             userPassport,
             newsletterAccepted,
             gdprAccepted,
+          }).then(() => {
+            setRegistered(true);
           });
         },
       );
     }
   };
 
-  return (
+  return registered ? (
+    <div className="container__registration">
+      <h2>Děkujeme za registraci!</h2>
+      <p>Teď můžete vesele přihazovat na našich aukcích.</p>
+    </div>
+  ) : (
     <div className="container__registration">
       <h3 className="registration__title">Registrace</h3>
       <div className="">Už u nás máte účet? Přihlaste se tady.</div>

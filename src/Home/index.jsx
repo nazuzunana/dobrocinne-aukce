@@ -3,12 +3,13 @@ import './style.css';
 import { Link } from 'react-router-dom';
 import imageJan from './img/Jan_Svankmajer_prirodopis_1.jpg';
 import imagePristav from './img/Pristav_1.jpg';
-
+import imageUtrpeni from '../Auction/lots/valecne-utrpeni.jpg';
+import imageSen from '../Auction/lots/prazsky-sen.jpg';
 // domovská stránka
 
 // slideshow
 
-const imagesTest = [imagePristav, imageJan, imagePristav, imageJan];
+const imagesTest = [imagePristav, imageJan, imageUtrpeni, imageSen];
 
 const Carousel = () => {
   const [image, setImage] = useState(0);
@@ -32,21 +33,6 @@ const Carousel = () => {
       }
     };
   }, []);
-
-  // useEffect(() => {
-  //   changeColor();
-  // });
-
-  // function flashText() {
-  //   return image === 0 ? image[setImage(3)] : setImage(image - 1);
-  // }
-
-  // function changeColor() {
-  //   // check if already an interval has been set up
-  //   if (!image) {
-  //     setImage(setTimeout(flashText, 10));
-  //   }
-  // }
 
   return (
     <div className="box__slideshow">

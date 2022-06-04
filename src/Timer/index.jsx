@@ -8,6 +8,6 @@ export const Timer = () => (
     <div>
       <p>|</p>
     </div>
-    <p>Končí za 3 hod 24 min</p>
+    <p>Končí za XX dní YY hod ZZ min</p>
   </div>
 );
