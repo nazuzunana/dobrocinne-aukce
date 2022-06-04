@@ -45,14 +45,14 @@
   align-items: center;
 }
 
-.close {
+.modalContainer__close {
   align-self: flex-end;
   height: calc(1.7rem + 1px);
   color: var(--green);
 }
 
-a:hover,
-.close:hover {
+.modalContainer__register:hover,
+.modalContainer__close:hover {
   border-bottom: 1px solid var(--green);
   padding-bottom: 2px;
   cursor: pointer;

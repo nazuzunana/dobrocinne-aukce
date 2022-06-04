@@ -79,6 +79,7 @@ a {
   margin: auto;
   background-color: var(--offwhite);
   box-shadow: 0rem 0rem 0.625rem #999999;
+  min-height: 100vh;
 }
 
 .organisation__logo {

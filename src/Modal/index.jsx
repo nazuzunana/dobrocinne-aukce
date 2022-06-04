@@ -5,16 +5,14 @@ function Modal({ setOpenModal }) {
   return (
     <div className="modalBackground">
       <div className="modalContainer">
-        {/* <div className="titleCloseBtn"> */}
         <p
-          className="close"
+          className="modalContainer__close"
           onClick={() => {
             setOpenModal(false);
           }}
         >
           Zavřít okno
         </p>
-        {/* </div> */}
         <div className="title">
           <h4>Přihlásit se do účtu:</h4>
         </div>
@@ -27,7 +25,11 @@ function Modal({ setOpenModal }) {
           </label>
           <button className="button__login">Přihlásit</button>
           <p>
-            Nemáte účet? <a href="/Registration">Zaregistrujte se</a>.
+            Nemáte účet?{' '}
+            <a href="/Registration" className="modalContainer__register">
+              Zaregistrujte se
+            </a>
+            .
           </p>
         </div>
       </div>
