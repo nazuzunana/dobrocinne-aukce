@@ -187,7 +187,8 @@ a {
   }
 
   .button__register,
-  .button__login {
+  .button__login,
+  .button__logout {
     border: 1px solid var(--green);
     color: var(--green);
     background-color: var(--white);
