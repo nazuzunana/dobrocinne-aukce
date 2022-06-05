@@ -13,29 +13,21 @@ import UserProvider, { useUser } from './User';
 import { signOut } from 'firebase/auth';
 import { auth } from './firebase';
 
-const hamburgerMenu = () => {
-  const links = document.querySelector('.nav__links');
-  const buttons = document.querySelector('.nav__buttons');
-  if (links.style.display === 'block' && buttons.style.display === 'block') {
-    links.style.display = 'none' && buttons.style.display === 'none';
-  } else {
-    links.style.display = 'block' && buttons.style.display === 'block';
-  }
-};
-
 // doplnit stylovanie, ktory link je zrovna aktivny: https://reactrouter.com/docs/en/v6/getting-started/tutorial#active-links
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
   const user = useUser();
 
   return (
     <div className="container">
-      <div className="nav">
+      <nav>
         <Link to="/">
           <div className="organisation__logo"></div>
         </Link>
-        <div className="nav__content">
+        <div className="nav__content" data-open={hamburgerOpen}>
           <div className="nav__links">
             <div className="nav__link">
               <Link to="/HowToBid">JAK DRAŽIT</Link>
@@ -73,12 +65,17 @@ const App = () => {
             {modalOpen && <Modal setOpenModal={setModalOpen} />}
           </div>
         </div>
-        <div className="nav__hamburger-icon" onClick={hamburgerMenu}>
+        <div
+          className="nav__hamburger-icon"
+          onClick={() => {
+            setHamburgerOpen(!hamburgerOpen);
+          }}
+        >
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
         </div>
-      </div>
+      </nav>
       <Outlet />
       <div className="footer">
         <div className="footer__links">

@@ -55,7 +55,7 @@ a {
   height: 1.5rem;
 }
 
-.nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,10 +69,6 @@ a {
 
 .nav__link:hover {
   border-bottom: 1px solid var(--green);
-}
-
-.nav__links {
-  display: none;
 }
 
 .organisation__logo {
@@ -89,9 +85,62 @@ a {
 }
 
 .nav__content {
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  width: 100%;
+  background-color: var(--offwhite);
+  align-items: center;
+  border-top: 0.5px solid var(--green);
+  border-bottom: 0.5px solid var(--green);
+}
+
+.nav__content[data-open='false'] {
+  display: none;
+}
+
+.nav__content[data-open='true'] {
+  display: flex;
+}
+
+.nav__links {
   display: flex;
   flex-direction: column;
-  display: none;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__link {
+  border-top: 0.5px solid var(--green);
+  border-bottom: 0.5px solid var(--green);
+  text-align: center;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.nav__buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.button__register,
+.button__login,
+.button__logout {
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 0.5px solid var(--green);
+  border-bottom: 0.5px solid var(--green);
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font-family: 'Crimson Text', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: var(--green);
+  font-size: 1rem;
 }
 
 .nav__hamburger-icon {
@@ -149,7 +198,7 @@ a {
     background-color: var(--offwhite);
   }
 
-  .nav {
+  nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -170,6 +219,15 @@ a {
     align-items: center;
     gap: 3rem;
     letter-spacing: 0.5px;
+    position: static;
+    width: initial;
+    background-color: var(--offwhite);
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .nav__content[data-open='false'] {
+    display: flex;
   }
 
   .nav__links {
@@ -177,6 +235,15 @@ a {
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
+    width: initial;
+  }
+
+  .nav__link {
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    padding: 0;
+    width: initial;
   }
 
   .nav__buttons {
@@ -184,6 +251,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
+    width: initial;
   }
 
   .button__register,
@@ -192,6 +260,12 @@ a {
     border: 1px solid var(--green);
     color: var(--green);
     background-color: var(--white);
+    width: initial;
+    border-radius: 5px;
+    text-transform: none;
+    font-weight: 700;
+    font-size: smaller;
+    padding: 0.5rem 1rem 0.5rem 1rem;
   }
 
   .nav__hamburger-icon {
