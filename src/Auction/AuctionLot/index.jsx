@@ -3,6 +3,7 @@ import './style.css';
 import Bidding from '../Bidding';
 import { storage } from '../../firebase';
 import { ref, getDownloadURL } from 'firebase/storage';
+import ModalImage from 'react-modal-image-responsive';
 
 // položka v aukci
 
@@ -26,12 +27,14 @@ export const AuctionLot = ({
     <div className="container__lot">
       <div className="auction__lot">
         <div className="lot__gallery">
-          <div
+          <ModalImage
             className="img"
-            style={{
-              backgroundImage: `url(${imageUrl})`,
-            }}
-          ></div>
+            small={imageUrl}
+            large={imageUrl}
+            alt={name}
+            hideDownload
+            hideZoom
+          />
         </div>
         <hr className="horizontal-line" />
         <div className="lot__description">

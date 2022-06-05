@@ -26,6 +26,7 @@
     "firebase": "^9.8.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-modal-image-responsive": "^1.1.1",
     "react-router-dom": "^6.3.0",
     "validator": "^13.7.0"
   }
