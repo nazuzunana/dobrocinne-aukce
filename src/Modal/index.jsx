@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
+import { auth } from '../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function Modal({ setOpenModal }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(auth, email, password).then(() => {
+      setOpenModal(false);
+    });
+  };
+
   return (
     <div className="modalBackground">
       <div className="modalContainer">
@@ -16,14 +28,34 @@ function Modal({ setOpenModal }) {
         <div className="title">
           <h4>Přihlásit se do účtu:</h4>
         </div>
-        <div className="body">
+        <form onSubmit={handleSubmit} className="body">
           <label>
-            <span>Váš přihlašovací e-mail: </span> <input type="email" />
+            <span>Váš přihlašovací e-mail: </span>{' '}
+            <input
+              value={email}
+              onChange={(event) => {
+                const vstup = event.target.value;
+                setEmail(vstup);
+              }}
+              type="email"
+              required
+            />
           </label>
           <label>
-            <span>Vaše přihlašovací heslo: </span> <input type="password" />
+            <span>Vaše přihlašovací heslo: </span>{' '}
+            <input
+              value={password}
+              onChange={(event) => {
+                const vstup = event.target.value;
+                setPassword(vstup);
+              }}
+              type="password"
+              required
+            />
           </label>
-          <button className="button__login">Přihlásit</button>
+          <button type="submit" className="button__login">
+            Přihlásit
+          </button>
           <p>
             Nemáte účet?{' '}
             <a href="/Registration" className="modalContainer__register">
@@ -31,7 +63,7 @@ function Modal({ setOpenModal }) {
             </a>
             .
           </p>
-        </div>
+        </form>
       </div>
     </div>
   );

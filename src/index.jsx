@@ -9,6 +9,9 @@ import AuctionList from './AuctionList';
 import Registration from './Registration';
 import Auction from './Auction';
 import Modal from './Modal';
+import UserProvider, { useUser } from './User';
+import { signOut } from 'firebase/auth';
+import { auth } from './firebase';
 
 // const hamburgerMenu = () => {
 //   const links = document.querySelector('.nav__links');
@@ -23,6 +26,7 @@ import Modal from './Modal';
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const user = useUser();
 
   return (
     <div className="container">
@@ -43,17 +47,28 @@ const App = () => {
             </div>
           </div>
           <div className="nav__buttons">
-            <Link to="/Registration">
-              <button className="button__register">Registrace k dražbě</button>
-            </Link>
-            <button
-              className="button__login button__login--logged"
-              onClick={() => {
-                setModalOpen(true);
-              }}
-            >
-              Přihlášení
-            </button>
+            {user ? (
+              <button onClick={() => signOut(auth)} className="button__logout">
+                Odhlásit
+              </button>
+            ) : (
+              <>
+                <Link to="/Registration">
+                  <button className="button__register">
+                    Registrace k dražbě
+                  </button>
+                </Link>
+                <button
+                  className="button__login"
+                  onClick={() => {
+                    setModalOpen(true);
+                  }}
+                >
+                  Přihlášení
+                </button>{' '}
+              </>
+            )}
+
             {modalOpen && <Modal setOpenModal={setModalOpen} />}
           </div>
         </div>
@@ -83,24 +98,26 @@ const App = () => {
 };
 
 createRoot(document.querySelector('#app')).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route path="/" element={<Home />} />
-        <Route path="HowToBid" element={<HowToBid />} />
-        <Route path="Contact" element={<Contact />} />
-        <Route path="AuctionList" element={<AuctionList />} />
-        <Route path="Registration" element={<Registration />} />
-        <Route path="Auction/:id" element={<Auction />} />
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: '1rem' }}>
-              <p>Ups...tady nic není.</p>
-            </main>
-          }
-        />
-      </Route>
-    </Routes>
-  </BrowserRouter>,
+  <UserProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="/" element={<Home />} />
+          <Route path="HowToBid" element={<HowToBid />} />
+          <Route path="Contact" element={<Contact />} />
+          <Route path="AuctionList" element={<AuctionList />} />
+          <Route path="Registration" element={<Registration />} />
+          <Route path="Auction/:id" element={<Auction />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: '1rem' }}>
+                <p>Ups...tady nic není.</p>
+              </main>
+            }
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </UserProvider>,
 );
