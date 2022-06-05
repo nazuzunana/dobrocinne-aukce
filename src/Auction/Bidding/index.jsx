@@ -8,16 +8,6 @@ import { db } from '../../firebase';
 
 // přihazování na položku v aukci
 
-// Nejnižší příhoz k ceně 1-500 Kč je 20 Kč.
-// Nejnižší příhoz k ceně 500-5 000 Kč je 100 Kč.
-// Nejnižší příhoz k ceně 5 000-10 000 Kč je 500 Kč.
-// Nejnižší příhoz k ceně 10 000-50 000 Kč je 1 000 Kč.
-// Nejnižší příhoz k ceně 50 000-100 000 Kč je 5 000 Kč.
-// Nejnižší příhoz k ceně 100 000-500 000 Kč je 10 000 Kč.
-// Nejnižší příhoz k ceně 500 000-1 000 000 Kč je 50 000 Kč.
-// Nejnižší příhoz k ceně 1 000 000-50 000 000 Kč je 100 000 Kč.
-// Nejnižší příhoz k ceně nad 50 000 000 Kč je 200 000 Kč.
-
 const caltulateMinimalBid = (currentPrice) => {
   if (currentPrice < 500) {
     return 20;
@@ -62,6 +52,7 @@ export const Bidding = ({
   const [minimalBid, setMinimalBid] = useState(
     caltulateMinimalBid(currentPrice),
   );
+  const [bidMessage, setBidMessage] = useState('');
 
   useEffect(() => {
     return onSnapshot(
@@ -92,6 +83,8 @@ export const Bidding = ({
       user: doc(db, 'users', user.uid),
       time: new Date(),
       amount,
+    }).then(() => {
+      setBidMessage(`Děkujeme za příhoz ${amount} CZK.`);
     });
   };
 
@@ -140,7 +133,7 @@ export const Bidding = ({
           </form>
         </div>
       )}
-      <img className="icon__hammer" src={hammer} />
+      {bidMessage && <p>{bidMessage}</p>}
     </div>
   );
 };

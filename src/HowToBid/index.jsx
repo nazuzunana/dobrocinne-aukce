@@ -62,7 +62,11 @@ const HowToBid = () => {
           </div>
           <div className="description__text">
             <p>
-              Nejnižší příhoz k ceně <span className="bold">500-5 000 Kč</span>{' '}
+              Nejnižší příhoz k ceně <span className="bold">1-500 Kč</span> je{' '}
+              <span className="bold">20 Kč</span>.<br />
+              Nejnižší příhoz k ceně <span className="bold">
+                500-5 000 Kč
+              </span>{' '}
               je <span className="bold">100 Kč</span>. <br />
               Nejnižší příhoz k ceně{' '}
               <span className="bold">5 000-10 000 Kč</span> je{' '}
