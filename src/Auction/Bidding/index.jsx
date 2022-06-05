@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import hammer from './img/hammer.svg';
 import { useUser } from '../../User';
 import { useLoginModal } from '../../Modal';
-import { collection, addDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../firebase';
 
 // přihazování na položku v aukci
@@ -18,6 +18,26 @@ export const Bidding = ({
   const setModalOpen = useLoginModal();
 
   const [bid, setBid] = useState('');
+  const [currentPrice, setCurrentPrice] = useState(startingPrice);
+
+  useEffect(() => {
+    return onSnapshot(
+      collection(db, 'auctions', auctionId, 'lots', lotId, 'bids'),
+      (collectionSnap) => {
+        const bids = [];
+        collectionSnap.forEach((doc) => {
+          bids.push({ id: doc.id, ...doc.data() });
+        });
+
+        const currentPrice = bids.reduce(
+          (previousPrice, bid) => previousPrice + bid.amount,
+          startingPrice,
+        );
+
+        setCurrentPrice(currentPrice);
+      },
+    );
+  }, [auctionId, lotId, setCurrentPrice]);
 
   const placeBid = (amount) => {
     if (!user) {
@@ -41,7 +61,7 @@ export const Bidding = ({
       <p>
         Aktuální cena:
         <br />
-        <span className="bidding__current-price"> CZK</span>
+        <span className="bidding__current-price">{currentPrice} CZK</span>
       </p>
 
       {auctionRunning && (

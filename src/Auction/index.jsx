@@ -16,7 +16,7 @@ const Auction = () => {
   useEffect(() => {
     const docRef = doc(db, 'auctions', id);
     getDoc(docRef).then((docSnap) => {
-      setAuction(docSnap.data());
+      setAuction({ id: docSnap.id, ...docSnap.data() });
     });
 
     getDocs(collection(docRef, 'lots')).then((collectionSnap) => {

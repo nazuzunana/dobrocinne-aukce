@@ -11,7 +11,7 @@ export const AuctionLot = ({
   lot: {
     id,
     images,
-    name,
+    title,
     date,
     author,
     signature,
@@ -45,7 +45,7 @@ export const AuctionLot = ({
         <hr className="horizontal-line" />
         <div className="lot__description">
           <div className="lot__author">{author}</div>
-          <div className="lot__name">{name}</div>
+          <div className="lot__name">{title}</div>
           <div className="lot__date">{date}</div>
           <div className="lot__signature">{signature}</div>
           <div className="lot__technique">{technique}</div>
