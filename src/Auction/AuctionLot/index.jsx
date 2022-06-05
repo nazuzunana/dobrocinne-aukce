@@ -8,14 +8,18 @@ import ModalImage from 'react-modal-image-responsive';
 // položka v aukci
 
 export const AuctionLot = ({
-  images,
-  name,
-  date,
-  author,
-  signature,
-  technique,
-  measurements,
-  startingPrice,
+  lot: {
+    id,
+    images,
+    name,
+    date,
+    author,
+    signature,
+    technique,
+    measurements,
+    startingPrice,
+  },
+  auctionId,
 }) => {
   const [imageUrl, setImageUrl] = useState('');
 
@@ -45,7 +49,11 @@ export const AuctionLot = ({
           <div className="lot__technique">{technique}</div>
           <div className="lot__measurements">{measurements}</div>
         </div>
-        <Bidding startingPrice={startingPrice} />
+        <Bidding
+          auctionId={auctionId}
+          lotId={id}
+          startingPrice={startingPrice}
+        />
       </div>
     </div>
   );

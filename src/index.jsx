@@ -8,16 +8,16 @@ import Contact from './Contact/index.jsx';
 import AuctionList from './AuctionList';
 import Registration from './Registration';
 import Auction from './Auction';
-import Modal from './Modal';
 import UserProvider, { useUser } from './User';
 import { signOut } from 'firebase/auth';
 import { auth } from './firebase';
+import ModalProvider, { useLoginModal } from './Modal';
 
 // doplnit stylovanie, ktory link je zrovna aktivny: https://reactrouter.com/docs/en/v6/getting-started/tutorial#active-links
 
 const App = () => {
-  const [modalOpen, setModalOpen] = useState(false);
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  const setModalOpen = useLoginModal();
 
   const user = useUser();
 
@@ -61,8 +61,6 @@ const App = () => {
                 </button>{' '}
               </>
             )}
-
-            {modalOpen && <Modal setOpenModal={setModalOpen} />}
           </div>
         </div>
         <div
@@ -101,25 +99,27 @@ const App = () => {
 
 createRoot(document.querySelector('#app')).render(
   <UserProvider>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="/" element={<Home />} />
-          <Route path="HowToBid" element={<HowToBid />} />
-          <Route path="Contact" element={<Contact />} />
-          <Route path="AuctionList" element={<AuctionList />} />
-          <Route path="Registration" element={<Registration />} />
-          <Route path="Auction/:id" element={<Auction />} />
-          <Route
-            path="*"
-            element={
-              <main style={{ padding: '1rem' }}>
-                <p>Ups...tady nic není.</p>
-              </main>
-            }
-          />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ModalProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="/" element={<Home />} />
+            <Route path="HowToBid" element={<HowToBid />} />
+            <Route path="Contact" element={<Contact />} />
+            <Route path="AuctionList" element={<AuctionList />} />
+            <Route path="Registration" element={<Registration />} />
+            <Route path="Auction/:id" element={<Auction />} />
+            <Route
+              path="*"
+              element={
+                <main style={{ padding: '1rem' }}>
+                  <p>Ups...tady nic není.</p>
+                </main>
+              }
+            />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ModalProvider>
   </UserProvider>,
 );

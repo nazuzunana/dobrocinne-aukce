@@ -3,7 +3,7 @@ import './style.css';
 import { Timer } from '../Timer';
 import AuctionLot from './AuctionLot';
 import { useParams } from 'react-router-dom';
-import { collection, doc, getDoc, onSnapshot } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 
 // aukce
@@ -19,7 +19,7 @@ const Auction = () => {
       setAuction(docSnap.data());
     });
 
-    onSnapshot(collection(docRef, 'lots'), (collectionSnap) => {
+    getDocs(collection(docRef, 'lots')).then((collectionSnap) => {
       const lots = [];
       collectionSnap.forEach((doc) => {
         lots.push({ id: doc.id, ...doc.data() });
@@ -38,17 +38,7 @@ const Auction = () => {
       <hr className="horizontal-line" />
       <div className="auction__lots">
         {lots.map((lot) => (
-          <AuctionLot
-            key={lot.id}
-            images={lot.images}
-            name={lot.name}
-            date={lot.date}
-            author={lot.author}
-            signature={lot.signature}
-            technique={lot.technique}
-            measurements={lot.measurements}
-            startingPrice={lot.startingPrice}
-          />
+          <AuctionLot key={lot.id} lot={lot} auctionId={id} />
         ))}
       </div>
     </div>

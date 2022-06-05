@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import './style.css';
 import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -69,4 +69,19 @@ function Modal({ setOpenModal }) {
   );
 }
 
-export default Modal;
+const ModalContext = createContext();
+
+const ModalProvider = ({ children }) => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  return (
+    <ModalContext.Provider value={setModalOpen}>
+      {modalOpen && <Modal setOpenModal={setModalOpen} />}
+      {children}
+    </ModalContext.Provider>
+  );
+};
+
+export const useLoginModal = () => useContext(ModalContext);
+
+export default ModalProvider;
