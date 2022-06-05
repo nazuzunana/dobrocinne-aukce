@@ -12,6 +12,7 @@ import UserProvider, { useUser } from './User';
 import { signOut } from 'firebase/auth';
 import { auth } from './firebase';
 import ModalProvider, { useLoginModal } from './Modal';
+import ScrollToTop from './ScrollToTop';
 
 // doplnit stylovanie, ktory link je zrovna aktivny: https://reactrouter.com/docs/en/v6/getting-started/tutorial#active-links
 
@@ -101,6 +102,7 @@ createRoot(document.querySelector('#app')).render(
   <UserProvider>
     <ModalProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<App />}>
             <Route path="/" element={<Home />} />
