@@ -8,6 +8,46 @@ import { db } from '../../firebase';
 
 // přihazování na položku v aukci
 
+// Nejnižší příhoz k ceně 1-500 Kč je 20 Kč.
+// Nejnižší příhoz k ceně 500-5 000 Kč je 100 Kč.
+// Nejnižší příhoz k ceně 5 000-10 000 Kč je 500 Kč.
+// Nejnižší příhoz k ceně 10 000-50 000 Kč je 1 000 Kč.
+// Nejnižší příhoz k ceně 50 000-100 000 Kč je 5 000 Kč.
+// Nejnižší příhoz k ceně 100 000-500 000 Kč je 10 000 Kč.
+// Nejnižší příhoz k ceně 500 000-1 000 000 Kč je 50 000 Kč.
+// Nejnižší příhoz k ceně 1 000 000-50 000 000 Kč je 100 000 Kč.
+// Nejnižší příhoz k ceně nad 50 000 000 Kč je 200 000 Kč.
+
+const caltulateMinimalBid = (currentPrice) => {
+  if (currentPrice < 500) {
+    return 20;
+  }
+  if (currentPrice >= 500 && currentPrice <= 5000) {
+    return 100;
+  }
+  if (currentPrice > 5000 && currentPrice <= 10000) {
+    return 500;
+  }
+  if (currentPrice > 10000 && currentPrice <= 50000) {
+    return 1000;
+  }
+  if (currentPrice > 50000 && currentPrice <= 100000) {
+    return 5000;
+  }
+  if (currentPrice > 100000 && currentPrice <= 500000) {
+    return 10000;
+  }
+  if (currentPrice > 500000 && currentPrice <= 1000000) {
+    return 50000;
+  }
+  if (currentPrice > 1000000 && currentPrice <= 50000000) {
+    return 100000;
+  }
+  if (currentPrice > 50000000) {
+    return 200000;
+  }
+};
+
 export const Bidding = ({
   lotId,
   auctionId,
@@ -19,6 +59,9 @@ export const Bidding = ({
 
   const [bid, setBid] = useState('');
   const [currentPrice, setCurrentPrice] = useState(startingPrice);
+  const [minimalBid, setMinimalBid] = useState(
+    caltulateMinimalBid(currentPrice),
+  );
 
   useEffect(() => {
     return onSnapshot(
@@ -35,9 +78,10 @@ export const Bidding = ({
         );
 
         setCurrentPrice(currentPrice);
+        setMinimalBid(caltulateMinimalBid(currentPrice));
       },
     );
-  }, [auctionId, lotId, setCurrentPrice]);
+  }, [auctionId, lotId, setCurrentPrice, setMinimalBid]);
 
   const placeBid = (amount) => {
     if (!user) {
@@ -68,8 +112,8 @@ export const Bidding = ({
         <div className="bidding__inputs">
           <p>Minimální příhoz:</p>
           <div className="bidding__input">
-            <button onClick={() => placeBid(1000)} className="btn_bid">
-              1000 CZK
+            <button onClick={() => placeBid(minimalBid)} className="btn_bid">
+              {minimalBid} CZK
             </button>
           </div>
           <form
@@ -88,7 +132,7 @@ export const Bidding = ({
               type="number"
               placeholder="Vlastní částka v CZK"
               required
-              min={0}
+              min={minimalBid}
             />
             <button type="submit" className="btn_bid">
               Chci přihodit
