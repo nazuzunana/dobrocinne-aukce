@@ -17,20 +17,40 @@ const HowToBid = () => {
           </div>
         </div>
         <div className="how-to-bid__step">
-          <div className="how-to-bid__icon mail"></div>
+          <div className="how-to-bid__icon auction"></div>
           <div className="step_instructions">
             <p>
-              Vyčkejte na potvrzovací e-mail a potvrďte svoji registraci
-              kliknutím na odkaz v e-mailu.
+              Po registraci a přihlášení můžete přihazovat na předměty v{' '}
+              <a href="/AuctionList">aktuálních aukcích</a>.
             </p>
           </div>
         </div>
         <div className="how-to-bid__step">
-          <div className="how-to-bid__icon login"></div>
+          <div className="how-to-bid__icon bid"></div>
           <div className="step_instructions">
             <p>
-              Po založení uživatelského účtu a potvrzení registrace se
-              přihlaste.
+              Na předměty lze přihazovat opakovaně. Minimální výše příhozu
+              závisí na aktuální ceně předmětu (podmínky přihazování níže).
+              Maximální výše příhozu není omezena.
+            </p>
+          </div>
+        </div>
+        <div className="how-to-bid__step">
+          <div className="how-to-bid__icon winning-bid"></div>
+          <div className="step_instructions">
+            <p>
+              Po uplynutí času aukce předmět vyhrává dražitel s nejvyšším
+              příhozem.
+            </p>
+          </div>
+        </div>
+        <div className="how-to-bid__step">
+          <div className="how-to-bid__icon mail"></div>
+          <div className="step_instructions">
+            <p>
+              V případě vydražení předmětu obdržíte na e-mailovou adresu, kterou
+              jste uvedli při registraci, email s poděkováním a instrukcemi k
+              dalšímu postupu.
             </p>
           </div>
         </div>
