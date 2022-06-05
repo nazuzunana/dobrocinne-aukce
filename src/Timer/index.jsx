@@ -1,11 +1,11 @@
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import timer from './timer.svg';
-import React from 'react';
 
 export const Timer = ({ endDate: endTimestamp }) => {
   const endDate = endTimestamp.toDate(); // koniec aukcie
   const now = new Date(); // teraz
-  const distance = endDate - now;
+  const [distance, setDistance] = useState(endDate - now);
 
   if (distance < 0) {
     return (
@@ -18,6 +18,17 @@ export const Timer = ({ endDate: endTimestamp }) => {
       </div>
     );
   }
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const now = new Date();
+      setDistance(endDate - now);
+    }, 30000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [setDistance]);
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
