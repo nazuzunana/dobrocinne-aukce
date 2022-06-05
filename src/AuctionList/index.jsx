@@ -8,7 +8,7 @@ import { ref, getDownloadURL } from 'firebase/storage';
 
 // seznam aukcí
 
-const AuctionListAuction = ({ id, img, title, description }) => {
+const AuctionListAuction = ({ id, img, title, description, endDate }) => {
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
@@ -16,24 +16,22 @@ const AuctionListAuction = ({ id, img, title, description }) => {
   }, [img, setImageUrl]);
 
   return (
-    <>
-      <section className="auction-list__auction">
-        <div
-          className="auction__img"
-          style={{
-            backgroundImage: `url(${imageUrl})`,
-          }}
-        ></div>
-        <div className="auction__content">
-          <h2>{title}</h2>
-          <div className="auction__description">{description}</div>
-          <Timer />
-          <Link to={`/Auction/${id}`}>
-            <button className="auction__enter">Přejít do aukce</button>
-          </Link>
-        </div>
-      </section>
-    </>
+    <section className="auction-list__auction">
+      <div
+        className="auction__img"
+        style={{
+          backgroundImage: `url(${imageUrl})`,
+        }}
+      ></div>
+      <div className="auction__content">
+        <h2>{title}</h2>
+        <div className="auction__description">{description}</div>
+        <Timer endDate={endDate} />
+        <Link to={`/Auction/${id}`}>
+          <button className="auction__enter">Přejít do aukce</button>
+        </Link>
+      </div>
+    </section>
   );
 };
 
@@ -61,6 +59,7 @@ const AuctionList = () => {
           img={auctionListAuction.img}
           title={auctionListAuction.title}
           description={auctionListAuction.description}
+          endDate={auctionListAuction.endDate}
         />
       ))}
     </div>

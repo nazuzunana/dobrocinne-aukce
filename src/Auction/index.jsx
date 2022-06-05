@@ -33,7 +33,7 @@ const Auction = () => {
       <div className="auction__intro">
         <h2 className="auction__name">{auction.title}</h2>
         <p className="auction__text">{auction.description}</p>
-        <Timer />
+        <Timer endDate={auction.endDate} />
       </div>
       <hr className="horizontal-line" />
       <div className="auction__lots">
