@@ -19,13 +19,6 @@
   gap: 1rem;
 }
 
-/* .socials__icons {
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 1.5rem;
-  height: 1.5rem;
-} */
-
 .organisation__instagram {
   background-image: url(./icons/instagram.png);
 }
@@ -90,14 +83,15 @@
 @media (min-width: 768px) {
   .container__contact {
     padding: 2rem 2rem 5rem 2rem;
+    width: 80%;
   }
 
-  .project,
+  /* .project,
   .organisation__contact,
   .project__authors {
     margin: auto;
     width: 80%;
-  }
+  } */
 
   .author__cards {
     display: flex;
@@ -107,9 +101,13 @@
 }
 
 @media (min-width: 992px) {
-  .project,
+  .container__contact {
+    padding: 2rem 2rem 5rem 2rem;
+    width: 60%;
+  }
+  /* .project,
   .organisation__contact,
   .project__authors {
     width: 60%;
-  }
+  } */
 }
