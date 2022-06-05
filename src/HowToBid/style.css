@@ -47,8 +47,16 @@
   background-image: url('icons/mail.png');
 }
 
-.login {
-  background-image: url('icons/key.png');
+.auction {
+  background-image: url('icons/auction.png');
+}
+
+.bid {
+  background-image: url('icons/bid.png');
+}
+
+.winning-bid {
+  background-image: url('icons/winning-bid.png');
 }
 
 .step_instructions {
