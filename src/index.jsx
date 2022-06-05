@@ -10,14 +10,15 @@ import Registration from './Registration';
 import Auction from './Auction';
 import Modal from './Modal';
 
-// const hamburgerMenu = () => {
-//   const links = document.querySelector('.nav__links');
-//   if (links.style.display === 'block') {
-//     links.style.display = 'none';
-//   } else {
-//     links.style.display = 'block';
-//   }
-// };
+const hamburgerMenu = () => {
+  const links = document.querySelector('.nav__links');
+  const buttons = document.querySelector('.nav__buttons');
+  if (links.style.display === 'block' && buttons.style.display === 'block') {
+    links.style.display = 'none' && buttons.style.display === 'none';
+  } else {
+    links.style.display = 'block' && buttons.style.display === 'block';
+  }
+};
 
 // doplnit stylovanie, ktory link je zrovna aktivny: https://reactrouter.com/docs/en/v6/getting-started/tutorial#active-links
 
@@ -57,7 +58,11 @@ const App = () => {
             {modalOpen && <Modal setOpenModal={setModalOpen} />}
           </div>
         </div>
-        <div className="nav__hamburger-icon"></div>
+        <div className="nav__hamburger-icon" onClick={hamburgerMenu}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
       </div>
       <Outlet />
       <div className="footer">
