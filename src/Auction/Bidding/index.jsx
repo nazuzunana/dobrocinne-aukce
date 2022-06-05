@@ -3,6 +3,8 @@ import './style.css';
 import hammer from './img/hammer.svg';
 import { useUser } from '../../User';
 import { useLoginModal } from '../../Modal';
+import { collection, addDoc, doc } from 'firebase/firestore';
+import { db } from '../../firebase';
 
 // přihazování na položku v aukci
 
@@ -17,7 +19,11 @@ export const Bidding = ({ lotId, auctionId, startingPrice }) => {
       return setModalOpen(true);
     }
 
-    console.log(amount);
+    addDoc(collection(db, 'auctions', auctionId, 'lots', lotId, 'bids'), {
+      user: doc(db, 'users', user.uid),
+      time: new Date(),
+      amount,
+    });
   };
 
   return (
