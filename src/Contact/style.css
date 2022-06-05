@@ -86,13 +86,6 @@
     width: 80%;
   }
 
-  /* .project,
-  .organisation__contact,
-  .project__authors {
-    margin: auto;
-    width: 80%;
-  } */
-
   .author__cards {
     display: flex;
     flex-direction: row;
@@ -105,9 +98,4 @@
     padding: 2rem 2rem 5rem 2rem;
     width: 60%;
   }
-  /* .project,
-  .organisation__contact,
-  .project__authors {
-    width: 60%;
-  } */
 }
