@@ -8,7 +8,12 @@ import { db } from '../../firebase';
 
 // přihazování na položku v aukci
 
-export const Bidding = ({ lotId, auctionId, startingPrice }) => {
+export const Bidding = ({
+  lotId,
+  auctionId,
+  startingPrice,
+  auctionRunning,
+}) => {
   const user = useUser();
   const setModalOpen = useLoginModal();
 
@@ -38,36 +43,39 @@ export const Bidding = ({ lotId, auctionId, startingPrice }) => {
         <br />
         <span className="bidding__current-price"> CZK</span>
       </p>
-      <p>Minimální příhoz:</p>
-      <div className="bidding__inputs">
-        <div className="bidding__input">
-          <button onClick={() => placeBid(1000)} className="btn_bid">
-            1000 CZK
-          </button>
-        </div>
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            placeBid(Number(bid));
-          }}
-          className="bidding__input"
-        >
-          <input
-            value={bid}
-            onChange={(event) => {
-              const vstup = event.target.value;
-              setBid(vstup);
+
+      {auctionRunning && (
+        <div className="bidding__inputs">
+          <p>Minimální příhoz:</p>
+          <div className="bidding__input">
+            <button onClick={() => placeBid(1000)} className="btn_bid">
+              1000 CZK
+            </button>
+          </div>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              placeBid(Number(bid));
             }}
-            type="number"
-            placeholder="Vlastní částka v CZK"
-            required
-            min={0}
-          />
-          <button type="submit" className="btn_bid">
-            Chci přihodit
-          </button>
-        </form>
-      </div>
+            className="bidding__input"
+          >
+            <input
+              value={bid}
+              onChange={(event) => {
+                const vstup = event.target.value;
+                setBid(vstup);
+              }}
+              type="number"
+              placeholder="Vlastní částka v CZK"
+              required
+              min={0}
+            />
+            <button type="submit" className="btn_bid">
+              Chci přihodit
+            </button>
+          </form>
+        </div>
+      )}
       <img className="icon__hammer" src={hammer} />
     </div>
   );

@@ -19,6 +19,12 @@
   font-size: larger;
 }
 
+.bidding__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .bidding__input {
   display: flex;
   flex-direction: column;

@@ -20,8 +20,10 @@ export const AuctionLot = ({
     startingPrice,
   },
   auctionId,
+  endDate,
 }) => {
   const [imageUrl, setImageUrl] = useState('');
+  const now = new Date();
 
   useEffect(() => {
     getDownloadURL(ref(storage, images[0])).then((url) => setImageUrl(url));
@@ -53,6 +55,7 @@ export const AuctionLot = ({
           auctionId={auctionId}
           lotId={id}
           startingPrice={startingPrice}
+          auctionRunning={now <= endDate}
         />
       </div>
     </div>

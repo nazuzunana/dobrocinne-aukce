@@ -38,7 +38,12 @@ const Auction = () => {
       <hr className="horizontal-line" />
       <div className="auction__lots">
         {lots.map((lot) => (
-          <AuctionLot key={lot.id} lot={lot} auctionId={id} />
+          <AuctionLot
+            key={lot.id}
+            lot={lot}
+            auctionId={auction.id}
+            endDate={auction.endDate.toDate()}
+          />
         ))}
       </div>
     </div>
