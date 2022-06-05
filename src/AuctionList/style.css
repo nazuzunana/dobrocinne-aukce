@@ -70,10 +70,12 @@
 
   .auction-list__auction {
     align-items: center;
+    justify-content: center;
   }
 
   .auction__img {
     width: 100%;
+    height: 60vh;
   }
 
   .auction__copy {
@@ -82,9 +84,7 @@
 
   .auction__content {
     height: 100%;
-    width: 60%;
-    margin-left: 18rem;
-    margin-top: -12rem;
+    width: 80%;
   }
 }
 
@@ -94,16 +94,12 @@
   }
 
   .auction__content {
-    height: 100%;
-    width: 80%;
-    margin-left: 22rem;
+    width: 70%;
   }
 }
 
 @media (min-width: 1200px) {
   .auction__content {
-    height: 100%;
-    width: 60%;
-    margin-left: 22rem;
+    width: 65%;
   }
 }
