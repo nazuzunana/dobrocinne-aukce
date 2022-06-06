@@ -134,9 +134,9 @@ export const Bidding = ({
         </div>
       )}
       {bidMessage ? (
-        <p>{bidMessage}</p>
+        <p className="bidding__message">{bidMessage}</p>
       ) : (
-        <p className="bidding__message-box"></p>
+        <p className="bidding__message"></p>
       )}
     </div>
   );

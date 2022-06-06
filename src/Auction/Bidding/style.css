@@ -55,6 +55,6 @@
   color: var(--green);
 }
 
-.bidding__message-box {
-  height: 1.7rem;
+.bidding__message {
+  height: 3rem;
 }
