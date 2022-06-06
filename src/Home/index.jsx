@@ -95,8 +95,6 @@ const Carousel = () => {
   ) : null;
 };
 
-// k slideshow ešte časovač a figcaption
-
 const Home = () => (
   <div className="container__homepage">
     <div className="homepage__box">
@@ -115,7 +113,9 @@ const Home = () => (
         </div>
         <div className="box__auctions__button">
           <Link to="/AuctionList">
-            <button className="button__auctions">Seznam aukcí</button>
+            <button className="button__auctions">
+              Přejít do seznamu aukcí
+            </button>
           </Link>
         </div>
       </div>

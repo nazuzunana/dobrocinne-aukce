@@ -169,6 +169,7 @@
   .homepage__box {
     display: flex;
     flex-direction: row;
+    height: 85vh;
   }
 
   .box__auctions,
