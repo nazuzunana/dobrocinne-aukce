@@ -57,3 +57,13 @@
   padding-bottom: 2px;
   cursor: pointer;
 }
+
+.modalContainer .button__login {
+  border: 1px solid var(--green);
+  width: initial;
+  border-radius: 5px;
+  text-transform: none;
+  font-weight: 700;
+  font-size: smaller;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}

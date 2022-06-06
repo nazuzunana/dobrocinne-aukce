@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
-import hammer from './img/hammer.svg';
 import { useUser } from '../../User';
 import { useLoginModal } from '../../Modal';
 import { collection, addDoc, doc, onSnapshot } from 'firebase/firestore';
