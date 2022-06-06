@@ -133,7 +133,11 @@ export const Bidding = ({
           </form>
         </div>
       )}
-      {bidMessage && <p>{bidMessage}</p>}
+      {bidMessage ? (
+        <p>{bidMessage}</p>
+      ) : (
+        <p className="bidding__message-box"></p>
+      )}
     </div>
   );
 };

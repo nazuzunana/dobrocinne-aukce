@@ -55,6 +55,6 @@
   color: var(--green);
 }
 
-.icon__hammer {
-  width: 2rem;
+.bidding__message-box {
+  height: 1.7rem;
 }
