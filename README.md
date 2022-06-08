@@ -39,10 +39,10 @@ We started off the project by running npm create-czechitas-app
 
 #### Known bugs
 
-### Features we hope to implement in the future
+#### Features we hope to implement in the future
 
 ### Credits
 
-The bestest mentor Jindřich Máca who helped us run Firebase smoothly.
+The bestest mentor Jindřich Máca who contributed to our little knowledge of backend immensely and helped us run Firebase/Firestore smoothly.
 
 Images used in the project were taken by 
