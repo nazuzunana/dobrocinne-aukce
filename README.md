@@ -23,7 +23,7 @@ Each auction has a coundown timer that updates every minute for the users to see
 
 You can either place a minimum bid available for a specific item by clicking a direct button to place such a bid or type in an amount of your preference and then hit a button to place a bid.
 
-All of the data, registration details of users, bidding amounts are stored in Firestore.
+All of the data, registration details of users, and bidding amounts are stored in Firestore.
 
 ### UX/UI Design and CSS
 
