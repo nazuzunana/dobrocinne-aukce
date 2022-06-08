@@ -5,7 +5,7 @@ A final project for the WEB Digital Academy in Czechitas: a Czech non-profit tha
 
 We created an auction web prototype to be used by a single non-profit organisation that wants to organise its own auctions for charitable purposes. Thanks to the technology used, the website allows placing bids from multiple computers for the items available on the website. 
 
-Instead of creating a fictional non-profit and its logo to act as an owner of the website, we asked an existing Prague based Hong-kongese NGO to use their logos, colors, and contact information for the purpose of the project.
+Instead of creating a fictional non-profit to act as an owner of the website, we asked an existing Prague based Hong-kongese NGO to become our main character and got a permit to use their logos, colors, and contact information for the purpose of the project.
 
 ### Technologies used
 
