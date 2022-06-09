@@ -12,7 +12,7 @@ Instead of creating a fictional non-profit to act as an owner of the website, we
  -> React framework
  -> HTML/CSS
  -> Javascript
- -> Firebase/Firestore
+ -> 🔥base/🔥store
  -> JSON
 
 ## What our application does?
@@ -23,7 +23,7 @@ Each auction has a coundown timer that updates every minute for the users to see
 
 You can either place a minimum bid available for a specific item by clicking a direct button to place such a bid or type in an amount of your preference and then hit a button to place a bid.
 
-All of the data, registration details of users, and bidding amounts are stored in Firestore.
+All of the data, registration details of users, and bidding amounts are stored in 🔥store.
 
 ### UX/UI Design and CSS
 
@@ -37,7 +37,7 @@ run npm install
 
 We started off the project by running npm create-czechitas-app
 
-#### Known bugs
+#### Known 🪲🪲🪲
 
 #### Features we hope to implement in the future
 
@@ -45,4 +45,4 @@ We started off the project by running npm create-czechitas-app
 
 The bestest mentor Jindřich Máca who contributed to our little knowledge of backend immensely and helped us run Firebase/Firestore smoothly.
 
-Images used in the project were taken by 
+Images used in the project were taken by 📷 Jiří Červín.
