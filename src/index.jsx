@@ -16,8 +16,30 @@ import ScrollToTop from './ScrollToTop';
 
 // doplnit stylovanie, ktory link je zrovna aktivny: https://reactrouter.com/docs/en/v6/getting-started/tutorial#active-links
 
+const MobileMenu = () => {
+  return (
+    <div className="container__mobile-menu">
+      <div className="mobile-menu__links">
+        <Link to="/HowToBid">
+          <div className="mobile-menu__link">JAK DRAŽIT</div>
+        </Link>
+        <Link to="/AuctionList">
+          <div className="mobile-menu__link">AUKCE</div>
+        </Link>
+        <Link to="/Contact">
+          <div className="mobile-menu__link">KONTAKT</div>
+        </Link>
+        <Link to="/Registration">
+          <div className="mobile-menu__link">REGISTRACE</div>
+        </Link>
+        <div className="mobile-menu__link">PŘIHLÁŠENÍ</div>
+      </div>
+    </div>
+  );
+};
+
 const App = () => {
-  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  // const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const setModalOpen = useLoginModal();
 
   const user = useUser();
@@ -28,7 +50,10 @@ const App = () => {
         <Link to="/">
           <div className="organisation__logo"></div>
         </Link>
-        <div className="nav__content" data-open={hamburgerOpen}>
+        <div
+          className="nav__content"
+          // data-open={hamburgerOpen}
+        >
           <div className="nav__links">
             <div className="nav__link">
               <Link to="/HowToBid">JAK DRAŽIT</Link>
@@ -64,16 +89,16 @@ const App = () => {
             )}
           </div>
         </div>
-        <div
-          className="nav__hamburger-icon"
-          onClick={() => {
+        <Link to="/MobileMenu" className="mobile-menu__icon">
+          <div className="nav__hamburger-icon">
+            {/* onClick={() => {
             setHamburgerOpen(!hamburgerOpen);
-          }}
-        >
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
-        </div>
+          }} */}
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
+        </Link>
       </nav>
       <Outlet />
       <div className="footer">
@@ -111,6 +136,7 @@ createRoot(document.querySelector('#app')).render(
             <Route path="AuctionList" element={<AuctionList />} />
             <Route path="Registration" element={<Registration />} />
             <Route path="Auction/:id" element={<Auction />} />
+            <Route path="MobileMenu" element={<MobileMenu />}></Route>
             <Route
               path="*"
               element={

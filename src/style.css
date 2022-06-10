@@ -156,6 +156,28 @@ nav {
   background-color: var(--green);
 }
 
+.container__mobile-menu {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.mobile-menu__links {
+  width: 100%;
+}
+
+.mobile-menu__link {
+  text-align: center;
+  border-top: 1px solid var(--green);
+  border-top: 1px solid var(--green);
+  padding: 1rem;
+  width: 100%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -202,9 +224,9 @@ nav {
   nav {
     /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
     gap: 1rem;
-    width: 100%; */
+    width: 100%;
     padding: 1rem 2rem 1rem 2rem;
   }
 
@@ -267,6 +289,10 @@ nav {
     font-weight: 700;
     font-size: smaller;
     padding: 0.5rem 1rem 0.5rem 1rem; */
+  }
+
+  .mobile-menu__icon {
+    display: none;
   }
 
   .nav__hamburger-icon {
