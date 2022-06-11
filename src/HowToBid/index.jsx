@@ -99,7 +99,7 @@ const HowToBid = () => {
           <div className="description__text">
             <p>
               Po vydražení předmětu obdržíte na e-mailovou adresu, kterou jste
-              uvedli při registraci, email s fakturou a instrukcemi k platbě.
+              uvedli při registraci, e-mail s fakturou a instrukcemi k platbě.
             </p>
           </div>
         </div>
