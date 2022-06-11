@@ -30,15 +30,15 @@ const App = () => {
         </Link>
         <div className="nav__content" data-open={hamburgerOpen}>
           <div className="nav__links">
-            <div className="nav__link">
-              <Link to="/HowToBid">JAK DRAŽIT</Link>
-            </div>
-            <div className="nav__link">
-              <Link to="/AuctionList">AUKCE</Link>
-            </div>
-            <div className="nav__link">
-              <Link to="/Contact">KONTAKT</Link>
-            </div>
+            <Link to="/HowToBid" className="nav__link">
+              JAK DRAŽIT
+            </Link>
+            <Link to="/AuctionList" className="nav__link">
+              AUKCE
+            </Link>
+            <Link to="/Contact" className="nav__link">
+              KONTAKT
+            </Link>
           </div>
           <div className="nav__buttons">
             {user ? (
