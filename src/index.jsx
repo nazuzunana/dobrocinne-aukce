@@ -54,7 +54,15 @@ const App = () => {
           </div>
           <div className="nav__buttons">
             {user ? (
-              <button onClick={() => signOut(auth)} className="button__logout">
+              <button
+                // onClick={() => signOut(auth)}
+
+                onClick={() => {
+                  signOut(auth);
+                  setHamburgerOpen(false);
+                }}
+                className="button__logout"
+              >
                 Odhlásit
               </button>
             ) : (
