@@ -26,7 +26,10 @@ const App = () => {
     <div className="container">
       <nav>
         <Link to="/">
-          <div className="organisation__logo"></div>
+          <div
+            className="organisation__logo"
+            onClick={() => setHamburgerOpen(false)}
+          ></div>
         </Link>
         <div className="nav__content" data-open={hamburgerOpen}>
           <div className="nav__links">
@@ -55,8 +58,6 @@ const App = () => {
           <div className="nav__buttons">
             {user ? (
               <button
-                // onClick={() => signOut(auth)}
-
                 onClick={() => {
                   signOut(auth);
                   setHamburgerOpen(false);
