@@ -38,9 +38,13 @@ Clone the Github project
 
 Go to project directory and run npm install
 
+npm validator
+npm react-modal-image-responsive
+npm react-router-dom
+
 #### Known 🪲🪲🪲
 
-Mobile menu is not fully functional - yet!
+tbc
 
 #### Features we hope to implement in the future
 
@@ -48,6 +52,6 @@ Simple CMS system for uploading new auctions/auction items
 
 ### Credits
 
-The bestest mentor Jindřich Máca who contributed to our little knowledge of backend immensely and helped us run Firebase/Firestore smoothly.
+The bestest mentor Jindřich Máca who immensely contributed to our little knowledge of backend  and helped us run Firebase/Firestore smoothly.
 
-Images used in the project were taken by 📷 Jiří Červín.
+Images used in the project were taken by 📷 Jiří Červín: www.jiricervin.cz
