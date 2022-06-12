@@ -1,6 +1,7 @@
 # Dobročinné aukce/Charity Auction Website
 A final project for the WEB Digital Academy in Czechitas: a Czech non-profit that aims to educate, inspire and apply new (mainly female) talents in IT and build a community around it.
 
+
 ## Project Description
 
 We created an auction web prototype to be used by a single non-profit organisation that wants to organise its own auctions for charitable purposes. Thanks to the technology used, the website allows placing bids from multiple computers for the items available on the website. 
@@ -38,8 +39,8 @@ Clone the Github project
 
 Go to project directory and run npm install
 
-npm validator
-npm react-modal-image-responsive
+npm validator/
+npm react-modal-image-responsive/
 npm react-router-dom
 
 #### Known 🪲🪲🪲
