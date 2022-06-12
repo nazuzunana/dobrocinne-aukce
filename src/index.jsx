@@ -30,35 +30,57 @@ const App = () => {
         </Link>
         <div className="nav__content" data-open={hamburgerOpen}>
           <div className="nav__links">
-            <Link to="/HowToBid" className="nav__link" onClick={hamburgerOpen}>
+            <Link
+              to="/HowToBid"
+              className="nav__link"
+              onClick={() => setHamburgerOpen(false)}
+            >
               JAK DRAŽIT
             </Link>
             <Link
               to="/AuctionList"
               className="nav__link"
-              onClick={hamburgerOpen}
+              onClick={() => setHamburgerOpen(false)}
             >
               AUKCE
             </Link>
-            <Link to="/Contact" className="nav__link" onClick={hamburgerOpen}>
+            <Link
+              to="/Contact"
+              className="nav__link"
+              onClick={() => setHamburgerOpen(false)}
+            >
               KONTAKT
             </Link>
           </div>
           <div className="nav__buttons">
             {user ? (
-              <button onClick={() => signOut(auth)} className="button__logout">
+              <button
+                // onClick={() => signOut(auth)}
+
+                onClick={() => {
+                  signOut(auth);
+                  setHamburgerOpen(false);
+                }}
+                className="button__logout"
+              >
                 Odhlásit
               </button>
             ) : (
               <>
                 <Link to="/Registration">
-                  <button className="button__register" onClick={hamburgerOpen}>
+                  <button
+                    className="button__register"
+                    onClick={() => setHamburgerOpen(false)}
+                  >
                     Registrace k dražbě
                   </button>
                 </Link>
                 <button
                   className="button__login"
-                  onClick={() => setModalOpen(true)}
+                  onClick={() => {
+                    setModalOpen(true);
+                    setHamburgerOpen(false);
+                  }}
                 >
                   Přihlášení
                 </button>{' '}

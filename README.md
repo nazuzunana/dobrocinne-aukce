@@ -11,6 +11,7 @@ Instead of creating a fictional non-profit to act as an owner of the website, we
 ### Technologies used
 
 -> React framework
+-> React router
 -> HTML/CSS
 -> Javascript
 -> 🔥base/🔥store
@@ -30,17 +31,21 @@ All of the data, registration details of users, and bidding amounts are stored i
 
 We opted for a minimal, eye-pleasing design that can be easily taken over by any non-profit when minor changes in color/font/logos are applied.
 
-### Installation instructions
-
-Clone the Github project
-
-run npm install
+### ⚙️ Installation instructions
 
 We started off the project by running npm create-czechitas-app
 
+Clone the Github project
+
+Go to project directory and run npm install
+
 #### Known 🪲🪲🪲
 
+Mobile menu is not fully functional - yet!
+
 #### Features we hope to implement in the future
+
+Simple CMS system for uploading new auctions/auction items
 
 ### Credits
 
