@@ -90,6 +90,10 @@
   font-weight: 700;
 }
 
+.how-to-bod__link {
+  font-weight: 700;
+}
+
 /* RESPONSIVITY */
 
 @media (min-width: 768px) {
