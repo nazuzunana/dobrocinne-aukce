@@ -30,13 +30,17 @@ const App = () => {
         </Link>
         <div className="nav__content" data-open={hamburgerOpen}>
           <div className="nav__links">
-            <Link to="/HowToBid" className="nav__link">
+            <Link to="/HowToBid" className="nav__link" onClick={hamburgerOpen}>
               JAK DRAŽIT
             </Link>
-            <Link to="/AuctionList" className="nav__link">
+            <Link
+              to="/AuctionList"
+              className="nav__link"
+              onClick={hamburgerOpen}
+            >
               AUKCE
             </Link>
-            <Link to="/Contact" className="nav__link">
+            <Link to="/Contact" className="nav__link" onClick={hamburgerOpen}>
               KONTAKT
             </Link>
           </div>
@@ -48,15 +52,13 @@ const App = () => {
             ) : (
               <>
                 <Link to="/Registration">
-                  <button className="button__register">
+                  <button className="button__register" onClick={hamburgerOpen}>
                     Registrace k dražbě
                   </button>
                 </Link>
                 <button
                   className="button__login"
-                  onClick={() => {
-                    setModalOpen(true);
-                  }}
+                  onClick={() => setModalOpen(true)}
                 >
                   Přihlášení
                 </button>{' '}

@@ -12,7 +12,10 @@ const HowToBid = () => {
           <div className="step_instructions">
             <p>
               Pro možnost přihazovat na předměty v aukcích si{' '}
-              <a href="/Registration">založte uživatelský učet</a>.
+              <a href="/Registration" className="how-to-bod__link">
+                založte uživatelský učet
+              </a>
+              .
             </p>
           </div>
         </div>
@@ -21,7 +24,10 @@ const HowToBid = () => {
           <div className="step_instructions">
             <p>
               Po registraci a přihlášení můžete přihazovat na předměty v{' '}
-              <a href="/AuctionList">aktuálních aukcích</a>.
+              <a href="/AuctionList" className="how-to-bod__link">
+                aktuálních aukcích
+              </a>
+              .
             </p>
           </div>
         </div>
