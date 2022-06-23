@@ -6,7 +6,7 @@ A final project for the WEB Digital Academy in Czechitas: a Czech non-profit tha
 
 We created an auction web prototype to be used by a single non-profit organisation that wants to organise its own auctions for charitable purposes. Thanks to the technology used, the website allows placing bids from multiple computers for the items available on the website. 
 
-Instead of creating a fictional non-profit to act as an owner of the website, we asked an existing Prague based Hong-kongese NGO to become our main character and got a permit to use their logos, colors, and contact information for the purpose of the project.
+Instead of creating a fictional non-profit to act as an owner of the website, we asked an existing Prague based Hong-kongese NGO "NGO DEI" to become our main character and got a permit to use their logos, colors, and contact information for the purpose of the project.
 
 ### Technologies used
 
@@ -51,8 +51,10 @@ tbc
 
 Simple CMS system for uploading new auctions/auction items
 
+Cookies/Legal and GDPR matters
+
 ### Credits
 
-The bestest mentor Jindřich Máca who immensely contributed to our little knowledge of backend  and helped us run Firebase/Firestore smoothly.
+The bestest mentor Jindřich Máca from the STRV company who immensely contributed to our little knowledge of backend  and helped us run Firebase/Firestore smoothly.
 
 Images used in the project were taken by 📷 Jiří Červín: www.jiricervin.cz
