@@ -63,6 +63,10 @@
   width: 100%;
 }
 
+.step_instructions a {
+  height: calc(1.7rem + 1px);
+}
+
 .step_instructions a:hover {
   border-bottom: 1px solid var(--green);
   padding-bottom: 2px;
