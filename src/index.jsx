@@ -103,17 +103,17 @@ const App = () => {
       <Outlet />
       <div className="footer">
         <div className="footer__links">
-          <div className="footer__auction-rules">
-            <a href="#">Aukční řád</a>
-          </div>
+          <a href="#" className="footer__auction-rules">
+            Aukční řád
+          </a>
 
-          <div className="footer__privacy-policy">
-            <a href="#">Ochrana osobních údajů</a>
-          </div>
+          <a href="#" className="footer__privacy-policy">
+            Ochrana osobních údajů
+          </a>
 
-          <div className="footer__contact">
-            <Link to="/Contact">Kontakt</Link>
-          </div>
+          <Link to="/Contact" className="footer__contact">
+            Kontakt
+          </Link>
         </div>
         <div className="footer__copyright">
           © 2022, Vytvořeno pro Czechitas, Digitální akademie: Web

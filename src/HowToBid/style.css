@@ -64,12 +64,12 @@
 }
 
 .step_instructions a {
-  height: calc(1.7rem + 1px);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
 }
 
 .step_instructions a:hover {
   border-bottom: 1px solid var(--green);
-  padding-bottom: 2px;
 }
 
 .how-to-bid__description {
