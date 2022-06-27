@@ -63,9 +63,13 @@
   width: 100%;
 }
 
+.step_instructions a {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
 .step_instructions a:hover {
   border-bottom: 1px solid var(--green);
-  padding-bottom: 2px;
 }
 
 .how-to-bid__description {

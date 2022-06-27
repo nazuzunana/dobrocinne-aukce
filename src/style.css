@@ -190,13 +190,15 @@ nav {
   gap: 1rem;
 }
 
-.footer a {
+.footer__links a {
   color: var(--offwhite);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  width: fit-content;
 }
 
-.footer a:hover {
+.footer__links a:hover {
   border-bottom: 1px solid var(--offwhite);
-  padding-bottom: 2px;
 }
 
 /* RESPONSIVITY */
@@ -248,7 +250,8 @@ nav {
 
   .nav__link {
     border-top: none;
-    border-bottom: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
     text-align: center;
     padding: 0;
     width: initial;

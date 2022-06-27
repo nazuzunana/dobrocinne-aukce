@@ -104,11 +104,11 @@ const Home = () => (
             Dobročinných sbírek jsme viděly mnoho, také uměleckých aukčních domů
             a aukčních portálů, a tak jsme tyto dvě činnosti spojily. Chyběl nám
             aukční web, jenž by spojoval příjemné s užitečným: někdo má hodně a
-            nestrádá, když daruje. Někdo si rád udělá radost a zároveň radost
-            přinese někomu, kdo to opravdu potřebuje.
+            nestrádá, když daruje, někdo si rád udělá radost a zároveň radost
+            přinese tomu, kdo ji opravdu potřebuje.
             <br />
             <br />
-            Pojďte si s námi něco hezkého pořídit!
+            Pojďte si s námi něco hezkého vydražit!
           </p>
         </div>
         <div className="box__auctions__button">

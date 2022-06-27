@@ -26,7 +26,10 @@ const App = () => {
     <div className="container">
       <nav>
         <Link to="/">
-          <div className="organisation__logo"></div>
+          <div
+            className="organisation__logo"
+            onClick={() => setHamburgerOpen(false)}
+          ></div>
         </Link>
         <div className="nav__content" data-open={hamburgerOpen}>
           <div className="nav__links">
@@ -55,8 +58,6 @@ const App = () => {
           <div className="nav__buttons">
             {user ? (
               <button
-                // onClick={() => signOut(auth)}
-
                 onClick={() => {
                   signOut(auth);
                   setHamburgerOpen(false);
@@ -102,17 +103,17 @@ const App = () => {
       <Outlet />
       <div className="footer">
         <div className="footer__links">
-          <div className="footer__auction-rules">
-            <a href="#">Aukční řád</a>
-          </div>
+          <a href="#" className="footer__auction-rules">
+            Aukční řád
+          </a>
 
-          <div className="footer__privacy-policy">
-            <a href="#">Ochrana osobních údajů</a>
-          </div>
+          <a href="#" className="footer__privacy-policy">
+            Ochrana osobních údajů
+          </a>
 
-          <div className="footer__contact">
-            <Link to="/Contact">Kontakt</Link>
-          </div>
+          <Link to="/Contact" className="footer__contact">
+            Kontakt
+          </Link>
         </div>
         <div className="footer__copyright">
           © 2022, Vytvořeno pro Czechitas, Digitální akademie: Web
