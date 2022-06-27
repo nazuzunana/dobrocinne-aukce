@@ -43,7 +43,7 @@ npm validator
 npm react-modal-image-responsive
 npm react-router-dom
 
-#### Known 🪲🪲🪲
+#### Known 🪲🪲🪲npm
 
 tbc
 
@@ -53,6 +53,6 @@ Simple CMS system for uploading new auctions/auction items
 
 ### Credits
 
-The bestest mentor Jindřich Máca who immensely contributed to our little knowledge of backend  and helped us run Firebase/Firestore smoothly.
+The bestest mentor Jindřich Máca who immensely contributed to our little knowledge of backend and helped us run Firebase/Firestore smoothly.
 
 Images used in the project were taken by 📷 Jiří Červín: www.jiricervin.cz
